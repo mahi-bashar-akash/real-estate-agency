@@ -114,7 +114,7 @@
 
             <div class="w-full flex flex-wrap">
 
-                <div class="w-full lg:w-2/3">
+                <div class="w-full lg:w-2/3 order-2 lg:order-1">
 
                     <!-- Property card -->
                     <div class="decoration-0 w-full">
@@ -959,7 +959,7 @@
 
                 </div>
 
-                <div class="w-full lg:w-1/3 md:ps-5">
+                <div class="w-full lg:w-1/3 md:ps-5 order-1 mb-5 lg:order-2">
 
                     <!-- Search -->
                     <div class="mb-5">

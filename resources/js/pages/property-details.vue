@@ -224,27 +224,27 @@
 
             <div class="border-b-2 border-b-gray-200 w-full mb-5"></div>
 
-            <div class="grid grid-cols-2 gap-5 lg:grid-cols-4 bg-gray-200 p-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-4 bg-gray-200 p-5">
                 <div class="text-start font-medium"> Property ID: </div>
-                <div class="text-end text-gray-800 text-[14px]"> hz-HZ27 </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> hz-HZ27 </div>
                 <div class="text-start font-medium"> Price: </div>
-                <div class="text-end text-gray-800 text-[14px]"> $97,000 </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> $97,000 </div>
                 <div class="text-start font-medium"> Property Size: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 1560 Sq Ft </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 1560 Sq Ft </div>
                 <div class="text-start font-medium"> Bedroom: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 1 </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 1 </div>
                 <div class="text-start font-medium"> Bathrooms: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 2 </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 2 </div>
                 <div class="text-start font-medium"> Garage: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 1 </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 1 </div>
                 <div class="text-start font-medium"> Garage Size: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 200 SqFt </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 200 SqFt </div>
                 <div class="text-start font-medium"> Year Built: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 2016 </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 2016 </div>
                 <div class="text-start font-medium"> Property Type: </div>
-                <div class="text-end text-gray-800 text-[14px]"> Apartment </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> Apartment </div>
                 <div class="text-start font-medium"> Property Status: </div>
-                <div class="text-end text-gray-800 text-[14px]"> For Sale </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> For Sale </div>
             </div>
 
             <br><br>
@@ -255,19 +255,19 @@
 
             <div class="border-b-2 border-b-gray-200 w-full mb-5"></div>
 
-            <div class="grid grid-cols-2 gap-5 lg:grid-cols-4 bg-gray-200 p-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-4 bg-gray-200 p-5">
                 <div class="text-start font-medium"> Deposit: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 20% </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 20% </div>
                 <div class="text-start font-medium"> Amenities: </div>
-                <div class="text-end text-gray-800 text-[14px]"> Clubhouse </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> Clubhouse </div>
                 <div class="text-start font-medium"> Pool Size: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 300 Sqft </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 300 Sqft </div>
                 <div class="text-start font-medium"> Additional Rooms: </div>
-                <div class="text-end text-gray-800 text-[14px]"> Guest Bath </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> Guest Bath </div>
                 <div class="text-start font-medium"> Last remodel year: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 1987 </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 1987 </div>
                 <div class="text-start font-medium"> Equipment: </div>
-                <div class="text-end text-gray-800 text-[14px]"> Grill - Gas </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> Grill - Gas </div>
             </div>
 
             <br><br>
@@ -278,19 +278,19 @@
 
             <div class="border-b-2 border-b-gray-200 w-full mb-5"></div>
 
-            <div class="grid grid-cols-2 gap-5 lg:grid-cols-4 bg-gray-200 p-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:grid-cols-4 bg-gray-200 p-5">
                 <div class="text-start font-medium"> Address: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 4936 N Broadway St </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 4936 N Broadway St </div>
                 <div class="text-start font-medium"> Zip/Postal Code: </div>
-                <div class="text-end text-gray-800 text-[14px]"> 60640 </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> 60640 </div>
                 <div class="text-start font-medium"> City: </div>
-                <div class="text-end text-gray-800 text-[14px]"> Chicago </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> Chicago </div>
                 <div class="text-start font-medium"> Area: </div>
-                <div class="text-end text-gray-800 text-[14px]"> Andersonville </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> Andersonville </div>
                 <div class="text-start font-medium"> State/county: </div>
-                <div class="text-end text-gray-800 text-[14px]"> Illinois, New York </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> Illinois, New York </div>
                 <div class="text-start font-medium"> Country: </div>
-                <div class="text-end text-gray-800 text-[14px]"> United States </div>
+                <div class="text-start sm:text-end text-gray-800 text-[14px]"> United States </div>
             </div>
 
             <br><br>
@@ -301,21 +301,21 @@
 
             <div class="flex flex-wrap w-full">
                 <div class="w-full md:w-1/2">
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div class="text-start font-medium"> Down Payment </div>
-                        <div class="text-end text-gray-800 text-[14px]"> $14,550.00 </div>
+                        <div class="text-start sm:text-end text-gray-800 text-[14px]"> $14,550.00 </div>
                         <div class="text-start font-medium"> Loan Amount </div>
-                        <div class="text-end text-gray-800 text-[14px]"> $82,450.00 </div>
+                        <div class="text-start sm:text-end text-gray-800 text-[14px]"> $82,450.00 </div>
                         <div class="text-start font-medium"> Monthly Mortgage Payment </div>
-                        <div class="text-end text-gray-800 text-[14px]"> $589.42 </div>
+                        <div class="text-start sm:text-end text-gray-800 text-[14px]"> $589.42 </div>
                         <div class="text-start font-medium"> Property Tax </div>
-                        <div class="text-end text-gray-800 text-[14px]"> $97.00 </div>
+                        <div class="text-start sm:text-end text-gray-800 text-[14px]"> $97.00 </div>
                         <div class="text-start font-medium"> Home Insurance </div>
-                        <div class="text-end text-gray-800 text-[14px]"> $16.67 </div>
+                        <div class="text-start sm:text-end text-gray-800 text-[14px]"> $16.67 </div>
                         <div class="text-start font-medium"> PMI </div>
-                        <div class="text-end text-gray-800 text-[14px]"> $68.71 </div>
+                        <div class="text-start sm:text-end text-gray-800 text-[14px]"> $68.71 </div>
                         <div class="text-start font-medium"> Monthly HOA Fees </div>
-                        <div class="text-end text-gray-800 text-[14px]"> $250.00 </div>
+                        <div class="text-start sm:text-end text-gray-800 text-[14px]"> $250.00 </div>
                     </div>
                 </div>
             </div>

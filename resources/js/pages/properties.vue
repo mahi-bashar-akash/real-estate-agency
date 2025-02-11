@@ -7,7 +7,7 @@
 
             <div class="flex flex-wrap px-5 lg:px-0">
 
-                <div class="w-full pb-16 lg:w-2/3 lg:pe-3">
+                <div class="w-full pb-16 lg:w-2/3 lg:pe-3 order-2 lg:order-1">
 
                     <!-- Property card -->
                     <div class="decoration-0 w-full">
@@ -852,7 +852,7 @@
 
                 </div>
 
-                <div class="w-full pb-16 lg:w-1/3 lg:ps-5">
+                <div class="w-full pb-16 lg:w-1/3 lg:ps-5 order-1 lg:order-2">
 
                     <!-- Search -->
                     <div class="mb-5">

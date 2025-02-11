@@ -8,7 +8,7 @@
                     <a href="javascript:void(0)" class="decoration-0 block h-full">
                         <div class="overflow-hidden group h-full rounded-3xl">
                             <img :src="'/images/image-01.png'"
-                                 class="object-cover bg-cover w-full rounded-3xl h-[450px] xl:min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1">
+                                 class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1">
                         </div>
                     </a>
                 </div>
@@ -42,13 +42,13 @@
                         <a href="javascript:void(0)">
                             <div class="overflow-hidden group h-full rounded-3xl">
                                 <img :src="'/images/image-02.png'"
-                                     class="object-cover bg-cover w-full rounded-3xl h-[250px] xl:min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1">
+                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1">
                             </div>
                         </a>
                         <a href="javascript:void(0)">
                             <div class="overflow-hidden group h-full rounded-3xl">
                                 <img :src="'/images/image-03.png'"
-                                     class="object-cover bg-cover w-full rounded-3xl h-[250px] xl:min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1">
+                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1">
                             </div>
                         </a>
                     </div>

@@ -1,9 +1,7 @@
 <template>
-    <div class="overflow-x-hidden">
-        <Header/>
-        <router-view/>
-        <Footer/>
-    </div>
+    <Header/>
+    <router-view/>
+    <Footer/>
 </template>
 
 <script>
