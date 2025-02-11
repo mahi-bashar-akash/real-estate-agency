@@ -16,7 +16,7 @@
         <div class="loader"></div>
     </div>
 
-    <script>
+    <script type="application/javascript">
 
         document.addEventListener('DOMContentLoaded', function () {
             const preloader = document.querySelector('#preloader');
