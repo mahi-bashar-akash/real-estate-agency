@@ -1,0 +1,23 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - master  # This triggers the deployment when you push to the master branch
+
+jobs:
+  web_deploy:
+    name: Deploy to FTP Server
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # This checks out your repository code
+
+      - name: Sync files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4  # FTP deploy action
+        with:
+          server: ${{ secrets.FTP_SERVER }}  # FTP server address
+          username: ${{ secrets.FTP_USERNAME }}  # FTP username
+          password: ${{ secrets.FTP_PASSWORD }}  # FTP password
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}  # The directory to deploy to
