@@ -5,12 +5,12 @@
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] py-2 sm:px-2 sm:py-0">
             <div class="w-full flex flex-wrap">
                 <div class="w-full lg:w-1/2 p-5">
-                    <a href="javascript:void(0)" class="decoration-0 block h-full">
+                    <router-link :to="{name:'About'}" class="decoration-0 block h-full">
                         <div class="overflow-hidden group h-full rounded-3xl">
-                            <img :src="'/images/image-01.png'"
-                                 class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1">
+                            <img :src="'/images/image-01.png'" loading="lazy"
+                                 class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1" />
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="w-full lg:w-1/2 p-5">
                     <div
@@ -23,7 +23,7 @@
                         lines and shapes. Within our plan, we endowed Villa with interestingly high-contrast spatial
                         experiences.
                     </div>
-                    <a href="javascript:void(0)"
+                    <router-link :to="{name:'About'}"
                        class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Request a visit
@@ -37,20 +37,20 @@
                                 </g>
                             </svg>
                         </span>
-                    </a>
+                    </router-link>
                     <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-3 mt-10">
-                        <a href="javascript:void(0)">
+                        <router-link :to="{name:'About'}">
                             <div class="overflow-hidden group h-full rounded-3xl">
-                                <img :src="'/images/image-02.png'"
-                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1">
+                                <img :src="'/images/image-02.png'" loading="lazy"
+                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1" />
                             </div>
-                        </a>
-                        <a href="javascript:void(0)">
+                        </router-link>
+                        <router-link :to="{name:'About'}">
                             <div class="overflow-hidden group h-full rounded-3xl">
-                                <img :src="'/images/image-03.png'"
-                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1">
+                                <img :src="'/images/image-03.png'" loading="lazy"
+                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1" />
                             </div>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                             Dealing always on time
                         </li>
                     </ul>
-                    <a href="javascript:void(0)"
+                    <router-link :to="{name:'About'}"
                        class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             More about Realar
@@ -155,17 +155,17 @@
                                 </g>
                             </svg>
                         </span>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="w-full lg:w-1/2 p-5">
                     <div class="relative sm:p-10">
-                        <img :src="'/images/image-07.png'"
+                        <img :src="'/images/image-07.png'" loading="lazy"
                              class="object-cover bg-cover bg-center w-full h-[450px] sm:h-[650px] rounded-3xl"
-                             alt="image">
+                             alt="image" />
                         <div class="absolute bottom-5 lg:-bottom-10 start-5 lg:-start-16">
-                            <img :src="'/images/image-06.png'"
+                            <img :src="'/images/image-06.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-[200px] h-[200px] sm:w-[350px] duration-500 ease-linear sm:h-[350px] rounded-3xl border-8 border-gray-200 up-down-animation"
-                                 alt="image">
+                                 alt="image" />
                         </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <a href="javascript:void(0)"
+                    <router-link :to="{name:'Properties'}"
                        class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Browse all services
@@ -202,13 +202,13 @@
                                 </g>
                             </svg>
                         </span>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <div class="w-full flex flex-wrap items-center">
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-08.png'" class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-08.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Property Valuation</div>
                     <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5"> All-inclusive real estate services to
@@ -217,7 +217,7 @@
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-09.png'" class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-09.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Property Management</div>
                     <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5"> All-inclusive real estate services to
@@ -226,7 +226,7 @@
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-10.png'" class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-10.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Invest Opportunities</div>
                     <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5"> All-inclusive real estate services to
@@ -250,7 +250,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <a href="javascript:void(0)"
+                    <router-link :to="{name:'Properties'}"
                        class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-white rounded-[50px] text-black duration-500 hover:bg-white/70">
                         <span class="flex justify-center items-center">
                             Browse all projects
@@ -264,13 +264,13 @@
                                 </g>
                             </svg>
                         </span>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <div class="w-full flex flex-wrap items-center">
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-11.png'" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-11.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Vroondal</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
@@ -281,7 +281,7 @@
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-12.png'" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-12.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Sakura</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
@@ -292,7 +292,7 @@
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-13.png'" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-13.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Vroondal</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
@@ -303,7 +303,7 @@
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-14.png'" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-14.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Joidarpark</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
@@ -399,7 +399,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <a href="javascript:void(0)"
+                    <router-link :to="{name:'Properties'}"
                        class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Browse all featured
@@ -413,16 +413,16 @@
                                 </g>
                             </svg>
                         </span>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <div class="w-full flex flex-wrap items-center">
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-18.png'"
+                            <img :src="'/images/image-18.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image">
+                                 alt="image" />
                         </div>
                         <div class="px-5 xl:px-10 py-5">
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
@@ -452,7 +452,7 @@
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <a href="javascript:void(0)"
+                                <router-link :to="{name:'Properties'}"
                                    class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -468,7 +468,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                </a>
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -476,9 +476,9 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-19.png'"
+                            <img :src="'/images/image-19.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image">
+                                 alt="image" />
                         </div>
                         <div class="px-5 xl:px-10 py-5">
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
@@ -508,7 +508,7 @@
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <a href="javascript:void(0)"
+                                <router-link :to="{name:'Properties'}"
                                    class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -524,7 +524,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                </a>
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -532,9 +532,9 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-20.png'"
+                            <img :src="'/images/image-20.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image">
+                                 alt="image" />
                         </div>
                         <div class="px-5 xl:px-10 py-5">
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
@@ -564,7 +564,7 @@
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <a href="javascript:void(0)"
+                                <router-link :to="{name:'Properties'}"
                                    class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -580,7 +580,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                </a>
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -588,9 +588,9 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-21.png'"
+                            <img :src="'/images/image-21.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image">
+                                 alt="image" />
                         </div>
                         <div class="px-5 xl:px-10 py-5">
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
@@ -620,7 +620,7 @@
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <a href="javascript:void(0)"
+                                <router-link :to="{name:'Properties'}"
                                    class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -636,7 +636,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                </a>
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -644,9 +644,9 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-22.png'"
+                            <img :src="'/images/image-22.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image">
+                                 alt="image" />
                         </div>
                         <div class="px-5 xl:px-10 py-5">
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
@@ -676,7 +676,7 @@
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <a href="javascript:void(0)"
+                                <router-link :to="{name:'Properties'}"
                                    class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -692,7 +692,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                </a>
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -700,9 +700,9 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-23.png'"
+                            <img :src="'/images/image-23.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image">
+                                 alt="image" />
                         </div>
                         <div class="px-5 xl:px-10 py-5">
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
@@ -732,7 +732,7 @@
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <a href="javascript:void(0)"
+                                <router-link :to="{name:'Properties'}"
                                    class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -748,7 +748,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                </a>
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -771,7 +771,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <a href="javascript:void(0)"
+                    <router-link :to="{name:'Team'}"
                        class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             View all team
@@ -785,21 +785,21 @@
                                 </g>
                             </svg>
                         </span>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <div class="w-full flex flex-wrap items-center">
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-25.png'" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
+                            <img :src="'/images/image-25.png'" loading="lazy" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
                                 <div class="text-[20px] font-bold">Michel Smith</div>
                                 <div class="text-[14px] text-gray-400"> Property Expert</div>
                             </div>
-                            <a href="javascript:void(0)" class="decoration-0">
+                            <router-link :to="{name:'Team'}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -813,21 +813,21 @@
                                               d="M13.4857 5.3293C13.5995 4.93102 14.0146 4.7004 14.4129 4.81419L14.2069 5.53534C14.4129 4.81419 14.4129 4.81419 14.4129 4.81419L14.4144 4.81461L14.4159 4.81505L14.4192 4.81602L14.427 4.81834L14.4468 4.8245C14.4618 4.82932 14.4807 4.8356 14.5031 4.84357C14.548 4.85951 14.6074 4.88217 14.6802 4.91337C14.8259 4.97581 15.0249 5.07223 15.2695 5.21694C15.7589 5.50662 16.4271 5.9878 17.2121 6.77277C17.9971 7.55775 18.4782 8.22593 18.7679 8.7154C18.9126 8.95991 19.009 9.15897 19.0715 9.30466C19.1027 9.37746 19.1254 9.43682 19.1413 9.48173C19.1493 9.50418 19.1555 9.52301 19.1604 9.53809L19.1665 9.55788L19.1688 9.56563L19.1698 9.56896L19.1702 9.5705C19.1702 9.5705 19.1707 9.57194 18.4495 9.77798L19.1707 9.57194C19.2845 9.97021 19.0538 10.3853 18.6556 10.4991C18.2607 10.6119 17.8492 10.3862 17.7313 9.99413L17.7276 9.98335C17.7223 9.96832 17.7113 9.93874 17.6928 9.89554C17.6558 9.8092 17.5887 9.66797 17.4771 9.47938C17.2541 9.10264 16.8514 8.53339 16.1514 7.83343C15.4515 7.13348 14.8822 6.73078 14.5055 6.50781C14.3169 6.39619 14.1757 6.32909 14.0893 6.29209C14.0461 6.27358 14.0165 6.26254 14.0015 6.25721L13.9907 6.25352C13.5987 6.13564 13.3729 5.72419 13.4857 5.3293Z"></path>
                                     </g>
                                 </svg>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-26.png'" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
+                            <img :src="'/images/image-26.png'" loading="lazy" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
                                 <div class="text-[20px] font-bold">Sara Prova</div>
                                 <div class="text-[14px] text-gray-400"> Property Expert</div>
                             </div>
-                            <a href="javascript:void(0)" class="decoration-0">
+                            <router-link :to="{name:'Team'}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -841,21 +841,21 @@
                                               d="M13.4857 5.3293C13.5995 4.93102 14.0146 4.7004 14.4129 4.81419L14.2069 5.53534C14.4129 4.81419 14.4129 4.81419 14.4129 4.81419L14.4144 4.81461L14.4159 4.81505L14.4192 4.81602L14.427 4.81834L14.4468 4.8245C14.4618 4.82932 14.4807 4.8356 14.5031 4.84357C14.548 4.85951 14.6074 4.88217 14.6802 4.91337C14.8259 4.97581 15.0249 5.07223 15.2695 5.21694C15.7589 5.50662 16.4271 5.9878 17.2121 6.77277C17.9971 7.55775 18.4782 8.22593 18.7679 8.7154C18.9126 8.95991 19.009 9.15897 19.0715 9.30466C19.1027 9.37746 19.1254 9.43682 19.1413 9.48173C19.1493 9.50418 19.1555 9.52301 19.1604 9.53809L19.1665 9.55788L19.1688 9.56563L19.1698 9.56896L19.1702 9.5705C19.1702 9.5705 19.1707 9.57194 18.4495 9.77798L19.1707 9.57194C19.2845 9.97021 19.0538 10.3853 18.6556 10.4991C18.2607 10.6119 17.8492 10.3862 17.7313 9.99413L17.7276 9.98335C17.7223 9.96832 17.7113 9.93874 17.6928 9.89554C17.6558 9.8092 17.5887 9.66797 17.4771 9.47938C17.2541 9.10264 16.8514 8.53339 16.1514 7.83343C15.4515 7.13348 14.8822 6.73078 14.5055 6.50781C14.3169 6.39619 14.1757 6.32909 14.0893 6.29209C14.0461 6.27358 14.0165 6.26254 14.0015 6.25721L13.9907 6.25352C13.5987 6.13564 13.3729 5.72419 13.4857 5.3293Z"></path>
                                     </g>
                                 </svg>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-27.png'" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
+                            <img :src="'/images/image-27.png'" loading="lazy" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
                                 <div class="text-[20px] font-bold">Jani Mai</div>
                                 <div class="text-[14px] text-gray-400"> Property Expert</div>
                             </div>
-                            <a href="javascript:void(0)" class="decoration-0">
+                            <router-link :to="{name:'Team'}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -869,21 +869,21 @@
                                               d="M13.4857 5.3293C13.5995 4.93102 14.0146 4.7004 14.4129 4.81419L14.2069 5.53534C14.4129 4.81419 14.4129 4.81419 14.4129 4.81419L14.4144 4.81461L14.4159 4.81505L14.4192 4.81602L14.427 4.81834L14.4468 4.8245C14.4618 4.82932 14.4807 4.8356 14.5031 4.84357C14.548 4.85951 14.6074 4.88217 14.6802 4.91337C14.8259 4.97581 15.0249 5.07223 15.2695 5.21694C15.7589 5.50662 16.4271 5.9878 17.2121 6.77277C17.9971 7.55775 18.4782 8.22593 18.7679 8.7154C18.9126 8.95991 19.009 9.15897 19.0715 9.30466C19.1027 9.37746 19.1254 9.43682 19.1413 9.48173C19.1493 9.50418 19.1555 9.52301 19.1604 9.53809L19.1665 9.55788L19.1688 9.56563L19.1698 9.56896L19.1702 9.5705C19.1702 9.5705 19.1707 9.57194 18.4495 9.77798L19.1707 9.57194C19.2845 9.97021 19.0538 10.3853 18.6556 10.4991C18.2607 10.6119 17.8492 10.3862 17.7313 9.99413L17.7276 9.98335C17.7223 9.96832 17.7113 9.93874 17.6928 9.89554C17.6558 9.8092 17.5887 9.66797 17.4771 9.47938C17.2541 9.10264 16.8514 8.53339 16.1514 7.83343C15.4515 7.13348 14.8822 6.73078 14.5055 6.50781C14.3169 6.39619 14.1757 6.32909 14.0893 6.29209C14.0461 6.27358 14.0165 6.26254 14.0015 6.25721L13.9907 6.25352C13.5987 6.13564 13.3729 5.72419 13.4857 5.3293Z"></path>
                                     </g>
                                 </svg>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-28.png'" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
+                            <img :src="'/images/image-28.png'" loading="lazy" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
                                 <div class="text-[20px] font-bold">Michel Jorden</div>
                                 <div class="text-[14px] text-gray-400"> Property Expert</div>
                             </div>
-                            <a href="javascript:void(0)" class="decoration-0">
+                            <router-link :to="{name:'Team'}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -897,7 +897,7 @@
                                               d="M13.4857 5.3293C13.5995 4.93102 14.0146 4.7004 14.4129 4.81419L14.2069 5.53534C14.4129 4.81419 14.4129 4.81419 14.4129 4.81419L14.4144 4.81461L14.4159 4.81505L14.4192 4.81602L14.427 4.81834L14.4468 4.8245C14.4618 4.82932 14.4807 4.8356 14.5031 4.84357C14.548 4.85951 14.6074 4.88217 14.6802 4.91337C14.8259 4.97581 15.0249 5.07223 15.2695 5.21694C15.7589 5.50662 16.4271 5.9878 17.2121 6.77277C17.9971 7.55775 18.4782 8.22593 18.7679 8.7154C18.9126 8.95991 19.009 9.15897 19.0715 9.30466C19.1027 9.37746 19.1254 9.43682 19.1413 9.48173C19.1493 9.50418 19.1555 9.52301 19.1604 9.53809L19.1665 9.55788L19.1688 9.56563L19.1698 9.56896L19.1702 9.5705C19.1702 9.5705 19.1707 9.57194 18.4495 9.77798L19.1707 9.57194C19.2845 9.97021 19.0538 10.3853 18.6556 10.4991C18.2607 10.6119 17.8492 10.3862 17.7313 9.99413L17.7276 9.98335C17.7223 9.96832 17.7113 9.93874 17.6928 9.89554C17.6558 9.8092 17.5887 9.66797 17.4771 9.47938C17.2541 9.10264 16.8514 8.53339 16.1514 7.83343C15.4515 7.13348 14.8822 6.73078 14.5055 6.50781C14.3169 6.39619 14.1757 6.32909 14.0893 6.29209C14.0461 6.27358 14.0165 6.26254 14.0015 6.25721L13.9907 6.25352C13.5987 6.13564 13.3729 5.72419 13.4857 5.3293Z"></path>
                                     </g>
                                 </svg>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -922,7 +922,7 @@
             <div class="w-full flex flex-wrap items-center pb-16">
                 <div class="w-full sm:w-1/2 xl:w-1/3 p-3 group">
                     <div class="w-full lg:py-16 xl:py-0 lg:pe-16 lg:flex justify-start items-end">
-                        <img :src="'/images/image-36.png'" class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl" alt="image" />
+                        <img :src="'/images/image-36.png'" loading="lazy" class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl" alt="image" />
                         <div
                             class="rounded-3xl p-10 md:min-w-[350px] mb-5 mt-5 lg:mt-0 lg:-ml-[320px] lg:-mb-[60px] bg-white text-[14px] text-gray-700 font-medium leading-6 duration-500 group-hover:lg:-mb-[95px] group-hover:lg:-ml-[300px]">
                             <q> Home is where love resides, memories are created, and dreams are nurtured. I have found
@@ -930,9 +930,9 @@
                                 own </q>
 
                             <div class="flex justify-start items-center mt-5">
-                                <img :src="'/images/image-32.png'"
+                                <img :src="'/images/image-32.png'" loading="lazy"
                                      class="size-[45px] min-w-[45px] min-h-[45px] bg-center rounded-full bg-cover object-cover"
-                                     alt="image">
+                                     alt="image" />
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Andrew Simon</div>
                                     <div class="font-normal -mt-1 text-[13px] text-gray-400"> Property Expert</div>
@@ -943,7 +943,7 @@
                 </div>
                 <div class="w-full sm:w-1/2 xl:w-1/3 p-3 group">
                     <div class="w-full lg:py-16 xl:py-0 lg:pe-16 lg:flex justify-start items-end">
-                        <img :src="'/images/image-37.png'" class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl" alt="image" />
+                        <img :src="'/images/image-37.png'" loading="lazy" class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl" alt="image" />
                         <div
                             class="rounded-3xl p-10 md:min-w-[350px] mb-5 mt-5 lg:mt-0 lg:-ml-[320px] lg:-mb-[60px] bg-white text-[14px] text-gray-700 font-medium leading-6 duration-500 group-hover:lg:-mb-[95px] group-hover:lg:-ml-[300px]">
                             <q> Home is where love resides, memories are created, and dreams are nurtured. I have found
@@ -951,9 +951,9 @@
                                 own </q>
 
                             <div class="flex justify-start items-center mt-5">
-                                <img :src="'/images/image-34.png'"
+                                <img :src="'/images/image-34.png'" loading="lazy"
                                      class="size-[45px] min-w-[45px] min-h-[45px] bg-center rounded-full bg-cover object-cover"
-                                     alt="image">
+                                     alt="image" />
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Ralph Edwards</div>
                                     <div class="font-normal -mt-1 text-[13px] text-gray-400"> Property Expert</div>
@@ -964,7 +964,7 @@
                 </div>
                 <div class="w-full sm:w-1/2 xl:w-1/3 p-3 group">
                     <div class="w-full lg:py-16 xl:py-0 lg:pe-16 lg:flex justify-start items-end">
-                        <img :src="'/images/image-38.png'" class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl" alt="image" />
+                        <img :src="'/images/image-38.png'" loading="lazy" class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl" alt="image" />
                         <div
                             class="rounded-3xl p-10 md:min-w-[350px] mb-5 mt-5 lg:mt-0 lg:-ml-[320px] lg:-mb-[60px] bg-white text-[14px] text-gray-700 font-medium leading-6 duration-500 group-hover:lg:-mb-[95px] group-hover:lg:-ml-[300px]">
                             <q> Home is where love resides, memories are created, and dreams are nurtured. I have found
@@ -972,9 +972,9 @@
                                 own </q>
 
                             <div class="flex justify-start items-center mt-5">
-                                <img :src="'/images/image-36.png'"
+                                <img :src="'/images/image-36.png'" loading="lazy"
                                      class="size-[45px] min-w-[45px] min-h-[45px] bg-center rounded-full bg-cover object-cover"
-                                     alt="image">
+                                     alt="image" />
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Andrew Jorden</div>
                                     <div class="font-normal -mt-1 text-[13px] text-gray-400"> Property Expert</div>
@@ -1001,7 +1001,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <a href="javascript:void(0)"
+                    <router-link :to="{name:'BlogDetails'}"
                        class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-white rounded-[50px] text-black duration-500 hover:bg-white/70">
                         <span class="flex justify-center items-center">
                             Browse all blog
@@ -1015,16 +1015,16 @@
                                 </g>
                             </svg>
                         </span>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <div class="w-full flex flex-wrap items-center">
                 <div class="w-full sm:w-1/2 p-3 group">
                     <div class="rounded-3xl overflow-hidden duration-500 group-hover:bg-white/10">
                         <div class="rounded-3xl overflow-hidden">
-                            <img :src="'/images/image-37.png'"
+                            <img :src="'/images/image-37.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
-                                 alt="image">
+                                 alt="image" />
                         </div>
                         <div class="p-7">
                             <div class="my-3 text-[13px] flex justify-between items-center text-white">
@@ -1035,7 +1035,7 @@
                                 Education for Success
                             </div>
                             <div class="flex justify-start">
-                                <a href="javascript:void(0)"
+                                <router-link :to="{name:'BlogDetails'}"
                                    class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
                                 <span class="w-full flex justify-center items-center">
                                     Read more
@@ -1051,7 +1051,7 @@
                                         </g>
                                     </svg>
                                 </span>
-                                </a>
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -1059,9 +1059,9 @@
                 <div class="w-full sm:w-1/2 p-3 group">
                     <div class="rounded-3xl overflow-hidden duration-500 group-hover:bg-white/10">
                         <div class="rounded-3xl overflow-hidden">
-                            <img :src="'/images/image-38.png'"
+                            <img :src="'/images/image-38.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
-                                 alt="image">
+                                 alt="image" />
                         </div>
                         <div class="p-7">
                             <div class="my-3 text-[13px] flex justify-between items-center text-white">
@@ -1072,7 +1072,7 @@
                                 Education for Success
                             </div>
                             <div class="flex justify-start">
-                                <a href="javascript:void(0)"
+                                <router-link :to="{name:'BlogDetails'}"
                                    class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
                                 <span class="w-full flex justify-center items-center">
                                     Read more
@@ -1088,7 +1088,7 @@
                                         </g>
                                     </svg>
                                 </span>
-                                </a>
+                                </router-link>
                             </div>
                         </div>
                     </div>
