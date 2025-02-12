@@ -1,6 +1,6 @@
 <template>
 
-    <div class="h-[100px]"></div>
+    <div class="h-[30px]"></div>
 
     <section class="w-full">
         <div class="mx-auto w-full lg:w-[1000px] px-5 lg:px-0">

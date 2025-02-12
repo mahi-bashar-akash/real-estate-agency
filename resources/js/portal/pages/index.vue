@@ -58,24 +58,14 @@
     </section>
 
     <!-- Count content -->
-    <section class="w-full py-5 sm:py-10">
+    <section class="w-full py-5 sm:py-10" ref="counterSection">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] px-3 py-2 sm:px-2 sm:py-0">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 text-center">
-                <div>
-                    <div class="text-[25px] sm:text-[35px]"> 850+</div>
-                    <div class="text-[17px]"> ELEGANT APARTMENTS</div>
-                </div>
-                <div>
-                    <div class="text-[25px] sm:text-[35px]"> 950+</div>
-                    <div class="text-[17px]"> LUXURY HOUSES</div>
-                </div>
-                <div>
-                    <div class="text-[25px] sm:text-[35px]"> 18K+</div>
-                    <div class="text-[17px]"> SATISFIED GUESTS</div>
-                </div>
-                <div>
-                    <div class="text-[25px] sm:text-[35px]"> 2K+</div>
-                    <div class="text-[17px]"> HAPPY OWNERS</div>
+                <div v-for="(value, key) in counters" :key="key">
+                    <div class="text-[25px] sm:text-[35px]">
+                        {{ value }}
+                    </div>
+                    <div class="text-[17px]">{{ labels[key] }}</div>
                 </div>
             </div>
         </div>
@@ -1110,17 +1100,84 @@
 </template>
 
 <script>
-
 export default {
-    data(){
-        return {}
+    data() {
+        return {
+            counters: {
+                annualPartner: 0,
+                completedProjects: 0,
+                happyCustomers: 0,
+                researchWork: 0,
+            },
+            targetCounters: {
+                annualPartner: 250,
+                completedProjects: 380,
+                happyCustomers: 490,
+                researchWork: 98,
+            },
+            labels: {
+                annualPartner: "ANNUAL PARTNERS",
+                completedProjects: "COMPLETED PROJECTS",
+                happyCustomers: "HAPPY CUSTOMERS",
+                researchWork: "RESEARCH WORK",
+            },
+            hasAnimated: false,
+        };
     },
     mounted() {
-
+        this.observeSection();
     },
     methods: {
 
-    }
-}
+        startCounting() {
+            if (this.hasAnimated) return;
+            this.hasAnimated = true;
 
+            Object.keys(this.counters).forEach((key) => {
+                this.animateCounter(key);
+            });
+        },
+
+        animateCounter(counterKey) {
+            const target = this.targetCounters[counterKey];
+            let count = 0;
+            const increment = Math.ceil(target / 100);
+            const updateCounter = () => {
+                if (count < target) {
+                    count += increment;
+                    this.counters[counterKey] = Math.min(count, target);
+                    requestAnimationFrame(updateCounter);
+                }
+            };
+            requestAnimationFrame(updateCounter);
+        },
+
+        resetCounters() {
+            if (!this.hasAnimated) return;
+            this.hasAnimated = false;
+            Object.keys(this.counters).forEach((key) => {
+                this.counters[key] = 0;
+            });
+        },
+
+        observeSection() {
+            const section = this.$refs.counterSection;
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            this.startCounting();
+                        } else {
+                            this.resetCounters();
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            );
+            observer.observe(section);
+        },
+
+    },
+};
 </script>
+

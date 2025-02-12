@@ -1,10 +1,13 @@
 <template>
 
-    <div class="h-[100px]"></div>
+    <div class="h-[30px]"></div>
 
     <div class="w-full p-3">
-        <div class="mx-auto w-full max-w-[430px] p-10 border font-medium">
-            <router-view/>
+        <div class="mx-auto w-full max-w-[500px] border font-medium">
+            <img :src="'/images/authentication-wallpaper.jpg'" class="w-full h-[200px] object-cover bg-cover object-center bg-center" alt="authentication-bg" />
+            <div class="p-10">
+                <router-view/>
+            </div>
         </div>
     </div>
 
