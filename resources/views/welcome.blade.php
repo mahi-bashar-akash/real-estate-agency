@@ -10,26 +10,26 @@
     <link rel="apple-touch-icon" href="{{asset('/images/logo.svg')}}">
     <title> Real Estate Agency </title>
 
-    <meta name="description" content="Find your dream home with DreamHome Realty. Browse listings, buy, sell, or rent properties with ease. Expert agents, best deals, and seamless transactions.">
+    <meta name="description" content="Find your dream home with Real Estate Agency. Browse listings, buy, sell, or rent properties with ease. Expert agents, best deals, and seamless transactions.">
     <meta name="keywords" content="real estate agency, buy house, sell property, rent apartment, real estate listings, dream home, investment properties, commercial real estate, property management, luxury homes">
     <meta name="subject" content="Your Trusted Real Estate Agency">
-    <meta name="summary" content="Find your dream home with DreamHome Realty. Trusted agents, best deals, and seamless transactions.">
+    <meta name="summary" content="Find your dream home with Real Estate Agency. Trusted agents, best deals, and seamless transactions.">
     <meta name="url" content="{{url()->current()}}">
     <meta name="identifier-URL" content="{{url()->current()}}">
-    <meta name="author" content="DreamHome Realty">
+    <meta name="author" content="Real Estate Agency">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:site_name" content="DreamHome Realty">
-    <meta property="og:title" content="DreamHome Realty - Find Your Dream Home">
+    <meta property="og:site_name" content="Real Estate Agency">
+    <meta property="og:title" content="Real Estate Agency - Find Your Dream Home">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{url()->current()}}">
-    <meta property="og:description" content="Find your dream home with DreamHome Realty. Browse listings, buy, sell, or rent properties with ease.">
+    <meta property="og:description" content="Find your dream home with Real Estate Agency. Browse listings, buy, sell, or rent properties with ease.">
     <meta property="og:image" content="{{asset('/images/logo.svg')}}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{url()->current()}}">
-    <meta property="twitter:title" content="DreamHome Realty - Find Your Dream Home">
-    <meta property="twitter:description" content="Find your dream home with DreamHome Realty. Browse listings, buy, sell, or rent properties with ease.">
+    <meta property="twitter:title" content="Real Estate Agency - Find Your Dream Home">
+    <meta property="twitter:description" content="Find your dream home with Real Estate Agency. Browse listings, buy, sell, or rent properties with ease.">
     <meta property="twitter:image" content="{{asset('/images/logo.svg')}}">
 
     <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE"/>
@@ -37,7 +37,7 @@
         {
           "@context": "https://schema.org",
           "@type": "RealEstateAgent",
-          "name": "DreamHome Realty",
+          "name": "Real Estate Agency",
           "url": "https://real-estate-agency.thethemeai.com/",
           "logo": "https://real-estate-agency.thethemeai.com/images/logo.svg",
           "description": "Your trusted real estate agency for buying, selling, and renting properties.",
