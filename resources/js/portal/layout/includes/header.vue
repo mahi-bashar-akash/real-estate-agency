@@ -51,6 +51,12 @@
                     <router-link :to="{name: 'Team'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Team', 'text-blue-500' : $route.name === 'Team' }" @click="navbarToggle()">
                         Team
                     </router-link>
+                    <router-link :to="{name: 'SignIn'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'SignIn', 'text-blue-500' : $route.name === 'SignIn' }" @click="navbarToggle()">
+                        SignIn
+                    </router-link>
+                    <router-link :to="{name: 'SignUp'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'SignUp', 'text-blue-500' : $route.name === 'SignUp' }" @click="navbarToggle()">
+                        SignUp
+                    </router-link>
                 </div>
             </div>
 
