@@ -21,177 +21,174 @@
                         </div>
                     </div>
                 </div>
+                <div class="w-full sm:w-1/2 lg:w-1/3 py-2 mb:py-4 px-2">
+                    <label for="sort" hidden="hidden">Sort</label>
+                    <div class="w-full relative">
+                        <select name="sort" id="sort" class="text-[13px] h-[42px] rounded-md w-full outline-0 border border-gray-300 focus-visible:border-blue-900 duration-500 px-5 appearance-none py-2" required autocomplete="off">
+                            <option value=""> Default </option>
+                            <option value=""> A to Z </option>
+                            <option value=""> Z to A </option>
+                        </select>
+                        <div class="absolute top-0 bottom-0 end-0 h-full flex justify-center items-center pointer-events-none pe-2">
+                            <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g id="Arrow / Caret_Down_SM">
+                                        <path id="Vector" d="M15 11L12 14L9 11" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="w-full flex flex-wrap text-center">
+            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 text-center gap-5 px-3">
 
-                <!-- agents member card -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 px-2 py-3">
-                    <div class="w-full border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
-                        <div class="w-full bg-white pb-5">
-                            <div class="py-5">
-                                <img :src="'/images/agent-1.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
-                            </div>
-                            <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
-                                Samuel Palmer
-                            </div>
-                            <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
-                            <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
-                                Company Agent, Modern House Real Estate
-                            </div>
-                            <router-link :to="{name: 'TeamDetails'}"
-                                         class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
-                                View Profile
-                            </router-link>
+                <div class="w-full rounded-xl overflow-hidden border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
+                    <div class="w-full bg-white pb-5">
+                        <div class="py-5">
+                            <img :src="'/images/agent-1.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
                         </div>
+                        <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
+                            Samuel Palmer
+                        </div>
+                        <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
+                        <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
+                            Company Agent, Modern House Real Estate
+                        </div>
+                        <router-link :to="{name: 'TeamDetails'}"
+                                     class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                            View Profile
+                        </router-link>
+                    </div>
 
+                </div>
+
+                <div class="w-full rounded-xl overflow-hidden border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
+                    <div class="w-full bg-white pb-5">
+                        <div class="py-5">
+                            <img :src="'/images/agent-2.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
+                        </div>
+                        <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
+                            Vincent Fuller
+                        </div>
+                        <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
+                        <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
+                            Company Agent , Modern House Real Estate
+                        </div>
+                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                            View Profile
+                        </router-link>
                     </div>
                 </div>
 
-                <!-- agents member card -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 px-2 py-3">
-                    <div class="w-full border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
-                        <div class="w-full bg-white pb-5">
-                            <div class="py-5">
-                                <img :src="'/images/agent-2.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
-                            </div>
-                            <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
-                                Vincent Fuller
-                            </div>
-                            <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
-                            <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
-                                Company Agent , Modern House Real Estate
-                            </div>
-                            <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
-                                View Profile
-                            </router-link>
+                <div class="w-full rounded-xl overflow-hidden border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
+                    <div class="w-full bg-white pb-5">
+                        <div class="py-5">
+                            <img :src="'/images/agent-3.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
                         </div>
+                        <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
+                            Brittany Watkins
+                        </div>
+                        <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
+                        <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
+                            Company Agent , Modern House Real Estate
+                        </div>
+                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                            View Profile
+                        </router-link>
                     </div>
                 </div>
 
-                <!-- agents member card -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 px-2 py-3">
-                    <div class="w-full border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
-                        <div class="w-full bg-white pb-5">
-                            <div class="py-5">
-                                <img :src="'/images/agent-3.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
-                            </div>
-                            <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
-                                Brittany Watkins
-                            </div>
-                            <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
-                            <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
-                                Company Agent , Modern House Real Estate
-                            </div>
-                            <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
-                                View Profile
-                            </router-link>
+                <div class="w-full rounded-xl overflow-hidden border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
+                    <div class="w-full bg-white pb-5">
+                        <div class="py-5">
+                            <img :src="'/images/agent-4.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
                         </div>
+                        <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
+                            Michelle Ramirez
+                        </div>
+                        <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
+                        <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
+                            Company Agent , Modern House Real Estate
+                        </div>
+                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                            View Profile
+                        </router-link>
                     </div>
                 </div>
 
-                <!-- agents member card -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 px-2 py-3">
-                    <div class="w-full border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
-                        <div class="w-full bg-white pb-5">
-                            <div class="py-5">
-                                <img :src="'/images/agent-4.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
-                            </div>
-                            <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
-                                Michelle Ramirez
-                            </div>
-                            <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
-                            <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
-                                Company Agent , Modern House Real Estate
-                            </div>
-                            <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
-                                View Profile
-                            </router-link>
+                <div class="w-full rounded-xl overflow-hidden border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
+                    <div class="w-full bg-white pb-5">
+                        <div class="py-5">
+                            <img :src="'/images/agent-6.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
                         </div>
+                        <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
+                            Jose Delgado
+                        </div>
+                        <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
+                        <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
+                            Company Agent , Modern House Real Estate
+                        </div>
+                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                            View Profile
+                        </router-link>
                     </div>
                 </div>
 
-                <!-- agents member card -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 px-2 py-3">
-                    <div class="w-full border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
-                        <div class="w-full bg-white pb-5">
-                            <div class="py-5">
-                                <img :src="'/images/agent-6.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
-                            </div>
-                            <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
-                                Jose Delgado
-                            </div>
-                            <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
-                            <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
-                                Company Agent , Modern House Real Estate
-                            </div>
-                            <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
-                                View Profile
-                            </router-link>
+                <div class="w-full rounded-xl overflow-hidden border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
+                    <div class="w-full bg-white pb-5">
+                        <div class="py-5">
+                            <img :src="'/images/agent-7.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
                         </div>
+                        <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
+                            Ana Beltran
+                        </div>
+                        <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
+                        <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
+                            Company Agent , Modern House Real Estate
+                        </div>
+                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                            View Profile
+                        </router-link>
                     </div>
                 </div>
 
-                <!-- agents member card -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 px-2 py-3">
-                    <div class="w-full border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
-                        <div class="w-full bg-white pb-5">
-                            <div class="py-5">
-                                <img :src="'/images/agent-7.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
-                            </div>
-                            <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
-                                Ana Beltran
-                            </div>
-                            <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
-                            <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
-                                Company Agent , Modern House Real Estate
-                            </div>
-                            <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
-                                View Profile
-                            </router-link>
+                <div class="w-full rounded-xl overflow-hidden border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
+                    <div class="w-full bg-white pb-5">
+                        <div class="py-5">
+                            <img :src="'/images/agent-8.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
                         </div>
+                        <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
+                            Maria Villalobos
+                        </div>
+                        <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
+                        <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
+                            Company Agent , Modern House Real Estate
+                        </div>
+                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                            View Profile
+                        </router-link>
                     </div>
                 </div>
 
-                <!-- agents member card -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 px-2 py-3">
-                    <div class="w-full border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
-                        <div class="w-full bg-white pb-5">
-                            <div class="py-5">
-                                <img :src="'/images/agent-8.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
-                            </div>
-                            <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
-                                Maria Villalobos
-                            </div>
-                            <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
-                            <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
-                                Company Agent , Modern House Real Estate
-                            </div>
-                            <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
-                                View Profile
-                            </router-link>
+                <div class="w-full rounded-xl overflow-hidden border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
+                    <div class="w-full bg-white pb-5">
+                        <div class="py-5">
+                            <img :src="'/images/agent-9.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
                         </div>
-                    </div>
-                </div>
-
-                <!-- agents member card -->
-                <div class="w-full sm:w-1/2 lg:w-1/4 px-2 py-3">
-                    <div class="w-full border border-transparent [background:linear-gradient(45deg,#fff,theme(colors.white)_50%,#fff)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray.300)_80%,theme(colors.indigo.500)_86%,theme(colors.indigo.300)_90%,theme(colors.indigo.500)_94%,theme(colors.gray.300))_border-box] animate-border" style="animation: rotate-border 4s linear infinite;">
-                        <div class="w-full bg-white pb-5">
-                            <div class="py-5">
-                                <img :src="'/images/agent-9.jpg'" class="rounded-full size-[120px] mx-auto" alt="profile">
-                            </div>
-                            <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
-                                Nicholas Javier
-                            </div>
-                            <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
-                            <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
-                                Company Agent , Modern House Real Estate
-                            </div>
-                            <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
-                                View Profile
-                            </router-link>
+                        <div class="mb-2 text-[18px] text-center text-blue-500 px-3">
+                            Nicholas Javier
                         </div>
+                        <div class="mb-5 text-[13px] text-center text-gray-600 px-3"> 5 Properties </div>
+                        <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
+                            Company Agent , Modern House Real Estate
+                        </div>
+                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                            View Profile
+                        </router-link>
                     </div>
                 </div>
 
