@@ -3,28 +3,35 @@
     <!-- Hero content -->
     <section class="w-full py-5 sm:py-10">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] py-2 sm:px-2 sm:py-0">
+
             <div class="w-full flex flex-wrap">
+
                 <div class="w-full lg:w-1/2 p-5">
                     <router-link :to="{name:'About'}" class="decoration-0 block h-full">
                         <div class="overflow-hidden group h-full rounded-3xl">
                             <img :src="'/images/image-01.png'" loading="lazy"
-                                 class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1" />
+                                 class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
+                                 alt="image-1"/>
                         </div>
                     </router-link>
                 </div>
+
                 <div class="w-full lg:w-1/2 p-5">
+
                     <div
                         class="text-[25px] sm:text-[35px] md:text-[45px] xl:text-[65px] font-semibold mb-5 leading-[40px] sm:leading-[50px] xl:leading-[70px]">
                         Discover Quality <br>
                         Living Space
                     </div>
+
                     <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
                         We aim to build contemporary homes whose beauty perishes in the delicate touches of minutiae
                         lines and shapes. Within our plan, we endowed Villa with interestingly high-contrast spatial
                         experiences.
                     </div>
+
                     <router-link :to="{name:'About'}"
-                       class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
+                                 class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Request a visit
                             <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -38,52 +45,72 @@
                             </svg>
                         </span>
                     </router-link>
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-3 mt-10">
+
                         <router-link :to="{name:'About'}">
                             <div class="overflow-hidden group h-full rounded-3xl">
                                 <img :src="'/images/image-02.png'" loading="lazy"
-                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1" />
+                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
+                                     alt="image-1"/>
                             </div>
                         </router-link>
+
                         <router-link :to="{name:'About'}">
                             <div class="overflow-hidden group h-full rounded-3xl">
                                 <img :src="'/images/image-03.png'" loading="lazy"
-                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125" alt="image-1" />
+                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
+                                     alt="image-1"/>
                             </div>
                         </router-link>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
     </section>
 
     <!-- Count content -->
     <section class="w-full py-5 sm:py-10" ref="counterSection">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] px-3 py-2 sm:px-2 sm:py-0">
+
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 text-center">
+
                 <div v-for="(value, key) in counters" :key="key">
-                    <div class="text-[25px] sm:text-[35px]">
-                        {{ value }}
-                    </div>
-                    <div class="text-[17px]">{{ labels[key] }}</div>
+
+                    <div class="text-[25px] sm:text-[35px]"> {{ value }}</div>
+
+                    <div class="text-[17px]"> {{ labels[key] }}</div>
+
                 </div>
+
             </div>
+
         </div>
     </section>
 
     <!-- About us content -->
     <section class="w-full py-5 sm:py-10 bg-gray-200">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] px-3 py-2 sm:px-2 sm:py-0">
+
             <div class="w-full flex flex-wrap">
+
                 <div class="w-full lg:w-1/2 p-5">
+
                     <div class="text-[25px] sm:text-[35px] xl:text-[45px] font-semibold mb-5"> About Us</div>
+
                     <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
                         We are a real estate firm with over 20 years of expertise, and our main goal is to provide
                         amazing locations to our partners and clients. Within the luxury real estate market,
                         our agency offers customized solutions. We are a real estate firm with over 20 years
                         of expertise. Our main goal is to provide amazing locations to our partners and clients.
                     </div>
+
                     <ul class="py-5">
+
                         <li class="flex justify-start items-center mb-3">
                             <div class="me-2">
                                 <svg viewBox="0 0 20 20" class="size-[20px]" xmlns="http://www.w3.org/2000/svg"
@@ -98,6 +125,7 @@
                             </div>
                             Quality real estate services
                         </li>
+
                         <li class="flex justify-start items-center mb-3">
                             <div class="me-2">
                                 <svg viewBox="0 0 20 20" class="size-[20px]" xmlns="http://www.w3.org/2000/svg"
@@ -112,6 +140,7 @@
                             </div>
                             100% Satisfaction guarantee
                         </li>
+
                         <li class="flex justify-start items-center mb-3">
                             <div class="me-2">
                                 <svg viewBox="0 0 20 20" class="size-[20px]" xmlns="http://www.w3.org/2000/svg"
@@ -126,6 +155,7 @@
                             </div>
                             Highly professional team
                         </li>
+
                         <li class="flex justify-start items-center mb-3">
                             <div class="me-2">
                                 <svg viewBox="0 0 20 20" class="size-[20px]" xmlns="http://www.w3.org/2000/svg"
@@ -140,9 +170,11 @@
                             </div>
                             Dealing always on time
                         </li>
+
                     </ul>
+
                     <router-link :to="{name:'About'}"
-                       class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
+                                 class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             More about Realar
                             <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -156,40 +188,51 @@
                             </svg>
                         </span>
                     </router-link>
+
                 </div>
+
                 <div class="w-full lg:w-1/2 p-5">
                     <div class="relative sm:p-10">
                         <img :src="'/images/image-07.png'" loading="lazy"
                              class="object-cover bg-cover bg-center w-full h-[450px] sm:h-[650px] rounded-3xl"
-                             alt="image" />
+                             alt="image"/>
                         <div class="absolute bottom-5 lg:-bottom-10 start-5 lg:-start-16">
                             <img :src="'/images/image-06.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-[200px] h-[200px] sm:w-[350px] duration-500 ease-linear sm:h-[350px] rounded-3xl border-8 border-gray-200 up-down-animation"
-                                 alt="image" />
+                                 alt="image"/>
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
     <!-- Our services content -->
     <section class="w-full py-5 sm:py-10">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] px-3 py-2 sm:px-2 sm:py-0">
+
             <div class="w-full py-5 sm:py-10 flex flex-wrap items-center">
+
                 <div class="w-full lg:w-1/2 p-3">
+
                     <div
                         class="text-[25px] sm:text-[35px] xl:text-[45px] leading-[30px] sm:leading-[40px] xl:leading-[70px] font-semibold mb-5">
                         Take A Look At Our Services
                     </div>
-                    <div class="text-[17px]"> We are a real estate firm with over 20 years of expertise, and our main
-                        goal is to provide amazing locations to our partners and clients. Within the luxury real estate
-                        market, our agency offers customized solutions.
+
+                    <div class="text-[17px]">
+                        We are a real estate firm with over 20 years of expertise, and our main
+                        goal is to provide amazing locations to our partners and clients. Within the
+                        luxury real estate market, our agency offers customized solutions.
                     </div>
+
                 </div>
+
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
                     <router-link :to="{name:'Properties'}"
-                       class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
+                                 class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Browse all services
                             <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -204,54 +247,77 @@
                         </span>
                     </router-link>
                 </div>
+
             </div>
+
             <div class="w-full flex flex-wrap items-center">
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-08.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-08.png'" loading="lazy"
+                             class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                             alt="image"/>
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Property Valuation</div>
-                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5"> All-inclusive real estate services to
-                        facilitate the easy and confident purchase, sale, and management of your properties.
+                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
+                        All-inclusive real estate services to facilitate the easy
+                        and confident purchase, sale, and management of your properties.
                     </div>
                 </div>
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-09.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-09.png'" loading="lazy"
+                             class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                             alt="image"/>
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Property Management</div>
-                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5"> All-inclusive real estate services to
-                        facilitate the easy and confident purchase, sale, and management of your properties.
+                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
+                        All-inclusive real estate services to facilitate the easy
+                        and confident purchase, sale, and management of your properties.
                     </div>
                 </div>
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-10.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-10.png'" loading="lazy"
+                             class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                             alt="image"/>
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Invest Opportunities</div>
-                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5"> All-inclusive real estate services to
-                        facilitate the easy and confident purchase, sale, and management of your properties.
+                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
+                        All-inclusive real estate services to facilitate the easy and
+                        confident purchase, sale, and management of your properties.
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
     <!-- Our Project content -->
     <section class="w-full py-5 sm:py-10 bg-[#364440]">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] px-3 py-2 sm:px-2 sm:py-0">
+
             <div class="w-full py-5 sm:py-10 flex flex-wrap items-center">
+
                 <div class="w-full lg:w-1/2 p-3">
-                    <div class="text-[25px] sm:text-[35px] xl:text-[45px] leading-[30px] sm:leading-[40px] xl:leading-[70px] mb-5 text-white font-semibold">
+
+                    <div
+                        class="text-[25px] sm:text-[35px] xl:text-[45px] leading-[30px] sm:leading-[40px] xl:leading-[70px] mb-5 text-white font-semibold">
                         Browse Our Latest Projects
                     </div>
+
                     <div class="text-[17px] text-white"> We are a real estate firm with over 20 years of expertise, and
                         our main goal is to provide amazing locations to our partners and clients.
                     </div>
+
                 </div>
+
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
                     <router-link :to="{name:'Properties'}"
-                       class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-white rounded-[50px] text-black duration-500 hover:bg-white/70">
+                                 class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-white rounded-[50px] text-black duration-500 hover:bg-white/70">
                         <span class="flex justify-center items-center">
                             Browse all projects
                             <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -266,77 +332,102 @@
                         </span>
                     </router-link>
                 </div>
+
             </div>
+
             <div class="w-full flex flex-wrap items-center">
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-11.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-11.png'" loading="lazy"
+                             class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                             alt="image"/>
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Vroondal</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
-                        <div class="truncate-to-2-line"> All-inclusive real estate services to facilitate the easy and
+                        <div class="truncate-to-2-line">
+                            All-inclusive real estate services to facilitate the easy and
                             confident purchase, sale, and management of your properties.
                         </div>
                     </div>
                 </div>
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-12.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-12.png'" loading="lazy"
+                             class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                             alt="image"/>
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Sakura</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
-                        <div class="truncate-to-2-line"> All-inclusive real estate services to facilitate the easy and
+                        <div class="truncate-to-2-line">
+                            All-inclusive real estate services to facilitate the easy and
                             confident purchase, sale, and management of your properties.
                         </div>
                     </div>
                 </div>
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-13.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-13.png'" loading="lazy"
+                             class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                             alt="image"/>
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Vroondal</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
-                        <div class="truncate-to-2-line"> All-inclusive real estate services to facilitate the easy and
+                        <div class="truncate-to-2-line">
+                            All-inclusive real estate services to facilitate the easy and
                             confident purchase, sale, and management of your properties.
                         </div>
                     </div>
                 </div>
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-14.png'" loading="lazy" class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125" alt="image" />
+                        <img :src="'/images/image-14.png'" loading="lazy"
+                             class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                             alt="image"/>
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Joidarpark</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
-                        <div class="truncate-to-2-line"> All-inclusive real estate services to facilitate the easy and
+                        <div class="truncate-to-2-line">
+                            All-inclusive real estate services to facilitate the easy and
                             confident purchase, sale, and management of your properties.
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
     <!-- Business solution -->
     <section class="w-full py-5 sm:py-10">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] px-3 py-2 sm:px-2 sm:py-0">
-            <div class="text-[25px] sm:text-[35px] xl:text-[45px] mb-5 text-center font-semibold"> Book Business
-                Solutions
+
+            <div class="text-[25px] sm:text-[35px] xl:text-[45px] mb-5 text-center font-semibold">
+                Book Business Solutions
             </div>
+
             <div class="flex justify-center px-3">
                 <div class="w-full max-w-[650px]">
                     <form class="w-full flex flex-wrap">
+
                         <div class="w-full sm:w-1/2 sm:pe-3 mb-4">
                             <label for="full-name" class="mb-1 block font-semibold"> Full Name </label>
                             <input type="text" id="full-name" name="name" placeholder="Enter your name"
                                    class="w-full outline-0 border border-gray-300 duration-500 focus-visible:border-green-800 py-3 px-5 rounded-lg"
                                    required autocomplete="off">
                         </div>
+
                         <div class="w-full sm:w-1/2 mb-4">
                             <label for="email" class="mb-1 block font-semibold"> Email </label>
                             <input id="email" type="email" name="email" placeholder="Enter your email"
                                    class="w-full outline-0 border border-gray-300 duration-500 focus-visible:border-green-800 py-3 px-5 rounded-lg"
                                    required autocomplete="off">
                         </div>
+
                         <div class="w-full mb-4">
                             <label for="type" class="mb-1 block font-semibold"> Type </label>
                             <select name="type" id="type"
@@ -348,12 +439,14 @@
                                 <option value="deluxe"> Deluxe</option>
                             </select>
                         </div>
+
                         <div class="w-full mb-4">
                             <label for="message" class="mb-1 block font-semibold"> Message </label>
                             <textarea name="message" id="message" placeholder="Type here..."
                                       class="w-full outline-0 border border-gray-300 duration-500 focus-visible:border-green-800 p-5 rounded-lg"
                                       cols="30" rows="5" required autocomplete="off"></textarea>
                         </div>
+
                         <div class="mb-4">
                             <button type="submit"
                                     class="inline-block font-semibold py-3 px-10 decoration-0 outline-0 border-0 bg-black rounded-[30px] text-white duration-500 hover:bg-black/70">
@@ -374,33 +467,45 @@
                                 </span>
                             </button>
                         </div>
+
                     </form>
                 </div>
             </div>
+
         </div>
     </section>
 
     <!-- Our featured content -->
     <section class="w-full py-5 sm:py-10 bg-gray-200">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] px-3 py-2 sm:px-2 sm:py-0">
+
             <div class="w-full py-5 sm:py-10 flex flex-wrap items-center">
+
                 <div class="w-full lg:w-1/2 p-3">
-                    <hr class="w-[35px] border border-black">
+
+                    <hr class="w-[35px] border border-black"/>
+
                     <div class="text-[17px] my-1">
                         Featured Listing
                     </div>
-                    <hr class="w-[35px] border border-black">
+
+                    <hr class="w-[35px] border border-black"/>
+
                     <div
                         class="text-[25px] sm:text-[35px] xl:text-[45px] mt-5 leading-[30px] sm:leading-[40px] xl:leading-[70px] mb-5 font-semibold">
                         Featured Listings
                     </div>
-                    <div class="text-[17px]"> Quis nulla blandit vulputate morbi adipiscing sem vestibulum. Nulla turpis
+
+                    <div class="text-[17px]">
+                        Quis nulla blandit vulputate morbi adipiscing sem vestibulum. Nulla turpis
                         integer dui sed posuere sem. Id molestie mi arcu gravida lorem potenti.
                     </div>
+
                 </div>
+
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
                     <router-link :to="{name:'Properties'}"
-                       class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
+                                 class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Browse all featured
                             <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -415,17 +520,24 @@
                         </span>
                     </router-link>
                 </div>
+
             </div>
+
             <div class="w-full flex flex-wrap items-center">
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
+
                     <div class="border border-gray-300 bg-white rounded-3xl">
+
                         <div class="overflow-hidden rounded-3xl">
                             <img :src="'/images/image-18.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image" />
+                                 alt="image"/>
                         </div>
+
                         <div class="px-5 xl:px-10 py-5">
+
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
+
                             <div class="my-3 flex gap-2 items-start leading-6 text-gray-700">
                                 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                                      class="bi bi-geo-alt size-[20px] min-w-[20px] mt-2 xl:mt-0 fill-gray-700">
@@ -440,20 +552,23 @@
                                 </svg>
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
+
                             <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
                                 <div class="truncate-to-2-line">
-                                    All-inclusive real estate services to facilitate the easy and confident purchase,
-                                    sale, and management of your properties.
+                                    All-inclusive real estate services to facilitate the easy and
+                                    confident purchase, sale, and management of your properties.
                                 </div>
                             </div>
+
                             <div class="flex justify-around items-center text-gray-500">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
+
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
                                 <router-link :to="{name:'Properties'}"
-                                   class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
+                                             class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
                                         <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -470,18 +585,26 @@
                                     </span>
                                 </router-link>
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
+
                         <div class="overflow-hidden rounded-3xl">
                             <img :src="'/images/image-19.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image" />
+                                 alt="image"/>
                         </div>
+
                         <div class="px-5 xl:px-10 py-5">
+
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
+
                             <div class="my-3 flex gap-2 items-start leading-6 text-gray-700">
                                 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                                      class="bi bi-geo-alt size-[20px] min-w-[20px] mt-2 xl:mt-0 fill-gray-700">
@@ -496,20 +619,23 @@
                                 </svg>
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
+
                             <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
                                 <div class="truncate-to-2-line">
-                                    All-inclusive real estate services to facilitate the easy and confident purchase,
-                                    sale, and management of your properties.
+                                    All-inclusive real estate services to facilitate the easy and
+                                    confident purchase, sale, and management of your properties.
                                 </div>
                             </div>
+
                             <div class="flex justify-around items-center text-gray-500">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
+
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
                                 <router-link :to="{name:'Properties'}"
-                                   class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
+                                             class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
                                         <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -526,18 +652,25 @@
                                     </span>
                                 </router-link>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
+
                         <div class="overflow-hidden rounded-3xl">
                             <img :src="'/images/image-20.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image" />
+                                 alt="image"/>
                         </div>
+
                         <div class="px-5 xl:px-10 py-5">
+
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
+
                             <div class="my-3 flex gap-2 items-start leading-6 text-gray-700">
                                 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                                      class="bi bi-geo-alt size-[20px] min-w-[20px] mt-2 xl:mt-0 fill-gray-700">
@@ -552,20 +685,23 @@
                                 </svg>
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
+
                             <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
                                 <div class="truncate-to-2-line">
-                                    All-inclusive real estate services to facilitate the easy and confident purchase,
-                                    sale, and management of your properties.
+                                    All-inclusive real estate services to facilitate the
+                                    easy and confident purchase, sale, and management of your properties.
                                 </div>
                             </div>
+
                             <div class="flex justify-around items-center text-gray-500">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
+
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
                                 <router-link :to="{name:'Properties'}"
-                                   class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
+                                             class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
                                         <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -582,18 +718,25 @@
                                     </span>
                                 </router-link>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
+
                         <div class="overflow-hidden rounded-3xl">
                             <img :src="'/images/image-21.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image" />
+                                 alt="image"/>
                         </div>
+
                         <div class="px-5 xl:px-10 py-5">
+
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
+
                             <div class="my-3 flex gap-2 items-start leading-6 text-gray-700">
                                 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                                      class="bi bi-geo-alt size-[20px] min-w-[20px] mt-2 xl:mt-0 fill-gray-700">
@@ -608,20 +751,23 @@
                                 </svg>
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
+
                             <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
                                 <div class="truncate-to-2-line">
                                     All-inclusive real estate services to facilitate the easy and confident purchase,
                                     sale, and management of your properties.
                                 </div>
                             </div>
+
                             <div class="flex justify-around items-center text-gray-500">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
+
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
                                 <router-link :to="{name:'Properties'}"
-                                   class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
+                                             class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
                                         <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -638,18 +784,25 @@
                                     </span>
                                 </router-link>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
+
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
+
                         <div class="overflow-hidden rounded-3xl">
                             <img :src="'/images/image-22.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image" />
+                                 alt="image"/>
                         </div>
+
                         <div class="px-5 xl:px-10 py-5">
+
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
+
                             <div class="my-3 flex gap-2 items-start leading-6 text-gray-700">
                                 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                                      class="bi bi-geo-alt size-[20px] min-w-[20px] mt-2 xl:mt-0 fill-gray-700">
@@ -664,20 +817,23 @@
                                 </svg>
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
+
                             <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
                                 <div class="truncate-to-2-line">
-                                    All-inclusive real estate services to facilitate the easy and confident purchase,
-                                    sale, and management of your properties.
+                                    All-inclusive real estate services to facilitate the easy and
+                                    confident purchase, sale, and management of your properties.
                                 </div>
                             </div>
+
                             <div class="flex justify-around items-center text-gray-500">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
+
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
                                 <router-link :to="{name:'Properties'}"
-                                   class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
+                                             class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
                                         <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -702,7 +858,7 @@
                         <div class="overflow-hidden rounded-3xl">
                             <img :src="'/images/image-23.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image" />
+                                 alt="image"/>
                         </div>
                         <div class="px-5 xl:px-10 py-5">
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
@@ -733,7 +889,7 @@
                             </div>
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
                                 <router-link :to="{name:'Properties'}"
-                                   class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
+                                             class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
                                         <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -772,7 +928,7 @@
                 </div>
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
                     <router-link :to="{name:'Team'}"
-                       class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
+                                 class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             View all team
                             <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -792,7 +948,9 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-25.png'" loading="lazy" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
+                            <img :src="'/images/image-25.png'" loading="lazy"
+                                 class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
+                                 alt="image"/>
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
@@ -820,7 +978,9 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-26.png'" loading="lazy" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
+                            <img :src="'/images/image-26.png'" loading="lazy"
+                                 class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
+                                 alt="image"/>
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
@@ -848,7 +1008,9 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-27.png'" loading="lazy" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
+                            <img :src="'/images/image-27.png'" loading="lazy"
+                                 class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
+                                 alt="image"/>
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
@@ -876,7 +1038,9 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-28.png'" loading="lazy" class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]" alt="image" />
+                            <img :src="'/images/image-28.png'" loading="lazy"
+                                 class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
+                                 alt="image"/>
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
@@ -922,7 +1086,9 @@
             <div class="w-full flex flex-wrap items-center pb-16">
                 <div class="w-full sm:w-1/2 xl:w-1/3 p-3 group">
                     <div class="w-full lg:py-16 xl:py-0 lg:pe-16 lg:flex justify-start items-end">
-                        <img :src="'/images/image-36.png'" loading="lazy" class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl" alt="image" />
+                        <img :src="'/images/image-36.png'" loading="lazy"
+                             class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl"
+                             alt="image"/>
                         <div
                             class="rounded-3xl p-10 md:min-w-[350px] mb-5 mt-5 lg:mt-0 lg:-ml-[320px] lg:-mb-[60px] bg-white text-[14px] text-gray-700 font-medium leading-6 duration-500 group-hover:lg:-mb-[95px] group-hover:lg:-ml-[300px]">
                             <q> Home is where love resides, memories are created, and dreams are nurtured. I have found
@@ -932,7 +1098,7 @@
                             <div class="flex justify-start items-center mt-5">
                                 <img :src="'/images/image-32.png'" loading="lazy"
                                      class="size-[45px] min-w-[45px] min-h-[45px] bg-center rounded-full bg-cover object-cover"
-                                     alt="image" />
+                                     alt="image"/>
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Andrew Simon</div>
                                     <div class="font-normal -mt-1 text-[13px] text-gray-400"> Property Expert</div>
@@ -943,7 +1109,9 @@
                 </div>
                 <div class="w-full sm:w-1/2 xl:w-1/3 p-3 group">
                     <div class="w-full lg:py-16 xl:py-0 lg:pe-16 lg:flex justify-start items-end">
-                        <img :src="'/images/image-37.png'" loading="lazy" class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl" alt="image" />
+                        <img :src="'/images/image-37.png'" loading="lazy"
+                             class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl"
+                             alt="image"/>
                         <div
                             class="rounded-3xl p-10 md:min-w-[350px] mb-5 mt-5 lg:mt-0 lg:-ml-[320px] lg:-mb-[60px] bg-white text-[14px] text-gray-700 font-medium leading-6 duration-500 group-hover:lg:-mb-[95px] group-hover:lg:-ml-[300px]">
                             <q> Home is where love resides, memories are created, and dreams are nurtured. I have found
@@ -953,7 +1121,7 @@
                             <div class="flex justify-start items-center mt-5">
                                 <img :src="'/images/image-34.png'" loading="lazy"
                                      class="size-[45px] min-w-[45px] min-h-[45px] bg-center rounded-full bg-cover object-cover"
-                                     alt="image" />
+                                     alt="image"/>
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Ralph Edwards</div>
                                     <div class="font-normal -mt-1 text-[13px] text-gray-400"> Property Expert</div>
@@ -964,7 +1132,9 @@
                 </div>
                 <div class="w-full sm:w-1/2 xl:w-1/3 p-3 group">
                     <div class="w-full lg:py-16 xl:py-0 lg:pe-16 lg:flex justify-start items-end">
-                        <img :src="'/images/image-38.png'" loading="lazy" class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl" alt="image" />
+                        <img :src="'/images/image-38.png'" loading="lazy"
+                             class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl"
+                             alt="image"/>
                         <div
                             class="rounded-3xl p-10 md:min-w-[350px] mb-5 mt-5 lg:mt-0 lg:-ml-[320px] lg:-mb-[60px] bg-white text-[14px] text-gray-700 font-medium leading-6 duration-500 group-hover:lg:-mb-[95px] group-hover:lg:-ml-[300px]">
                             <q> Home is where love resides, memories are created, and dreams are nurtured. I have found
@@ -974,7 +1144,7 @@
                             <div class="flex justify-start items-center mt-5">
                                 <img :src="'/images/image-36.png'" loading="lazy"
                                      class="size-[45px] min-w-[45px] min-h-[45px] bg-center rounded-full bg-cover object-cover"
-                                     alt="image" />
+                                     alt="image"/>
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Andrew Jorden</div>
                                     <div class="font-normal -mt-1 text-[13px] text-gray-400"> Property Expert</div>
@@ -1002,7 +1172,7 @@
                 </div>
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
                     <router-link :to="{name:'BlogDetails'}"
-                       class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-white rounded-[50px] text-black duration-500 hover:bg-white/70">
+                                 class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-white rounded-[50px] text-black duration-500 hover:bg-white/70">
                         <span class="flex justify-center items-center">
                             Browse all blog
                             <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -1024,19 +1194,20 @@
                         <div class="rounded-3xl overflow-hidden">
                             <img :src="'/images/image-37.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
-                                 alt="image" />
+                                 alt="image"/>
                         </div>
                         <div class="p-7">
                             <div class="my-3 text-[13px] flex justify-between items-center text-white">
                                 <span> April 17, 2024 </span>
                                 <span> 3 min read </span>
                             </div>
-                            <div class="mt-3 mb-10 text-[25px] font-bold text-white"> Enrich Your Mind Envision Your Future
+                            <div class="mt-3 mb-10 text-[25px] font-bold text-white"> Enrich Your Mind Envision Your
+                                Future
                                 Education for Success
                             </div>
                             <div class="flex justify-start">
                                 <router-link :to="{name:'BlogDetails'}"
-                                   class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
+                                             class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
                                 <span class="w-full flex justify-center items-center">
                                     Read more
                                     <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -1061,19 +1232,20 @@
                         <div class="rounded-3xl overflow-hidden">
                             <img :src="'/images/image-38.png'" loading="lazy"
                                  class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
-                                 alt="image" />
+                                 alt="image"/>
                         </div>
                         <div class="p-7">
                             <div class="my-3 text-[13px] flex justify-between items-center text-white">
                                 <span> April 17, 2024 </span>
                                 <span> 3 min read </span>
                             </div>
-                            <div class="mt-3 mb-10 text-[25px] font-bold text-white"> Enrich Your Mind Envision Your Future
+                            <div class="mt-3 mb-10 text-[25px] font-bold text-white"> Enrich Your Mind Envision Your
+                                Future
                                 Education for Success
                             </div>
                             <div class="flex justify-start">
                                 <router-link :to="{name:'BlogDetails'}"
-                                   class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
+                                             class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
                                 <span class="w-full flex justify-center items-center">
                                     Read more
                                     <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
@@ -1172,7 +1344,7 @@ export default {
                         }
                     });
                 },
-                { threshold: 0.5 }
+                {threshold: 0.5}
             );
             observer.observe(section);
         },

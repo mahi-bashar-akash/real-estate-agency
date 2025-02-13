@@ -19,7 +19,7 @@
                         Get In Touch
                     </div>
                     <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 group duration-500 text-gray-600 hover:text-gray-800 block">
+                        <a href="https://www.google.com/maps/search/789+Inner+Lane,+Holy+park,+California,+USA/@33.9227035,-118.3267629,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDIxMC4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D" class="text-[18px] font-medium decoration-0 group duration-500 text-gray-600 hover:text-gray-800 block">
                             <span class="flex items-center">
                                 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="bi bi-geo-alt min-w-[20px] size-[20px] fill-gray-600 duration-500 group-hover:fill-gray-800 me-2">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -34,7 +34,7 @@
                         </a>
                     </div>
                     <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <a href="tel:001234567890" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             <span class="flex items-center">
                                 <svg viewBox="0 0 24 24" class="size-[20px] min-w-[20px] me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -48,7 +48,7 @@
                         </a>
                     </div>
                     <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <a href="tel:009876543210" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             <span class="flex items-center">
                                 <svg viewBox="0 0 24 24" class="size-[20px] min-w-[20px] me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -62,7 +62,7 @@
                         </a>
                     </div>
                     <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium group decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <a href="mailto:infomailrealar@gmail.com" class="text-[18px] font-medium group decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             <span class="flex items-center">
                                 <svg viewBox="0 -0.5 25 25" class="size-[20px] min-w-[20px] me-3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -76,7 +76,7 @@
                         </a>
                     </div>
                     <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium group decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <a href="mailto:supportmail01@gmail.com" class="text-[18px] font-medium group decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             <span class="flex items-center">
                                 <svg viewBox="0 -0.5 25 25" class="size-[20px] min-w-[20px] me-3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -100,24 +100,14 @@
                         </router-link>
                     </div>
                     <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <router-link :to="{name:'Team'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             All Authors
-                        </a>
+                        </router-link>
                     </div>
                     <div class="mb-2">
                         <router-link :to="{name:'Team'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             Our Team
                         </router-link>
-                    </div>
-                    <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
-                            Our Pricing
-                        </a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
-                            Our Products
-                        </a>
                     </div>
                 </div>
                 <div>
@@ -125,35 +115,20 @@
                         Explore
                     </div>
                     <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <router-link :to="{name:'Properties'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             All Properties
-                        </a>
+                        </router-link>
                     </div>
                     <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
-                            All Authors
-                        </a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <router-link :to="{name:'Team'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             Our Team
-                        </a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
-                            Our Pricing
-                        </a>
-                    </div>
-                    <div class="mb-2">
-                        <a href="javascript:void(0)" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
-                            Our Products
-                        </a>
+                        </router-link>
                     </div>
                 </div>
             </div>
         </div>
         <div class="w-full text-center border-t border-t-gray-300 mt-10 py-5 text-white bg-[#364440]">
-            Copyright © 2020 <a href="javascript:void(0)" class="decoration-0 text-green-600 duration-500 hover:text-green-300"> benefits </a>. All Rights Reserved.
+            Copyright © 2020 <a href="https://benefits.thethemeai.com/" class="decoration-0 text-green-600 duration-500 hover:text-green-300"> benefits </a>. All Rights Reserved.
         </div>
     </footer>
 
