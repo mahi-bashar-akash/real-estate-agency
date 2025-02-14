@@ -77,7 +77,7 @@
     <section class="w-full py-5 sm:py-10" ref="counterSection">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] px-3 py-2 sm:px-2 sm:py-0">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 text-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 text-center">
 
                 <div v-for="(value, key) in counters" :key="key">
 
