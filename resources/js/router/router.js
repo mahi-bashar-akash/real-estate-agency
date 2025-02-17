@@ -15,22 +15,24 @@ import AuthLayout from "../auth/layout/layout.vue";
     import Forgot from "../auth/pages/forgot.vue";
     import Reset from "../auth/pages/reset.vue";
 
+    const company_name = "Realer Living Solution";
+
 const routes = [
     {path: '/', name: 'Layout', component: Layout,
         children: [
-            {path: '', name: 'Index', component: Index},
-            {path: 'about', name: 'About', component: About},
-            {path: 'team', name: 'Team', component: Team},
-            {path: 'team-details', name: 'TeamDetails', component: TeamDetails},
-            {path: 'blog-details', name: 'BlogDetails', component: BlogDetails},
-            {path: 'properties', name: 'Properties', component: Properties},
-            {path: 'property-details', name: 'PropertyDetails', component: PropertyDetails},
+            {path: '', name: 'Index', component: Index, meta: {title: company_name + ' Home'}},
+            {path: 'about', name: 'About', component: About, meta: {title: company_name + ' About'}},
+            {path: 'team', name: 'Team', component: Team, meta: {title: company_name + ' Team'}},
+            {path: 'team-details', name: 'TeamDetails', component: TeamDetails, meta: {title: company_name + ' Team Details'}},
+            {path: 'blog-details', name: 'BlogDetails', component: BlogDetails, meta: {title: company_name + ' Blog Details'}},
+            {path: 'properties', name: 'Properties', component: Properties, meta: {title: company_name + ' Properties'}},
+            {path: 'property-details', name: 'PropertyDetails', component: PropertyDetails, meta: {title: company_name + ' Property Details'}},
             {path: 'auth/', name: 'AuthLayout', component: AuthLayout,
                 children: [
-                    {path: 'sign-in', name: 'SignIn', component: SignIn},
-                    {path: 'sign-up', name: 'SignUp', component: SignUp},
-                    {path: 'forgot', name: 'Forgot', component: Forgot},
-                    {path: 'reset', name: 'Reset', component: Reset},
+                    {path: 'sign-in', name: 'SignIn', component: SignIn, meta: {title: company_name + ' Sign In'}},
+                    {path: 'sign-up', name: 'SignUp', component: SignUp, meta: {title: company_name + ' Sign Up'}},
+                    {path: 'forgot', name: 'Forgot', component: Forgot, meta: {title: company_name + ' Forgot'}},
+                    {path: 'reset', name: 'Reset', component: Reset, meta: {title: company_name + ' Reset'}},
                 ]
             }
         ]
