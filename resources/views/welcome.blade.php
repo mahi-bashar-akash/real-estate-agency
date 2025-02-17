@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="{{asset('/images/logo.svg')}}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{asset('/images/logo.svg')}}">
+    <link rel="shortcut icon" href="{{asset('/images/logo-icon.svg')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{asset('/images/logo-icon.svg')}}">
     <title> Real Estate Agency </title>
     <meta name="description" content="Find your dream home with Real Estate Agency. Browse listings, buy, sell, or rent properties with ease. Expert agents, best deals, and seamless transactions.">
     <meta name="keywords" content="real estate agency, buy house, sell property, rent apartment, real estate listings, dream home, investment properties, commercial real estate, property management, luxury homes">
@@ -20,12 +20,12 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{url()->current()}}">
     <meta property="og:description" content="Find your dream home with Real Estate Agency. Browse listings, buy, sell, or rent properties with ease.">
-    <meta property="og:image" content="{{asset('/images/logo.svg')}}">
+    <meta property="og:image" content="{{asset('/images/logo-icon.svg')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{url()->current()}}">
     <meta property="twitter:title" content="Real Estate Agency - Find Your Dream Home">
     <meta property="twitter:description" content="Find your dream home with Real Estate Agency. Browse listings, buy, sell, or rent properties with ease.">
-    <meta property="twitter:image" content="{{asset('/images/logo.svg')}}">
+    <meta property="twitter:image" content="{{asset('/images/logo-icon.svg')}}">
     <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE"/>
     <script type="application/ld+json">
         {
@@ -33,7 +33,7 @@
           "@type": "RealEstateAgent",
           "name": "Real Estate Agency",
           "url": "https://real-estate-agency.thethemeai.com/",
-          "logo": "https://real-estate-agency.thethemeai.com/images/logo.svg",
+          "logo": "https://real-estate-agency.thethemeai.com/images/logo-icon.svg",
           "description": "Your trusted real estate agency for buying, selling, and renting properties.",
           "address": {
             "@type": "PostalAddress",
