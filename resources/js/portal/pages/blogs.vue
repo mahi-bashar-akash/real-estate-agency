@@ -443,12 +443,12 @@
                         </div>
                     </div>
 
-                    <!-- Property types -->
+                    <!-- Post Categories -->
                     <div class="mb-5 text-[21px]">
-                        Types of property
+                        Post categories
                     </div>
 
-                    <!-- Property types list -->
+                    <!-- Post category list -->
                     <div class="text-[15px] ps-5">
                         <div class="my-3">
                             <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
@@ -460,39 +460,37 @@
                                     </g>
                                 </svg>
                                 <span class="ms-1">
-                                        Commercial
+                                        Apartment
                                     </span>
                             </a>
                         </div>
-                        <div class="ms-5">
-                            <div class="mb-3">
-                                <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                                    <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ms-1">
-                                            Office
+                        <div class="mb-3">
+                            <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
+                                <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
+                                    </g>
+                                </svg>
+                                <span class="ms-1">
+                                            Banglow
                                         </span>
-                                </a>
-                            </div>
-                            <div class="mb-3">
-                                <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                                    <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ms-1">
-                                            Store
+                            </a>
+                        </div>
+                        <div class="mb-3">
+                            <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
+                                <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
+                                    </g>
+                                </svg>
+                                <span class="ms-1">
+                                            Modern Houses
                                         </span>
-                                </a>
-                            </div>
+                            </a>
                         </div>
                         <div class="my-3">
                             <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
@@ -504,228 +502,67 @@
                                     </g>
                                 </svg>
                                 <span class="ms-1">
-                                        Residential
+                                        Property
                                     </span>
                             </a>
                         </div>
-                        <div class="ms-5">
-                            <div class="mb-3">
-                                <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                                    <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ms-1">
+                        <div class="mb-3">
+                            <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
+                                <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
+                                    </g>
+                                </svg>
+                                <span class="ms-1">
                                             Apartment
                                         </span>
-                                </a>
-                            </div>
-                            <div class="mb-3">
-                                <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                                    <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ms-1">
-                                            Condominium
+                            </a>
+                        </div>
+                        <div class="mb-3">
+                            <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
+                                <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
+                                    </g>
+                                </svg>
+                                <span class="ms-1">
+                                            Real Estate
                                         </span>
-                                </a>
-                            </div>
-                            <div class="mb-3">
-                                <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                                    <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ms-1">
-                                            Apartment Building
-                                        </span>
-                                </a>
-                            </div>
-                            <div class="mb-3">
-                                <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                                    <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ms-1">
-                                            Single Family
-                                        </span>
-                                </a>
-                            </div>
-                            <div class="mb-3">
-                                <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                                    <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path class="fill-black duration-500 group-hover:fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C8.5 17.4045 8.74364 17.7691 9.11732 17.9239C9.49099 18.0787 9.92111 17.9931 10.2071 17.7071L15.2071 12.7071C15.5976 12.3166 15.5976 11.6834 15.2071 11.2929L10.2071 6.29289C9.92111 6.00689 9.49099 5.92134 9.11732 6.07612C8.74364 6.2309 8.5 6.59554 8.5 7V17Z"></path>
-                                        </g>
-                                    </svg>
-                                    <span class="ms-1">
-                                            Villa
-                                        </span>
-                                </a>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Agents -->
+                    <!-- Popular tags -->
                     <div class="my-5 text-[21px]">
-                        Agents of property
-                    </div>
-
-                    <!-- Property types list -->
-                    <div class="flex flex-wrap justify-start items-start gap-2">
-                        <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                            <img :src="'/images/agent-1.jpg'" class="size-[55px] rounded-full overflow-hidden" alt="agent">
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                            <img :src="'/images/agent-2.jpg'" class="size-[55px] rounded-full overflow-hidden" alt="agent">
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                            <img :src="'/images/agent-3.jpg'" class="size-[55px] rounded-full overflow-hidden" alt="agent">
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                            <img :src="'/images/agent-4.jpg'" class="size-[55px] rounded-full overflow-hidden" alt="agent">
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                            <img :src="'/images/agent-6.jpg'" class="size-[55px] rounded-full overflow-hidden" alt="agent">
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                            <img :src="'/images/agent-7.jpg'" class="size-[55px] rounded-full overflow-hidden" alt="agent">
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                            <img :src="'/images/agent-8.jpg'" class="size-[55px] rounded-full overflow-hidden" alt="agent">
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 text-black duration-500 hover:text-blue-600 group flex justify-start items-center">
-                            <img :src="'/images/agent-9.jpg'" class="size-[55px] rounded-full overflow-hidden" alt="agent">
-                        </a>
-                    </div>
-
-                    <!-- Property status -->
-                    <div class="my-5 text-[21px]">
-                        Status of property
+                        Popular Tags
                     </div>
 
                     <!-- Property status list -->
                     <div class="flex flex-wrap justify-start items-start gap-1">
                         <a href="javascript:void(0)" class="decoration-0 bg-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg text-white text-[13px] whitespace-break-spaces">
-                            Purchase
+                            Apartment
                         </a>
                         <a href="javascript:void(0)" class="decoration-0 bg-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg text-white text-[13px] whitespace-break-spaces">
-                            Rent
+                            Buyer
                         </a>
                         <a href="javascript:void(0)" class="decoration-0 bg-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg text-white text-[13px] whitespace-break-spaces">
-                            Sell
+                            Innovate
                         </a>
                         <a href="javascript:void(0)" class="decoration-0 bg-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg text-white text-[13px] whitespace-break-spaces">
-                            Miss
+                            Luxury
                         </a>
                         <a href="javascript:void(0)" class="decoration-0 bg-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg text-white text-[13px] whitespace-break-spaces">
-                            Evaluation
+                            Modern
                         </a>
                         <a href="javascript:void(0)" class="decoration-0 bg-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg text-white text-[13px] whitespace-break-spaces">
-                            Mortgage
+                            Real estate
                         </a>
-                    </div>
-
-                    <!-- Location -->
-                    <div class="my-5 text-[21px]">
-                        Location
-                    </div>
-
-                    <!-- Location list -->
-                    <div class="flex flex-wrap justify-start items-start gap-1">
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            United States
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Bangladesh
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Canada
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Brazil
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Argentina
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            United Kingdom
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Germany
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            France
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Italy
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Spain
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Russia
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            China
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Japan
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            South Korea
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            India
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Australia
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            New Zealand
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Mexico
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            South Africa
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Egypt
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Saudi Arabia
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Turkey
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Greece
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Sweden
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Norway
-                        </a>
-                        <a href="javascript:void(0)" class="decoration-0 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg hover:text-white text-[13px] whitespace-break-spaces">
-                            Netherlands
+                        <a href="javascript:void(0)" class="decoration-0 bg-blue-500 duration-500 hover:bg-blue-700 px-4 py-2 rounded-lg text-white text-[13px] whitespace-break-spaces">
+                            Sale
                         </a>
                     </div>
 
