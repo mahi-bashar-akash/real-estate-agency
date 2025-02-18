@@ -231,7 +231,7 @@
                 </div>
 
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <router-link :to="{name:'Properties'}"
+                    <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
                                  class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Browse all services
@@ -504,7 +504,7 @@
                 </div>
 
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <router-link :to="{name:'Properties'}"
+                    <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
                                  class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Browse all featured
@@ -567,7 +567,7 @@
                             </div>
 
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <router-link :to="{name:'Properties'}"
+                                <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
                                              class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -634,7 +634,7 @@
                             </div>
 
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <router-link :to="{name:'Properties'}"
+                                <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
                                              class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -700,7 +700,7 @@
                             </div>
 
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <router-link :to="{name:'Properties'}"
+                                <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
                                              class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -766,7 +766,7 @@
                             </div>
 
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <router-link :to="{name:'Properties'}"
+                                <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
                                              class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -832,7 +832,7 @@
                             </div>
 
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <router-link :to="{name:'Properties'}"
+                                <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
                                              class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -888,7 +888,7 @@
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
                             </div>
                             <div class="flex justify-center items-center mt-5 xl:mt-10 xl:mb-5">
-                                <router-link :to="{name:'Properties'}"
+                                <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
                                              class="outline-0 border border-gray-800 group/item px-4 sm:px-8 py-1 sm:py-3 rounded-[50px] duration-500 hover:text-white hover:bg-black hover:border-black">
                                     <span class="flex justify-center items-center">
                                         Details
@@ -927,7 +927,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <router-link :to="{name:'Team'}"
+                    <router-link :to="{name:'Teams'}"
                                  class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             View all team
@@ -957,7 +957,7 @@
                                 <div class="text-[20px] font-bold">Michel Smith</div>
                                 <div class="text-[14px] text-gray-400"> Property Expert</div>
                             </div>
-                            <router-link :to="{name:'Team'}" class="decoration-0">
+                            <router-link :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -987,7 +987,7 @@
                                 <div class="text-[20px] font-bold">Sara Prova</div>
                                 <div class="text-[14px] text-gray-400"> Property Expert</div>
                             </div>
-                            <router-link :to="{name:'Team'}" class="decoration-0">
+                            <router-link :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1017,7 +1017,7 @@
                                 <div class="text-[20px] font-bold">Jani Mai</div>
                                 <div class="text-[14px] text-gray-400"> Property Expert</div>
                             </div>
-                            <router-link :to="{name:'Team'}" class="decoration-0">
+                            <router-link :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1047,7 +1047,7 @@
                                 <div class="text-[20px] font-bold">Michel Jorden</div>
                                 <div class="text-[14px] text-gray-400"> Property Expert</div>
                             </div>
-                            <router-link :to="{name:'Team'}" class="decoration-0">
+                            <router-link :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1171,7 +1171,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <router-link :to="{name:'BlogDetails'}"
+                    <router-link :to="{name:'Blogs'}"
                                  class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-white rounded-[50px] text-black duration-500 hover:bg-white/70">
                         <span class="flex justify-center items-center">
                             Browse all blog
@@ -1206,7 +1206,7 @@
                                 Education for Success
                             </div>
                             <div class="flex justify-start">
-                                <router-link :to="{name:'BlogDetails'}"
+                                <router-link :to="{name:'BlogDetails',params:{id:'1'}}"
                                              class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
                                 <span class="w-full flex justify-center items-center">
                                     Read more
@@ -1244,7 +1244,7 @@
                                 Education for Success
                             </div>
                             <div class="flex justify-start">
-                                <router-link :to="{name:'BlogDetails'}"
+                                <router-link :to="{name:'BlogDetails',params:{id:'1'}}"
                                              class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
                                 <span class="w-full flex justify-center items-center">
                                     Read more

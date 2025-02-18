@@ -58,7 +58,7 @@
                         <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
                             Company Agent, Modern House Real Estate
                         </div>
-                        <router-link :to="{name: 'TeamDetails'}"
+                        <router-link :to="{name: 'TeamDetails',params:{id:'1'}}"
                                      class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
                             View Profile
                         </router-link>
@@ -78,7 +78,7 @@
                         <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
                             Company Agent , Modern House Real Estate
                         </div>
-                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                        <router-link :to="{name: 'TeamDetails',params:{id:'1'}}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
                             View Profile
                         </router-link>
                     </div>
@@ -96,7 +96,7 @@
                         <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
                             Company Agent , Modern House Real Estate
                         </div>
-                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                        <router-link :to="{name: 'TeamDetails',params:{id:'1'}}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
                             View Profile
                         </router-link>
                     </div>
@@ -114,7 +114,7 @@
                         <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
                             Company Agent , Modern House Real Estate
                         </div>
-                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                        <router-link :to="{name: 'TeamDetails',params:{id:'1'}}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
                             View Profile
                         </router-link>
                     </div>
@@ -132,7 +132,7 @@
                         <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
                             Company Agent , Modern House Real Estate
                         </div>
-                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                        <router-link :to="{name: 'TeamDetails',params:{id:'1'}}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
                             View Profile
                         </router-link>
                     </div>
@@ -150,7 +150,7 @@
                         <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
                             Company Agent , Modern House Real Estate
                         </div>
-                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                        <router-link :to="{name: 'TeamDetails',params:{id:'1'}}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
                             View Profile
                         </router-link>
                     </div>
@@ -168,7 +168,7 @@
                         <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
                             Company Agent , Modern House Real Estate
                         </div>
-                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                        <router-link :to="{name: 'TeamDetails',params:{id:'1'}}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
                             View Profile
                         </router-link>
                     </div>
@@ -186,7 +186,7 @@
                         <div class="text-center text-gray-400 text-[14px] px-10 mb-5">
                             Company Agent , Modern House Real Estate
                         </div>
-                        <router-link :to="{name: 'TeamDetails'}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
+                        <router-link :to="{name: 'TeamDetails',params:{id:'1'}}" class="decoration-0 text-blue-600 duration-500 hover:text-blue-900">
                             View Profile
                         </router-link>
                     </div>

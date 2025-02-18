@@ -1,15 +1,21 @@
 import {createRouter, createWebHistory} from "vue-router";
 
 import Layout from "../portal/layout/layout.vue";
+
     import Index from "../portal/pages/index.vue";
     import About from "../portal/pages/about.vue";
-    import Team from "../portal/pages/team.vue";
+
+    import Teams from "../portal/pages/teams.vue";
     import TeamDetails from "../portal/pages/team-details.vue";
+
+    import Blogs from "../portal/pages/blogs.vue";
     import BlogDetails from "../portal/pages/blog-details.vue";
+
     import Properties from "../portal/pages/properties.vue";
     import PropertyDetails from "../portal/pages/property-details.vue";
 
 import AuthLayout from "../auth/layout/layout.vue";
+
     import SignIn from "../auth/pages/sign-in.vue";
     import SignUp from "../auth/pages/sign-up.vue";
     import Forgot from "../auth/pages/forgot.vue";
@@ -22,11 +28,12 @@ const routes = [
         children: [
             {path: '', name: 'Index', component: Index, meta: {title: company_name + ' Home'}},
             {path: 'about', name: 'About', component: About, meta: {title: company_name + ' About'}},
-            {path: 'team', name: 'Team', component: Team, meta: {title: company_name + ' Team'}},
-            {path: 'team-details', name: 'TeamDetails', component: TeamDetails, meta: {title: company_name + ' Team Details'}},
-            {path: 'blog-details', name: 'BlogDetails', component: BlogDetails, meta: {title: company_name + ' Blog Details'}},
+            {path: 'teams', name: 'Teams', component: Teams, meta: {title: company_name + ' Teams'}},
+            {path: 'team-details/:id', name: 'TeamDetails', component: TeamDetails, meta: {title: company_name + ' Team Details'}},
+            {path: 'blogs', name: 'Blogs', component: Blogs, meta: {title: company_name + ' Blogs'}},
+            {path: 'blog-details/:id', name: 'BlogDetails', component: BlogDetails, meta: {title: company_name + ' Blog Details'}},
             {path: 'properties', name: 'Properties', component: Properties, meta: {title: company_name + ' Properties'}},
-            {path: 'property-details', name: 'PropertyDetails', component: PropertyDetails, meta: {title: company_name + ' Property Details'}},
+            {path: 'property-details/:id', name: 'PropertyDetails', component: PropertyDetails, meta: {title: company_name + ' Property Details'}},
             {path: 'auth/', name: 'AuthLayout', component: AuthLayout,
                 children: [
                     {path: 'sign-in', name: 'SignIn', component: SignIn, meta: {title: company_name + ' Sign In'}},

@@ -54,8 +54,12 @@
                         Properties
                     </router-link>
 
-                    <router-link :to="{name: 'Team'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Team', 'text-blue-500' : $route.name === 'Team' }" @click="navbarToggle()">
-                        Team
+                    <router-link :to="{name: 'Teams'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Teams', 'text-blue-500' : $route.name === 'Teams' }" @click="navbarToggle()">
+                        Teams
+                    </router-link>
+
+                    <router-link :to="{name: 'Blogs'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Blogs', 'text-blue-500' : $route.name === 'Blogs' }" @click="navbarToggle()">
+                        Blogs
                     </router-link>
 
                     <router-link :to="{name: 'SignIn'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'SignIn', 'text-blue-500' : $route.name === 'SignIn' }" @click="navbarToggle()">

@@ -100,12 +100,12 @@
                         </router-link>
                     </div>
                     <div class="mb-2">
-                        <router-link :to="{name:'Team'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <router-link :to="{name:'Teams'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             All Authors
                         </router-link>
                     </div>
                     <div class="mb-2">
-                        <router-link :to="{name:'Team'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <router-link :to="{name:'Teams'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             Our Team
                         </router-link>
                     </div>
@@ -120,7 +120,7 @@
                         </router-link>
                     </div>
                     <div class="mb-2">
-                        <router-link :to="{name:'Team'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
+                        <router-link :to="{name:'Teams'}" class="text-[18px] font-medium decoration-0 duration-500 text-gray-600 hover:text-gray-800 block">
                             Our Team
                         </router-link>
                     </div>
