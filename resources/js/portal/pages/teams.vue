@@ -6,7 +6,7 @@
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] py-2 sm:px-7 sm:py-0">
 
             <div class="flex flex-wrap justify-between items-center">
-                <div class="w-full sm:w-1/2 lg:w-1/3 py-2 md:py-4 px-2">
+                <div class="w-full sm:w-1/2 lg:w-1/3 pb-2 md:pb-4 px-2">
                     <label for="keyword" hidden="hidden"> keyword </label>
                     <div class="relative w-full">
                         <input type="text" id="keyword" placeholder="Search here..." name="keyword" class="text-[13px] h-[42px] rounded-md w-full outline-0 border border-gray-300 focus-visible:border-blue-900 duration-500 ps-10 pe-3 py-2" required autocomplete="off">
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/3 py-2 mb:py-4 px-2">
+                <div class="w-full sm:w-1/2 lg:w-1/3 pb-2 md:pb-4 px-2">
                     <label for="sort" hidden="hidden">Sort</label>
                     <div class="w-full relative">
                         <select name="sort" id="sort" class="text-[13px] h-[42px] rounded-md w-full outline-0 border border-gray-300 focus-visible:border-blue-900 duration-500 px-5 appearance-none py-2" required autocomplete="off">

@@ -14,6 +14,8 @@ import Layout from "../portal/layout/layout.vue";
     import Properties from "../portal/pages/properties.vue";
     import PropertyDetails from "../portal/pages/property-details.vue";
 
+    import ServiceDetails from "../portal/pages/service-details.vue";
+
 import AuthLayout from "../auth/layout/layout.vue";
 
     import SignIn from "../auth/pages/sign-in.vue";
@@ -34,6 +36,7 @@ const routes = [
             {path: 'blog-details/:id', name: 'BlogDetails', component: BlogDetails, meta: {title: company_name + ' Blog Details'}},
             {path: 'properties', name: 'Properties', component: Properties, meta: {title: company_name + ' Properties'}},
             {path: 'property-details/:id', name: 'PropertyDetails', component: PropertyDetails, meta: {title: company_name + ' Property Details'}},
+            {path: 'service-details/:id', name: 'ServiceDetails', component: ServiceDetails, meta: {title: company_name + ' Service Details'}},
             {path: 'auth/', name: 'AuthLayout', component: AuthLayout,
                 children: [
                     {path: 'sign-in', name: 'SignIn', component: SignIn, meta: {title: company_name + ' Sign In'}},

@@ -153,7 +153,7 @@
 
                     <!-- Our service card -->
                     <div class="p-2 w-full sm:w-1/2">
-                        <a href="javascript:void(0)" class="decoration-0">
+                        <router-link :to="{name:'ServiceDetails',params:{id:'1'}}" class="decoration-0">
                             <div class="overflow-hidden rounded relative before:absolute before:content-[''] before:top-0 before:start-0 before:w-full before:h-full before:bg-black before:opacity-45 before:duration-500 hover:before:opacity-65">
                                 <img :src="'/images/properties-2.jpg'" class="object-cover bg-cover w-full h-[257px]" alt="gallery">
                                 <div class="absolute top-0 bottom-0 start-0 end-0 p-5 text-white uppercase">
@@ -175,12 +175,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
 
                     <!-- Our service card -->
                     <div class="p-2 w-full sm:w-1/2">
-                        <a href="javascript:void(0)" class="decoration-0">
+                        <router-link :to="{name:'ServiceDetails',params:{id:'1'}}" class="decoration-0">
                             <div class="overflow-hidden rounded relative before:absolute before:content-[''] before:top-0 before:start-0 before:w-full before:h-full before:bg-black before:opacity-45 before:duration-500 hover:before:opacity-65">
                                 <img :src="'/images/properties-3.jpg'" class="object-cover bg-cover w-full h-[257px]" alt="gallery">
                                 <div class="absolute top-0 bottom-0 start-0 end-0 p-5 text-white uppercase">
@@ -202,12 +202,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
 
                     <!-- Our service card -->
                     <div class="p-2 w-full sm:w-1/2">
-                        <a href="javascript:void(0)" class="decoration-0">
+                        <router-link :to="{name:'ServiceDetails',params:{id:'1'}}" class="decoration-0">
                             <div class="overflow-hidden rounded relative before:absolute before:content-[''] before:top-0 before:start-0 before:w-full before:h-full before:bg-black before:opacity-45 before:duration-500 hover:before:opacity-65">
                                 <img :src="'/images/properties-6.jpg'" class="object-cover bg-cover w-full h-[257px]" alt="gallery">
                                 <div class="absolute top-0 bottom-0 start-0 end-0 p-5 text-white uppercase">
@@ -229,12 +229,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
 
                     <!-- Our service card -->
                     <div class="p-2 w-full sm:w-1/2">
-                        <a href="javascript:void(0)" class="decoration-0">
+                        <router-link :to="{name:'ServiceDetails',params:{id:'1'}}" class="decoration-0">
                             <div class="overflow-hidden rounded relative before:absolute before:content-[''] before:top-0 before:start-0 before:w-full before:h-full before:bg-black before:opacity-45 before:duration-500 hover:before:opacity-65">
                                 <img :src="'/images/properties-1.jpg'" class="object-cover bg-cover w-full h-[257px]" alt="gallery">
                                 <div class="absolute top-0 bottom-0 start-0 end-0 p-5 text-white uppercase">
@@ -256,7 +256,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
 
                 </div>
@@ -265,7 +265,7 @@
 
                     <!-- Our service card -->
                     <div class="p-2 w-full sm:w-1/2">
-                        <a href="javascript:void(0)" class="decoration-0">
+                        <router-link :to="{name:'ServiceDetails',params:{id:'1'}}" class="decoration-0">
                             <div class="overflow-hidden rounded relative before:absolute before:content-[''] before:top-0 before:start-0 before:w-full before:h-full before:bg-black before:opacity-45 before:duration-500 hover:before:opacity-65">
                                 <img :src="'/images/properties-4.jpg'" class="object-cover bg-cover w-full h-[257px] lg:h-[530px]" alt="gallery">
                                 <div class="absolute top-0 bottom-0 start-0 end-0 p-5 text-white uppercase">
@@ -287,12 +287,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
 
                     <!-- Our service card -->
                     <div class="p-2 w-full sm:w-1/2">
-                        <a href="javascript:void(0)" class="decoration-0">
+                        <router-link :to="{name:'ServiceDetails',params:{id:'1'}}" class="decoration-0">
                             <div class="overflow-hidden rounded relative before:absolute before:content-[''] before:top-0 before:start-0 before:w-full before:h-full before:bg-black before:opacity-45 before:duration-500 hover:before:opacity-65">
                                 <img :src="'/images/properties-5.jpg'" class="object-cover bg-cover w-full h-[257px] lg:h-[530px]" alt="gallery">
                                 <div class="absolute top-0 bottom-0 start-0 end-0 p-5 text-white uppercase">
@@ -314,7 +314,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
 
                 </div>

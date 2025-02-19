@@ -6,11 +6,11 @@
         <div class="mx-auto w-full lg:w-[1000px] px-5 lg:px-0">
 
             <div class="text-[25px] mb-5">
-                Skills That You Can Learn In The Real Estate Market
+                Property management
             </div>
 
             <div class="mb-5">
-                <img :src="'/images/properties-1.jpg'" class="object-cover bg-cover w-full h-[250px] md:h-[300px] lg:h-[350px]" alt="property">
+                <img :src="'/images/properties-2.jpg'" class="object-cover bg-cover w-full h-[250px] md:h-[300px] lg:h-[350px]" alt="property">
             </div>
 
             <div class="flex justify-start items-center mb-5">
@@ -138,25 +138,22 @@
 
             <div class="my-10 flex justify-start items-center flex-wrap gap-2">
 
-                <div class="text-[18px] font-medium"> Tags: </div>
+                <div class="text-[18px] font-medium"> More Services: </div>
 
                 <a href="javascript:void(0)" class="decoration-0 bg-blue-600 duration-500 hover:bg-blue-700 px-3 py-1 rounded text-white text-[13px] whitespace-break-spaces">
-                    Purchase
+                    Capital Improvement
                 </a>
                 <a href="javascript:void(0)" class="decoration-0 bg-blue-600 duration-500 hover:bg-blue-700 px-3 py-1 rounded text-white text-[13px] whitespace-break-spaces">
-                    Rent
+                    Financial Reporting
                 </a>
                 <a href="javascript:void(0)" class="decoration-0 bg-blue-600 duration-500 hover:bg-blue-700 px-3 py-1 rounded text-white text-[13px] whitespace-break-spaces">
-                    Sell
+                    Business Development
                 </a>
                 <a href="javascript:void(0)" class="decoration-0 bg-blue-600 duration-500 hover:bg-blue-700 px-3 py-1 rounded text-white text-[13px] whitespace-break-spaces">
-                    Miss
+                    Finance Real Estate
                 </a>
                 <a href="javascript:void(0)" class="decoration-0 bg-blue-600 duration-500 hover:bg-blue-700 px-3 py-1 rounded text-white text-[13px] whitespace-break-spaces">
-                    Evaluation
-                </a>
-                <a href="javascript:void(0)" class="decoration-0 bg-blue-600 duration-500 hover:bg-blue-700 px-3 py-1 rounded text-white text-[13px] whitespace-break-spaces">
-                    Mortgage
+                    Recover Asset Value
                 </a>
 
             </div>
@@ -181,7 +178,7 @@
 
                 <div class="w-full mb-3">
                     <label for="blog-message" class="block mb-1 w-full">Message</label>
-                    <textarea name="message" id="blog-message" class="text-[13px] rounded-md w-full outline-0 border border-gray-300 focus-visible:border-blue-900 duration-500 px-3 py-2 placeholder-slate-700" cols="30" rows="10" required placeholder="Enter your message" autocomplete="off"></textarea>
+                    <textarea name="message" id="blog-message" placeholder="Enter your message" class="text-[13px] rounded-md w-full outline-0 border border-gray-300 focus-visible:border-blue-900 duration-500 px-3 py-2 placeholder-slate-700" cols="30" rows="10" required autocomplete="off"></textarea>
                 </div>
 
                 <button type="submit" class="uppercase py-2 px-4 text-white bg-blue-600 duration-500 hover:bg-blue-900 rounded-md">

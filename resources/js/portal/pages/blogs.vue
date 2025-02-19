@@ -2,7 +2,7 @@
 
     <div class="h-[30px]"></div>
 
-    <section class="w-full py-16">
+    <section class="w-full pb-5 md:pb-10">
         <div class="mx-auto lg:max-w-[1000px] xl:max-w-[1400px] py-2 sm:px-7 sm:py-0">
 
             <div class="flex flex-wrap px-5 lg:px-0">
