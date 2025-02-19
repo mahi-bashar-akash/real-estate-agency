@@ -126,8 +126,8 @@
                                     <!-- Property card image -->
                                     <img :src="'/images/properties-1.jpg'" class="object-cover bg-cover w-full h-[250px]" alt="properties"/>
 
-                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-200 bg-opacity-45 scale-0 duration-500 group-hover:scale-100">
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-100 bg-opacity-45 opacity-0 duration-500 group-hover:opacity-100">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -136,7 +136,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -146,7 +146,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <router-link :to="{name: 'PropertyDetails'}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <router-link :to="{name: 'PropertyDetails',params:{id:'1'}}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -263,8 +263,8 @@
                                     <!-- Property card image -->
                                     <img :src="'/images/properties-2.jpg'" class="object-cover bg-cover w-full h-[250px]" alt="properties"/>
 
-                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-200 bg-opacity-45 scale-0 duration-500 group-hover:scale-100">
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-100 bg-opacity-45 opacity-0 duration-500 group-hover:opacity-100">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -273,7 +273,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -283,7 +283,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <router-link :to="{name: 'PropertyDetails'}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <router-link :to="{name: 'PropertyDetails',params:{id:'1'}}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -400,8 +400,8 @@
                                     <!-- Property card image -->
                                     <img :src="'/images/properties-3.jpg'" class="object-cover bg-cover w-full h-[250px]" alt="properties"/>
 
-                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-200 bg-opacity-45 scale-0 duration-500 group-hover:scale-100">
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-100 bg-opacity-45 opacity-0 duration-500 group-hover:opacity-100">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -410,7 +410,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -420,7 +420,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <router-link :to="{name: 'PropertyDetails'}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <router-link :to="{name: 'PropertyDetails',params:{id:'1'}}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -537,8 +537,8 @@
                                     <!-- Property card image -->
                                     <img :src="'/images/properties-4.jpg'" class="object-cover bg-cover w-full h-[250px]" alt="properties"/>
 
-                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-200 bg-opacity-45 scale-0 duration-500 group-hover:scale-100">
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-100 bg-opacity-45 opacity-0 duration-500 group-hover:opacity-100">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -547,7 +547,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -557,7 +557,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <router-link :to="{name: 'PropertyDetails'}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <router-link :to="{name: 'PropertyDetails',params:{id:'1'}}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -674,8 +674,8 @@
                                     <!-- Property card image -->
                                     <img :src="'/images/properties-5.jpg'" class="object-cover bg-cover w-full h-[250px]" alt="properties"/>
 
-                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-200 bg-opacity-45 scale-0 duration-500 group-hover:scale-100">
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-100 bg-opacity-45 opacity-0 duration-500 group-hover:opacity-100">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -684,7 +684,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -694,7 +694,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <router-link :to="{name: 'PropertyDetails'}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <router-link :to="{name: 'PropertyDetails',params:{id:'1'}}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -811,8 +811,8 @@
                                     <!-- Property card image -->
                                     <img :src="'/images/properties-6.jpg'" class="object-cover bg-cover w-full h-[250px]" alt="properties"/>
 
-                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-200 bg-opacity-45 scale-0 duration-500 group-hover:scale-100">
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                    <div class="absolute bottom-0 start-0 top-0 end-0 p-3 flex justify-center items-center gap-x-3 bg-blue-100 bg-opacity-45 opacity-0 duration-500 group-hover:opacity-100">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -821,7 +821,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <button type="button" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -831,7 +831,7 @@
                                                 </g>
                                             </svg>
                                         </button>
-                                        <router-link :to="{name: 'PropertyDetails'}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 group/item">
+                                        <router-link :to="{name: 'PropertyDetails',params:{id:'1'}}" class="size-[40px] rounded outline-0 bg-blue-600 border border-blue-600 flex justify-center items-center hover:bg-transparent duration-500 scale-0 group-hover:scale-100 group/item">
                                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
