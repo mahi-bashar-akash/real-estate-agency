@@ -7,7 +7,7 @@
             <div class="w-full flex flex-wrap">
 
                 <div class="w-full lg:w-1/2 p-5">
-                    <router-link :to="{name:'About'}" class="decoration-0 block h-full">
+                    <router-link :to="{name:'PropertyDetails',params:{id:'1'}}" class="decoration-0 block h-full">
                         <div class="overflow-hidden group h-full rounded-3xl">
                             <img :src="'/images/image-01.png'" loading="lazy"
                                  class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
@@ -30,7 +30,7 @@
                         experiences.
                     </div>
 
-                    <router-link :to="{name:'About'}"
+                    <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
                                  class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Request a visit
@@ -48,7 +48,7 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-3 mt-10">
 
-                        <router-link :to="{name:'About'}">
+                        <router-link :to="{name:'PropertyDetails',params:{id:'1'}}">
                             <div class="overflow-hidden group h-full rounded-3xl">
                                 <img :src="'/images/image-02.png'" loading="lazy"
                                      class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
@@ -231,7 +231,7 @@
                 </div>
 
                 <div class="w-full lg:w-1/2 p-3 flex justify-end">
-                    <router-link :to="{name:'PropertyDetails',params:{id:'1'}}"
+                    <router-link :to="{name:'About'}"
                                  class="inline-block px-7 sm:px-10 py-3 sm:py-5 decoration-0 outline-0 border-0 bg-black rounded-[50px] text-white duration-500 hover:bg-black/70">
                         <span class="flex justify-center items-center">
                             Browse all services
