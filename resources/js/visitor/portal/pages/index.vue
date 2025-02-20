@@ -8,7 +8,7 @@
 
                 <div class="w-full lg:w-1/2 p-5">
                     <router-link :to="{name:'PropertyDetails',params:{id:'1'}}" class="decoration-0 block h-full">
-                        <div class="overflow-hidden group h-full rounded-3xl">
+                        <div class="overflow-hidden group h-full rounded-3xl max-h-[687.87px]">
                             <img :src="'/images/image-01.png'" loading="lazy"
                                  class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
                                  alt="image-1"/>
