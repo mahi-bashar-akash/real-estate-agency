@@ -1,9 +1,23 @@
 <template>
     <main class="w-full h-screen overflow-hidden flex items-start bg-[#1c252e]">
-        <aside class="min-w-[290px] h-screen p-5 duration-500" :class="{ '-ms-[290px]' : isSidebarActive, 'ms-0' : !isSidebarActive }">
-            <div class="text-center text-2xl p-3 text-white"> Admin Panel </div>
+        <aside class="min-w-[290px] h-screen p-5 duration-500 fixed lg:static top-0 bottom-0 bg-[#1c252e] backdrop-blur-2xl lg:backdrop-blur-0 z-50 lg:bg-transparent" @click.self="isSidebarActive = false" :class="{ 'start-[0px] lg:-ms-[290px]' : isSidebarActive, '-start-[290px] lg:ms-0' : !isSidebarActive }">
+            <div class="p-3 text-white flex justify-between lg:justify-center items-center">
+                <router-link :to="{name:'analysis'}" class="text-2xl" @click="closeSidebar()">
+                    Admin Panel
+                </router-link>
+                <button type="button" class="border-0 outline-0 bg-transparent inline-block lg:hidden" @click="closeSidebar()">
+                    <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path class="stroke-white" d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke-width="1.5" stroke-linecap="round"></path>
+                            <path class="stroke-white" d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-width="1.5" stroke-linecap="round"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
             <div class="overflow-y-auto h-[calc(100vh-96px)]">
-                <router-link :to="{name:'analysis'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'analysis' , 'bg-transparent' : $route.name === 'analysis' }">
+                <router-link :to="{name:'analysis'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'analysis' , 'bg-transparent' : $route.name === 'analysis' }" @click="closeSidebar()">
                     Analysis
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +31,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'properties'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'properties' , 'bg-transparent' : $route.name === 'properties' }">
+                <router-link :to="{name:'properties'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'properties' , 'bg-transparent' : $route.name === 'properties' }" @click="closeSidebar()">
                     Properties
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +45,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'agents'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'agents' , 'bg-transparent' : $route.name === 'agents' }">
+                <router-link :to="{name:'agents'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'agents' , 'bg-transparent' : $route.name === 'agents' }" @click="closeSidebar()">
                     Agents
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +59,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'blogs'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'blogs' , 'bg-transparent' : $route.name === 'blogs' }">
+                <router-link :to="{name:'blogs'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'blogs' , 'bg-transparent' : $route.name === 'blogs' }" @click="closeSidebar()">
                     Blogs
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +73,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'services'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'services' , 'bg-transparent' : $route.name === 'services' }">
+                <router-link :to="{name:'services'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'services' , 'bg-transparent' : $route.name === 'services' }" @click="closeSidebar()">
                     Services
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +87,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'customers'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'customers' , 'bg-transparent' : $route.name === 'customers' }">
+                <router-link :to="{name:'customers'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'customers' , 'bg-transparent' : $route.name === 'customers' }" @click="closeSidebar()">
                     Customers
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +101,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'orders'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'orders' , 'bg-transparent' : $route.name === 'orders' }">
+                <router-link :to="{name:'orders'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'orders' , 'bg-transparent' : $route.name === 'orders' }" @click="closeSidebar()">
                     Orders
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +115,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'reviews'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'reviews' , 'bg-transparent' : $route.name === 'reviews' }">
+                <router-link :to="{name:'reviews'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'reviews' , 'bg-transparent' : $route.name === 'reviews' }" @click="closeSidebar()">
                     Reviews
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +129,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'chats'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'chats' , 'bg-transparent' : $route.name === 'chats' }">
+                <router-link :to="{name:'chats'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'chats' , 'bg-transparent' : $route.name === 'chats' }" @click="closeSidebar()">
                     Chats
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +143,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'emails'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'emails' , 'bg-transparent' : $route.name === 'emails' }">
+                <router-link :to="{name:'emails'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'emails' , 'bg-transparent' : $route.name === 'emails' }" @click="closeSidebar()">
                     Emails
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +163,7 @@
             <div class="w-full h-full bg-white rounded-3xl overflow-hidden">
                 <div class="w-full flex justify-between items-center px-5 h-[70px]">
                     <div class="flex items-center gap-x-2">
-                        <button type="button" class="bg-transparent duration-500 hover:bg-gray-300 outline-0 border-0 flex justify-center items-center cursor-pointer size-[45px] rounded-xl" @click="sidebarToggle()">
+                        <button type="button" class="bg-transparent duration-500 hover:bg-gray-300 outline-0 border-0 flex justify-center items-center cursor-pointer size-[45px] rounded-xl" @click.stop="toggleSidebar()">
                             <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -259,12 +273,15 @@ export default {
     },
     mounted() {
         window.addEventListener("click", this.handleDropdownClose);
+        window.addEventListener("click", (event) => this.handleSidebarClose(event));
     },
     beforeUnmount() {
-        window.removeEventListener("click", this.handleDropdownClose)
+        window.removeEventListener("click", this.handleDropdownClose);
+        window.removeEventListener("click", this.handleSidebarClose);
     },
     methods: {
 
+        // full screen
         fullscreen() {
             this.isFullScreen = !this.isFullScreen;
             if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
@@ -286,22 +303,36 @@ export default {
             }
         },
 
-        // Toggle responsive dropdown
+        // toggle dropdown
         dropdownToggle() {
             this.isDropdownActive = !this.isDropdownActive;
         },
 
-        // Handle responsive dropdown as close
+        // handle dropdown close
         handleDropdownClose() {
             if(!event.target.closest("#profileDropdown")) {
                 this.isDropdownActive = false;
             }
         },
 
-        sidebarToggle() {
+        // open sidebar
+        toggleSidebar() {
             this.isSidebarActive = !this.isSidebarActive;
-        }
+        },
 
+        // close sidebar
+        closeSidebar() {
+            this.isSidebarActive = false;
+        },
+
+        // handle sidebar close
+        handleSidebarClose(event) {
+            if(window.innerWidth <= 991) {
+                if (!event.target.closest("#sidebar") && this.isSidebarActive) {
+                    this.isSidebarActive = false;
+                }
+            }
+        },
 
     }
 }
