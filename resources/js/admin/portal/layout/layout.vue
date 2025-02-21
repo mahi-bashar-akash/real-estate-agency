@@ -1,6 +1,6 @@
 <template>
     <main class="w-full h-screen overflow-hidden flex items-start bg-[#1c252e]">
-        <aside class="min-w-[290px] h-screen p-5 duration-500 fixed lg:static top-0 bottom-0 bg-[#1c252e] backdrop-blur-2xl lg:backdrop-blur-0 z-50 lg:bg-transparent" @click.self="isSidebarActive = false" :class="{ 'start-[0px] lg:-ms-[290px]' : isSidebarActive, '-start-[290px] lg:ms-0' : !isSidebarActive }">
+        <aside class="w-full sm:max-w-[290px] sm:min-w-[290px] h-screen p-5 duration-500 fixed lg:static top-0 bottom-0 bg-[#1c252e] backdrop-blur-2xl lg:backdrop-blur-0 z-50 lg:bg-transparent" @click.self="isSidebarActive = false" :class="{ 'start-[0px] lg:-ms-[290px]' : isSidebarActive, 'start-[-100%] sm:start-[-290px] lg:ms-0' : !isSidebarActive }">
             <div class="p-3 text-white flex justify-between lg:justify-center items-center">
                 <router-link :to="{name:'analysis'}" class="text-2xl" @click="closeSidebar()">
                     Admin Panel
@@ -19,6 +19,34 @@
             <div class="overflow-y-auto h-[calc(100vh-96px)]">
                 <router-link :to="{name:'analysis'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'analysis' , 'bg-transparent' : $route.name === 'analysis' }" @click="closeSidebar()">
                     Analysis
+                    <span>
+                        <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g id="Arrow / Caret_Right_SM">
+                                    <path class="stroke-white" id="Vector" d="M11 9L14 12L11 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                </router-link>
+                <router-link :to="{name:'chats'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'chats' , 'bg-transparent' : $route.name === 'chats' }" @click="closeSidebar()">
+                    Chats
+                    <span>
+                        <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g id="Arrow / Caret_Right_SM">
+                                    <path class="stroke-white" id="Vector" d="M11 9L14 12L11 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                </router-link>
+                <router-link :to="{name:'emails'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'emails' , 'bg-transparent' : $route.name === 'emails' }" @click="closeSidebar()">
+                    Emails
                     <span>
                         <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -129,37 +157,9 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link :to="{name:'chats'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'chats' , 'bg-transparent' : $route.name === 'chats' }" @click="closeSidebar()">
-                    Chats
-                    <span>
-                        <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <g id="Arrow / Caret_Right_SM">
-                                    <path class="stroke-white" id="Vector" d="M11 9L14 12L11 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </g>
-                        </svg>
-                    </span>
-                </router-link>
-                <router-link :to="{name:'emails'}" class="flex text-md justify-between items-center px-5 py-3 rounded-lg text-white duration-500 hover:bg-white/15 m-1" :class="{ 'bg-white/15' : $route.name === 'emails' , 'bg-transparent' : $route.name === 'emails' }" @click="closeSidebar()">
-                    Emails
-                    <span>
-                        <svg viewBox="0 0 24 24" class="size-[30px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <g id="Arrow / Caret_Right_SM">
-                                    <path class="stroke-white" id="Vector" d="M11 9L14 12L11 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </g>
-                        </svg>
-                    </span>
-                </router-link>
             </div>
         </aside>
-        <section class="p-5 h-screen w-full">
+        <section class="p-3 md:p-5 h-screen w-full">
             <div class="w-full h-full bg-white rounded-3xl overflow-hidden">
                 <div class="w-full flex justify-between items-center px-5 h-[70px]">
                     <div class="flex items-center gap-x-2">

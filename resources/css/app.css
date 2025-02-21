@@ -81,3 +81,59 @@
         --border-angle: 360deg;
     }
 }
+
+.scrollbar {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 5px !important;
+        height: 5px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #000000;
+        height: 5px !important;
+    }
+}
+
+/* slider */
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.slider {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    cursor: grab;
+}
+
+.slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.slider.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto; /* Disable smooth scrolling while dragging */
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
