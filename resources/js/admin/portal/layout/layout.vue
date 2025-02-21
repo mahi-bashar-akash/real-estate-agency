@@ -160,19 +160,6 @@
                                 </g>
                             </svg>
                         </button>
-                        <label for="search" hidden="hidden">keyword</label>
-                        <div class="w-[250px] relative">
-                            <div class="absolute top-0 bottom-0 start-0 ps-3 flex justify-center items-center pointer-events-none">
-                                <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path class="stroke-[#1c252e]" d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <input type="text" id="search" name="keyword" placeholder="Search here ..." class="w-full outline-0 bg-gray-200 border border-gray-200 placeholder-[#1c252e] duration-500  h-[45px] focus-within:border-[#1c252e] py-2 ps-10 pe-4 rounded-xl" required autocomplete="off" />
-                        </div>
                     </div>
                     <div class="flex justify-end items-center gap-x-2">
                         <button type="button" class="bg-transparent duration-500 size-[45px] hover:bg-gray-300 outline-0 border-0 flex justify-center items-center rounded-full" @click="fullscreen()">
