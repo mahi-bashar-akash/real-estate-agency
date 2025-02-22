@@ -4,12 +4,12 @@
     "name": "vue-router"
   },
   "resources/css/app.css": {
-    "file": "assets/app-CI6v36lX.css",
+    "file": "assets/app-hIqA44zw.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-C44gUJK_.js",
+    "file": "assets/app-iVEPERFr.js",
     "name": "app",
     "src": "resources/js/admin/app.js",
     "isEntry": true,

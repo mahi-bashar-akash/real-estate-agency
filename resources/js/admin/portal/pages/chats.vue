@@ -612,7 +612,17 @@ export default {
                 { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-1.jpg" },
                 { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" },
                 { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-1.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" }
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-1.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-1.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-1.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-1.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-1.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" },
             ]
         }
     },
