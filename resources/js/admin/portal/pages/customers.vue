@@ -68,7 +68,7 @@
                             <div
                                 class="border bg-white duration-500 rounded-xl overflow-hidden hover:shadow-xl relative">
                                 <div class="absolute top-0 end-0 p-3">
-                                    <button type="button" class="bg-transparent duration-500 hover:bg-gray-300 outline-0 border-0 size-[45px] rounded-lg inline-flex justify-center items-center">
+                                    <button type="button" class="bg-gray-200 duration-500 hover:bg-gray-400 outline-0 border-0 size-[45px] rounded-lg inline-flex justify-center items-center">
                                         <svg viewBox="0 -0.5 25 25" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

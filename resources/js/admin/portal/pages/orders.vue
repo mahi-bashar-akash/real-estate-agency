@@ -68,7 +68,7 @@
                             <div
                                 class="border bg-white duration-500 rounded-xl overflow-hidden hover:shadow-xl relative">
                                 <div class="absolute top-0 end-0 p-3">
-                                    <span class="px-3 py-1 rounded-md inline-block text-white bg-green-500/35 text-green-700 font-medium text-[13px]">
+                                    <span class="px-3 py-1 rounded-md inline-block bg-green-500/35 text-green-700 font-medium text-[13px]">
                                         Paid
                                     </span>
                                 </div>
