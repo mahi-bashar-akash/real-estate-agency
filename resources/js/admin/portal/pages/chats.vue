@@ -4,10 +4,10 @@
         <div class="bg-gray-200 rounded-2xl w-full h-[calc(100vh-130px)] overflow-hidden">
 
             <div class="flex justify-start items-start h-full relative">
-                <div class="max-w-[380px] min-w-[380px] h-full absolute bg-white z-20 top-0 bottom-0 start-0">
+                <div class="max-w-[380px] min-w-[380px] h-full absolute bg-gray-200 z-30 top-0 bottom-0 overflow-y-auto scrollbar duration-500" @click.self="isChatSettingsSidebarActive = false" :class="{ 'start-0' : isChatSettingsSidebarActive, '-start-[380px]' : !isChatSettingsSidebarActive }" id="chatSettingsSidebar">
                     <div class="ps-6 pe-5 py-3 flex justify-between items-center">
                         <div class="text-[25px]"> Settings </div>
-                        <button type="button" class="bg-transparent outline-0 border-0 size-[35px] inline-flex justify-center items-center rounded-full hover:bg-gray-300 duration-500">
+                        <button type="button" class="bg-transparent outline-0 border-0 size-[35px] inline-flex justify-center items-center rounded-full hover:bg-white duration-500" @click="closeChatSettingsSidebar()">
                             <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -39,7 +39,13 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <svg viewBox="0 0 24 24" class="size-[25px] fill-black cursor-pointer" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21,2H15a1,1,0,0,0-1,1V9a1,1,0,0,0,1,1h1v2h2V10h2v2h2V3A1,1,0,0,0,21,2ZM18,8H16V4h4V8ZM3,10H9a1,1,0,0,0,1-1V3A1,1,0,0,0,9,2H3A1,1,0,0,0,2,3V9A1,1,0,0,0,3,10ZM4,4H8V8H4ZM5,16v2H3V16ZM3,20H5v2H3Zm4-2v2H5V18Zm0-2H5V14H7V12H9v4ZM5,12v2H3V12Zm9,3v1H13V14H11v4h3v3a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V15a1,1,0,0,0-1-1H16V12H14Zm6,1v4H16V16ZM9,18h2v2h1v2H7V20H9ZM13,6H11V4h2ZM11,8h2v4H11ZM5,5H7V7H5ZM17,5h2V7H17Zm2,14H17V17h2Z"></path></g></svg>
+                                            <svg viewBox="0 0 24 24" class="size-[25px] fill-black duration-500 hover:fill-blue-600 cursor-pointer" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path d="M21,2H15a1,1,0,0,0-1,1V9a1,1,0,0,0,1,1h1v2h2V10h2v2h2V3A1,1,0,0,0,21,2ZM18,8H16V4h4V8ZM3,10H9a1,1,0,0,0,1-1V3A1,1,0,0,0,9,2H3A1,1,0,0,0,2,3V9A1,1,0,0,0,3,10ZM4,4H8V8H4ZM5,16v2H3V16ZM3,20H5v2H3Zm4-2v2H5V18Zm0-2H5V14H7V12H9v4ZM5,12v2H3V12Zm9,3v1H13V14H11v4h3v3a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V15a1,1,0,0,0-1-1H16V12H14Zm6,1v4H16V16ZM9,18h2v2h1v2H7V20H9ZM13,6H11V4h2ZM11,8h2v4H11ZM5,5H7V7H5ZM17,5h2V7H17Zm2,14H17V17h2Z"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                     </div>
                                 </div>
@@ -114,27 +120,92 @@
 
                                 <!-- Accordion Content -->
                                 <div
-                                    class="bg-gray-200 mt-2 rounded-xl overflow-hidden transition-all duration-500"
+                                    class="bg-white mt-2 rounded-xl overflow-hidden transition-all duration-500"
                                     :class="{ 'max-h-[900px] mb-2' : activeTab === index, 'max-h-0 mb-0' : activeTab !== index }"
                                 >
                                     <div class="p-3">
                                         <template v-if="index === 0">
-                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center duration-500 text-gray-700 hover:text-blue-700 text-[14px] font-medium">
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg viewBox="0 0 192 192" class="size-[25px] fill-gray-700" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <g fill="none" class="stroke-gray-700" stroke-width="12">
+                                                                <path stroke-linecap="round" d="M151.8 144.5a74 74 0 0 1-85.59 19.21A74 74 0 0 1 22.42 87.7a74 74 0 0 1 59.55-64.42m28.03.06a74 74 0 0 1 50.06 35.61 74 74 0 0 1 5.915 61.15"></path>
+                                                                <path d="M76 92h40c4.432 0 8 3.568 8 8v22c0 4.432-3.568 8-8 8H76c-4.432 0-8-3.568-8-8v-22c0-4.432 3.568-8 8-8zm4 0V77.7C80 69.029 87.163 62 96 62s16 7.029 16 15.7V92"></path>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
                                                 Privacy
                                             </a>
-                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center duration-500 text-gray-700 hover:text-blue-700 text-[14px] font-medium">
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path class="stroke-gray-700" d="M20.91 11.12C20.91 16.01 17.36 20.59 12.51 21.93C12.18 22.02 11.82 22.02 11.49 21.93C6.63996 20.59 3.08997 16.01 3.08997 11.12V6.72997C3.08997 5.90997 3.70998 4.97998 4.47998 4.66998L10.05 2.39001C11.3 1.88001 12.71 1.88001 13.96 2.39001L19.53 4.66998C20.29 4.97998 20.92 5.90997 20.92 6.72997L20.91 11.12Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path class="stroke-gray-700" d="M12 12.5C13.1046 12.5 14 11.6046 14 10.5C14 9.39543 13.1046 8.5 12 8.5C10.8954 8.5 10 9.39543 10 10.5C10 11.6046 10.8954 12.5 12 12.5Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path class="stroke-gray-700" d="M12 12.5V15.5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </g>
+                                                    </svg>
+                                                </span>
                                                 Security
                                             </a>
-                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center duration-500 text-gray-700 hover:text-blue-700 text-[14px] font-medium">
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path class="stroke-gray-700" d="M15 18L17 20L21 16M11 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V7.2C4 6.0799 4 5.51984 4.21799 5.09202C4.40973 4.71569 4.71569 4.40973 5.09202 4.21799C5.51984 4 6.0799 4 7.2 4H16.8C17.9201 4 18.4802 4 18.908 4.21799C19.2843 4.40973 19.5903 4.71569 19.782 5.09202C20 5.51984 20 6.0799 20 7.2V12M7 20C7 19.6575 7.03443 19.3231 7.10002 19C7.56329 16.7178 9.58104 15 12 15M14 10C14 11.1046 13.1046 12 12 12C10.8954 12 10 11.1046 10 10C10 8.89543 10.8954 8 12 8C13.1046 8 14 8.89543 14 10Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </g>
+                                                    </svg>
+                                                </span>
                                                 Two-step verification
                                             </a>
-                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center duration-500 text-gray-700 hover:text-blue-700 text-[14px] font-medium">
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path class="stroke-gray-700" stroke-width="1.5" d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </g>
+                                                    </svg>
+                                                </span>
                                                 Change number
                                             </a>
-                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center duration-500 text-gray-700 hover:text-blue-700 text-[14px] font-medium">
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path class="stroke-gray-700" d="M12 17V11" stroke-width="1.5" stroke-linecap="round"></path>
+                                                            <circle class="fill-gray-700" cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)"></circle>
+                                                            <path class="stroke-gray-700" stroke-width="1.5" d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"></path>
+                                                        </g>
+                                                    </svg>
+                                                </span>
                                                 Request account info
                                             </a>
-                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center duration-500 text-gray-700 hover:text-blue-700 text-[14px] font-medium">
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path class="fill-gray-700" d="M12 2.75C11.0215 2.75 10.1871 3.37503 9.87787 4.24993C9.73983 4.64047 9.31134 4.84517 8.9208 4.70713C8.53026 4.56909 8.32557 4.1406 8.46361 3.75007C8.97804 2.29459 10.3661 1.25 12 1.25C13.634 1.25 15.022 2.29459 15.5365 3.75007C15.6745 4.1406 15.4698 4.56909 15.0793 4.70713C14.6887 4.84517 14.2602 4.64047 14.1222 4.24993C13.813 3.37503 12.9785 2.75 12 2.75Z"></path>
+                                                            <path class="fill-gray-700" d="M2.75 6C2.75 5.58579 3.08579 5.25 3.5 5.25H20.5001C20.9143 5.25 21.2501 5.58579 21.2501 6C21.2501 6.41421 20.9143 6.75 20.5001 6.75H3.5C3.08579 6.75 2.75 6.41421 2.75 6Z"></path>
+                                                            <path class="fill-gray-700" d="M5.91508 8.45011C5.88753 8.03681 5.53015 7.72411 5.11686 7.75166C4.70356 7.77921 4.39085 8.13659 4.41841 8.54989L4.88186 15.5016C4.96735 16.7844 5.03641 17.8205 5.19838 18.6336C5.36678 19.4789 5.6532 20.185 6.2448 20.7384C6.83639 21.2919 7.55994 21.5307 8.41459 21.6425C9.23663 21.75 10.2751 21.75 11.5607 21.75H12.4395C13.7251 21.75 14.7635 21.75 15.5856 21.6425C16.4402 21.5307 17.1638 21.2919 17.7554 20.7384C18.347 20.185 18.6334 19.4789 18.8018 18.6336C18.9637 17.8205 19.0328 16.7844 19.1183 15.5016L19.5818 8.54989C19.6093 8.13659 19.2966 7.77921 18.8833 7.75166C18.47 7.72411 18.1126 8.03681 18.0851 8.45011L17.6251 15.3492C17.5353 16.6971 17.4712 17.6349 17.3307 18.3405C17.1943 19.025 17.004 19.3873 16.7306 19.6431C16.4572 19.8988 16.083 20.0647 15.391 20.1552C14.6776 20.2485 13.7376 20.25 12.3868 20.25H11.6134C10.2626 20.25 9.32255 20.2485 8.60915 20.1552C7.91715 20.0647 7.54299 19.8988 7.26957 19.6431C6.99616 19.3873 6.80583 19.025 6.66948 18.3405C6.52891 17.6349 6.46488 16.6971 6.37503 15.3492L5.91508 8.45011Z"></path>
+                                                            <path class="fill-gray-700" d="M9.42546 10.2537C9.83762 10.2125 10.2051 10.5132 10.2464 10.9254L10.7464 15.9254C10.7876 16.3375 10.4869 16.7051 10.0747 16.7463C9.66256 16.7875 9.29502 16.4868 9.25381 16.0746L8.75381 11.0746C8.71259 10.6625 9.0133 10.2949 9.42546 10.2537Z"></path>
+                                                            <path class="fill-gray-700" d="M15.2464 11.0746C15.2876 10.6625 14.9869 10.2949 14.5747 10.2537C14.1626 10.2125 13.795 10.5132 13.7538 10.9254L13.2538 15.9254C13.2126 16.3375 13.5133 16.7051 13.9255 16.7463C14.3376 16.7875 14.7051 16.4868 14.7464 16.0746L15.2464 11.0746Z"></path>
+                                                        </g>
+                                                    </svg>
+                                                </span>
                                                 Delete my account
                                             </a>
                                         </template>
@@ -147,20 +218,105 @@
                                                 </label>
                                             </div>
                                             <div class="mb-3 px-3 text-[14px]"> Sound Control </div>
-                                            <div class="px-3 pb-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-[14px] font-medium w-full">
-                                                <label for="silent" class="duration-500 text-gray-700 hover:text-blue-700 inline-flex justify-start items-center">
-                                                    <input type="radio" id="silent" name="sound-type" class="me-2" />
-                                                    Silent
+                                            <div class="grid grid-cols-3 gap-2 px-3">
+                                                <label for="silent" class="flex items-center gap-1 cursor-pointer text-gray-700">
+                                                    <input type="radio" id="silent" name="sound-type" class="hidden peer" checked />
+                                                    <span class="w-5 h-5 flex items-center justify-center rounded-full border-4 border-gray-300 peer-checked:border-blue-700">
+                                                        <span class="w-3 h-3 bg-blue-700 rounded-full opacity-0 peer-checked:opacity-100 transition"></span>
+                                                    </span>
+                                                    <span>Silent</span>
                                                 </label>
-                                                <label for="vibrate" class="duration-500 text-gray-700 hover:text-blue-700 inline-flex justify-start items-center">
-                                                    <input type="radio" id="vibrate" name="sound-type" class="me-2" />
-                                                    Vibrate
+
+                                                <label for="vibrate" class="flex items-center gap-1 cursor-pointer text-gray-700">
+                                                    <input type="radio" id="vibrate" name="sound-type" class="hidden peer" />
+                                                    <span class="w-5 h-5 flex items-center justify-center rounded-full border-4 border-gray-300 peer-checked:border-blue-700">
+                                                        <span class="w-3 h-3 bg-blue-700 rounded-full opacity-0 peer-checked:opacity-100 transition"></span>
+                                                    </span>
+                                                    <span>Vibrate</span>
                                                 </label>
-                                                <label for="default" class="duration-500 text-gray-700 hover:text-blue-700 inline-flex justify-start items-center">
-                                                    <input type="radio" id="default" name="sound-type" class="me-2" />
-                                                    Default
+
+                                                <label for="default" class="flex items-center gap-1 cursor-pointer text-gray-700">
+                                                    <input type="radio" id="default" name="sound-type" class="hidden peer" />
+                                                    <span class="w-5 h-5 flex items-center justify-center rounded-full border-4 border-gray-300 peer-checked:border-blue-700">
+                                                        <span class="w-3 h-3 bg-blue-700 rounded-full opacity-0 peer-checked:opacity-100 transition"></span>
+                                                    </span>
+                                                    <span>Default</span>
                                                 </label>
                                             </div>
+                                        </template>
+                                        <template v-if="index === 2">
+
+                                            <div class="flex justify-start items-center mb-3">
+                                                <div class="size-[55px] inline-flex justify-center items-center bg-gray-200 rounded-full">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 8.2C3 7.07989 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H9.67452C10.1637 5 10.4083 5 10.6385 5.05526C10.8425 5.10425 11.0376 5.18506 11.2166 5.29472C11.4184 5.4184 11.5914 5.59135 11.9373 5.93726L12.0627 6.06274C12.4086 6.40865 12.5816 6.5816 12.7834 6.70528C12.9624 6.81494 13.1575 6.89575 13.3615 6.94474C13.5917 7 13.8363 7 14.3255 7H17.8C18.9201 7 19.4802 7 19.908 7.21799C20.2843 7.40973 20.5903 7.71569 20.782 8.09202C21 8.51984 21 9.0799 21 10.2V15.8C21 16.9201 21 17.4802 20.782 17.908C20.5903 18.2843 20.2843 18.5903 19.908 18.782C19.4802 19 18.9201 19 17.8 19H6.2C5.07989 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <div class="text-[17px] font-medium"> Manage storage </div>
+                                                    <div class="text-gray-700 text-[14px]"> 2.4 GB </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex justify-start items-center">
+                                                <div class="size-[55px] inline-flex justify-center items-center bg-gray-200 rounded-full">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7 13.9998C12.777 13.9998 13.65 14.8952 13.65 15.9998C13.65 17.1043 12.777 17.9998 11.7 17.9998C10.623 17.9998 9.75 17.1043 9.75 15.9998C9.75 14.8952 10.623 13.9998 11.7 13.9998Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6.53734 11.4153C6.21454 11.6749 6.16328 12.147 6.42284 12.4698C6.68241 12.7926 7.15451 12.8438 7.47731 12.5843L6.53734 11.4153ZM15.9217 12.5843C16.2445 12.8438 16.7166 12.7926 16.9762 12.4698C17.2357 12.147 17.1845 11.6749 16.8617 11.4153L15.9217 12.5843ZM4.40719 8.91358C4.08343 9.17195 4.03042 9.64385 4.28878 9.96761C4.54714 10.2914 5.01905 10.3444 5.34281 10.086L4.40719 8.91358ZM18.0785 10.1024C18.4113 10.349 18.881 10.2791 19.1276 9.9463C19.3742 9.61349 19.3043 9.14379 18.9715 8.89719L18.0785 10.1024ZM7.47731 12.5843C9.95807 10.5895 13.441 10.5895 15.9217 12.5843L16.8617 11.4153C13.832 8.97915 9.56702 8.97915 6.53734 11.4153L7.47731 12.5843ZM5.34281 10.086C8.03641 7.9365 10.6227 7.52956 12.8154 7.84408C15.0378 8.16284 16.9034 9.23173 18.0785 10.1024L18.9715 8.89719C17.6808 7.94087 15.5835 6.72576 13.0284 6.35927C10.4437 5.98854 7.43782 6.4951 4.40719 8.91358L5.34281 10.086Z" fill="#000000"></path> </g></svg>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <div class="text-[17px] font-medium"> Network usage </div>
+                                                    <div class="text-gray-700 text-[14px]"> 7.2 GB sent - 13.8 GB received </div>
+                                                </div>
+                                            </div>
+
+                                        </template>
+                                        <template v-if="index === 3">
+
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path class="stroke-gray-700" d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13M12 17H12.01M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                Help center or FAQ?
+                                            </a>
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path class="stroke-gray-700" stroke-width="1.5" d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                Contact us
+                                            </a>
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg class="size-[25px] fill-gray-700" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path d="M21.406,5.086l-9-4a1,1,0,0,0-.812,0l-9,4A1,1,0,0,0,2,6v.7a18.507,18.507,0,0,0,9.515,16.17,1,1,0,0,0,.97,0A18.507,18.507,0,0,0,22,6.7V6A1,1,0,0,0,21.406,5.086ZM20,6.7a16.507,16.507,0,0,1-8,14.141A16.507,16.507,0,0,1,4,6.7V6.65l8-3.556L20,6.65ZM11,10h2v8H11Zm0-4h2V8H11Z"></path>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                Teams and Privacy Policy
+                                            </a>
+                                            <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
+                                                <span class="me-2">
+                                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path class="stroke-gray-700" stroke-width="1.5" d="M12 18H12.01M9.2 21H14.8C15.9201 21 16.4802 21 16.908 20.782C17.2843 20.5903 17.5903 20.2843 17.782 19.908C18 19.4802 18 18.9201 18 17.8V6.2C18 5.0799 18 4.51984 17.782 4.09202C17.5903 3.71569 17.2843 3.40973 16.908 3.21799C16.4802 3 15.9201 3 14.8 3H9.2C8.0799 3 7.51984 3 7.09202 3.21799C6.71569 3.40973 6.40973 3.71569 6.21799 4.09202C6 4.51984 6 5.07989 6 6.2V17.8C6 18.9201 6 19.4802 6.21799 19.908C6.40973 20.2843 6.71569 20.5903 7.09202 20.782C7.51984 21 8.07989 21 9.2 21Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                App info
+                                            </a>
                                         </template>
                                     </div>
                                 </div>
@@ -169,9 +325,20 @@
 
                     </div>
                 </div>
-                <div class="max-w-[380px] min-w-[380px] h-full">
-                    <div class="px-5 py-3 text-[25px]">
+                <div class="max-w-[380px] min-w-[380px] h-full absolute xl:static top-0 bottom-0 duration-500 z-20 bg-white xl:bg-transparent" @click.self="isChatSidebarActive = false" :class="{ '-start-[380px]' : !isChatSidebarActive, 'start-[0px]' : isChatSidebarActive }" id="chatSidebar">
+                    <div class="px-5 py-3 text-[25px] flex justify-between xl:justify-start items-center">
                         Chats
+                        <button type="button" class="bg-transparent outline-0 border-0 size-[35px] inline-flex xl:hidden justify-center items-center rounded-full hover:bg-white duration-500" @click="closeChatSidebar()">
+                            <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g id="Menu / Close_SM">
+                                        <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
                     </div>
                     <div class="px-5 pb-3 flex justify-between items-center gap-3">
                         <label for="search" hidden="hidden">keyword</label>
@@ -192,7 +359,7 @@
                                    class="w-full outline-0 bg-white border border-white placeholder-[#1c252e] duration-500  h-[45px] focus-within:border-[#1c252e] py-2 ps-10 pe-4 rounded-xl"
                                    required autocomplete="off"/>
                         </div>
-                        <div class="min-w-[45px] min-h-[45px] flex justify-center items-center duration-500 bg-transparent hover:bg-white rounded-full cursor-pointer">
+                        <div class="min-w-[45px] min-h-[45px] flex justify-center items-center duration-500 bg-transparent hover:bg-white rounded-full cursor-pointer" @click.stop="openChatSettingsSidebar()">
                             <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -204,7 +371,7 @@
                         </div>
                     </div>
                     <div class="px-5 pb-3">
-                        <div class="text-[17px] font-medium text-gray-500 mb-2"> Messages </div>
+                        <div class="text-[17px] font-medium mb-2"> Messages </div>
                         <div class="grid grid-cols-3 gap-2">
                             <button type="button" class="bg-blue-800 duration-500 hover:bg-blue-950 py-2 text-white rounded-md"> Chat </button>
                             <button type="button" class="bg-blue-800 duration-500 hover:bg-blue-950 py-2 text-white rounded-md"> Group </button>
@@ -310,8 +477,119 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full h-full bg-gray-100">
-
+                <div class="w-full h-full bg-gray-200 p-3">
+                    <div class="w-full h-full bg-white rounded-xl overflow-hidden">
+                        <div class="flex justify-between items-center w-full pe-3">
+                            <div class="flex justify-start items-center ps-3 gap-x-2">
+                                <button type="button" class="min-w-[55px] min-h-[55px] size-[55px] rounded-full inline-flex xl:hidden justify-center items-center bg-transparent duration-500 hover:bg-gray-300" @click.stop="openChatSidebar()">
+                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path d="M5 7H19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M5 12L14 12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M5 17L19 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <div class="flex justify-start items-center py-3 bg-transparent pe-3 bg-white">
+                                    <img :src="'/images/agent-1.jpg'" class="size-[55px] min-w-[55px] min-h-[55px] rounded-full object-cover bg-cover object-top bg-top" alt="">
+                                    <div class="flex justify-between items-center w-full">
+                                        <div class="ps-3 w-full">
+                                            <div class="font-medium text-gray-700 text-[17px]">
+                                                John Doe
+                                            </div>
+                                            <div class="text-green-500 text-[14px] font-medium flex items-center justify-start gap-x-2">
+                                                Active <span class="inline-block bg-green-500 h-3 w-3 rounded-full"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative" id="profileChatDropdown">
+                                <button type="button" class="outline-0 border-0 inline-flex justify-center items-center size-[45px] rounded-full bg-transparent duration-500 cursor-pointer hover:bg-gray-200" @click.stop="chatDropdownToggle()">
+                                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"
+                                         class="bi bi-three-dots-vertical size-[20px]">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                           stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <ul class="absolute top-auto end-0 w-[170px] h-auto bg-white drop-shadow-xl rounded-lg p-2 mt-2" v-if="isChatDropdownActive" @click.stop>
+                                    <li>
+                                        <a href="javascript:void(0)" class="decoration-0 flex justify-start items-center px-3 py-2 bg-transparent duration-500 rounded-lg hover:bg-gray-200 text-[14px]" @click="chatDropdownToggle()">
+                                            <span class="inline-flex min-w-[25px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[20px]">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                                </svg>
+                                            </span>
+                                            View Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="decoration-0 flex justify-start items-center px-3 py-2 bg-transparent duration-500 rounded-lg hover:bg-gray-200 text-[14px]" @click="chatDropdownToggle()">
+                                            <span class="inline-flex min-w-[25px]">
+                                                <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                    <g id="SVGRepo_iconCarrier">
+                                                        <path class="stroke-black" stroke-width="1.5" d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                            Call
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="decoration-0 flex justify-start items-center px-3 py-2 bg-transparent duration-500 rounded-lg hover:bg-gray-200 text-[14px]" @click="chatDropdownToggle()">
+                                            <span class="inline-flex min-w-[25px]">
+                                                <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                    <g id="SVGRepo_iconCarrier">
+                                                        <path class="stroke-black" d="M16 10L18.5768 8.45392C19.3699 7.97803 19.7665 7.74009 20.0928 7.77051C20.3773 7.79703 20.6369 7.944 20.806 8.17433C21 8.43848 21 8.90095 21 9.8259V14.1741C21 15.099 21 15.5615 20.806 15.8257C20.6369 16.056 20.3773 16.203 20.0928 16.2295C19.7665 16.2599 19.3699 16.022 18.5768 15.5461L16 14M6.2 18H12.8C13.9201 18 14.4802 18 14.908 17.782C15.2843 17.5903 15.5903 17.2843 15.782 16.908C16 16.4802 16 15.9201 16 14.8V9.2C16 8.0799 16 7.51984 15.782 7.09202C15.5903 6.71569 15.2843 6.40973 14.908 6.21799C14.4802 6 13.9201 6 12.8 6H6.2C5.0799 6 4.51984 6 4.09202 6.21799C3.71569 6.40973 3.40973 6.71569 3.21799 7.09202C3 7.51984 3 8.07989 3 9.2V14.8C3 15.9201 3 16.4802 3.21799 16.908C3.40973 17.2843 3.71569 17.5903 4.09202 17.782C4.51984 18 5.07989 18 6.2 18Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                            Video Call
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-3 h-[calc(100vh-305px)]">
+                            <div class="w-full bg-gray-100 h-full rounded-xl p-3 overflow-y-auto scrollbar">
+                                <div v-for="(message, index) in messages" :key="index" class="flex mb-3" :class="{'justify-start': message.type === 'received', 'justify-end': message.type === 'sent'}">
+                                    <div v-if="message.type === 'received'" class="me-2">
+                                        <img :src="message.avatar" class="size-[55px] min-w-[55px] min-h-[55px] rounded-full object-cover bg-cover object-center bg-center" alt="chat" />
+                                    </div>
+                                    <div :class="message.type === 'received' ? 'bg-white' : 'bg-blue-800 text-white'" class="px-4 py-2 drop-shadow-xl rounded-lg">
+                                        <div class="font-medium"> {{ message.text }} </div>
+                                        <div :class="message.type === 'received' ? 'text-gray-600 text-end' : 'text-white text-start'" class="text-[13px] mt-2"> {{ message.time }} </div>
+                                    </div>
+                                    <div v-if="message.type === 'sent'" class="ms-2">
+                                        <img :src="message.avatar" class="size-[55px] min-w-[55px] min-h-[55px] rounded-full object-cover bg-cover object-center bg-center" alt="chat" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center px-3 gap-x-3">
+                            <input type="text" name="message" placeholder="Type Here ..." class="w-full px-5 py-4 rounded-xl outline-0 border-0 bg-gray-200" required autocomplete="off" />
+                            <button type="submit" class="min-w-[57px] py-4 inline-flex justify-center items-center bg-gray-200 duration-500 hover:bg-blue-800 rounded-xl group">
+                                <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path class="duration-500 stroke-black group-hover:stroke-white" stroke="#000000" d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -327,15 +605,63 @@ export default {
         return {
             activeTab: null,
             accordionItems: [],
+            isChatSettingsSidebarActive: false,
+            isChatSidebarActive: false,
+            isChatDropdownActive: false,
+            messages: [
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-1.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-1.jpg" },
+                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-2.jpg" }
+            ]
         }
     },
     mounted() {
-
+        window.addEventListener("click", this.handleChatDropdownClose);
+        window.addEventListener("click", (event) => this.handleChatSettingsSidebarClose(event))
+        window.addEventListener("click", (event) => this.handleChatSidebarClose(event))
+    },
+    unmounted() {
+        window.removeEventListener("click", this.handleChatDropdownClose);
+        window.removeEventListener("click", this.handleChatSettingsSidebarClose);
+        window.removeEventListener("click", this.handleChatSidebarClose);
     },
     methods: {
         setTab(index) {
-            this.activeTab = this.activeTab === index ? null : index; // Toggle the active tab
+            this.activeTab = this.activeTab === index ? null : index;
         },
+        openChatSettingsSidebar() {
+            this.isChatSettingsSidebarActive = true;
+            this.isChatSidebarActive = false;
+        },
+        closeChatSettingsSidebar() {
+            this.isChatSettingsSidebarActive = false;
+        },
+        handleChatSettingsSidebarClose(event) {
+            if (!event.target.closest("#chatSettingsSidebar") && this.isChatSettingsSidebarActive) {
+                this.isChatSettingsSidebarActive = false;
+            }
+        },
+        openChatSidebar() {
+            this.isChatSidebarActive = true;
+        },
+        closeChatSidebar() {
+            this.isChatSidebarActive = false;
+        },
+        handleChatSidebarClose(event) {
+            if (!event.target.closest("#chatSidebar") && this.isChatSidebarActive) {
+                this.isChatSidebarActive = false;
+            }
+        },
+        chatDropdownToggle() {
+            this.isChatDropdownActive = !this.isChatDropdownActive;
+        },
+        handleChatDropdownClose() {
+            if(!event.target.closest("#profileChatDropdown")) {
+                this.isChatDropdownActive = false;
+            }
+        },
+
     }
 }
 
