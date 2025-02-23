@@ -263,9 +263,9 @@
         </div>
     </div>
 
-    <!-- modal -->
-    <div class="fixed inset-0 size-full flex justify-center items-center duration-500 z-50" :class="{ 'invisible bg-black/35' : !isComposerModal, 'visible bg-black/65' : isComposerModal }" @click="isComposerModal = false">
-        <form class="bg-white rounded-2xl w-full max-w-[550px] p-5 duration-500 origin-top" :class="{ '-translate-y-1/2 opacity-0' : !isComposerModal, 'translate-y-0 opacity-100' : isComposerModal }" @click.stop>
+    <!-- composer modal -->
+    <div class="fixed inset-0 size-full grid sm:justify-center items-center duration-500 z-50 overflow-y-auto scrollbar p-2 md:p-16" :class="{ 'invisible bg-black/35' : !isComposerModal, 'visible bg-black/65' : isComposerModal }" @click="isComposerModal = false">
+        <form class="bg-white rounded-2xl min-w-full sm:min-w-[450px] p-5 sm:p-10 duration-500 origin-top" :class="{ '-translate-y-1/2 opacity-0' : !isComposerModal, 'translate-y-0 opacity-100' : isComposerModal }" @click.stop>
             <div class="flex justify-between items-center mb-3">
                 <div class="text-[22px]"> New Message </div>
                 <button type="button" class="size-[35px] inline-flex justify-center items-center" @click="closeComposerModal()">
@@ -290,10 +290,10 @@
                 </div>
             </div>
             <div class="flex justify-end items-center gap-x-2">
-                <button type="button" class="min-w-[130px] px-5 py-2 inline-flex justify-center items-center bg-gray-200 duration-500 text-gray-700 hover:bg-gray-700 hover:text-white rounded-lg" @click="closeComposerModal()">
+                <button type="button" class="min-w-[126px] py-2 inline-flex justify-center items-center bg-gray-200 duration-500 text-gray-700 hover:bg-gray-700 hover:text-white rounded-lg" @click="closeComposerModal()">
                     Cancel
                 </button>
-                <button type="submit" class="min-w-[130px] px-5 py-2 inline-flex justify-center items-center bg-blue-200 duration-500 text-blue-700 hover:bg-blue-800 hover:text-white rounded-lg">
+                <button type="submit" class="min-w-[126px] py-2 inline-flex justify-center items-center bg-blue-200 duration-500 text-blue-700 hover:bg-blue-800 hover:text-white rounded-lg">
                     Send
                 </button>
             </div>

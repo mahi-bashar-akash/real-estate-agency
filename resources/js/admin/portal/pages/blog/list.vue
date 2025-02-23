@@ -7,13 +7,12 @@
             <div class="flex justify-between items-center mb-3">
 
                 <!-- title -->
-                <div class="text-[25px]"> Blogs</div>
+                <div class="text-[25px]"> Blogs </div>
 
                 <!-- button -->
-                <button type="button" @click="openManageModal()"
-                   class="bg-[#1c252e] outline-0 border-0 text-white rounded-xl opacity-100 duration-500 hover:opacity-75 h-[45px] w-[100px] text-[15px] inline-flex justify-center items-center">
+                <router-link :to="{name:'manageBlog',params:{id:'new'}}" class="bg-[#1c252e] outline-none border-0 text-white rounded-xl opacity-100 duration-500 hover:opacity-75 h-[45px] w-[100px] text-[15px] inline-flex justify-center items-center">
                     Add
-                </button>
+                </router-link>
 
             </div>
 
@@ -69,9 +68,7 @@
                                         <ul class="absolute top-auto end-0 w-[150px] bg-white drop-shadow-xl border p-1 rounded-xl"
                                             v-if="isDropdownActive === index" @click.stop>
                                             <li>
-                                                <a href="javascript:void(0)"
-                                                   class="decoration-0 flex justify-start items-center px-4 py-2 duration-500 bg-transparent hover:bg-gray-200 rounded-xl"
-                                                   @click="dropdownToggle(index)">
+                                                <router-link :to="{name:'viewBlog',params:{id:index}}" class="decoration-0 flex justify-start items-center px-4 py-2 duration-500 bg-transparent hover:bg-gray-200 rounded-xl">
                                                     <span class="min-w-[30px] inline-flex justify-start items-center">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[20px]">
                                                           <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
@@ -79,23 +76,22 @@
                                                         </svg>
                                                     </span>
                                                     View
-                                                </a>
+                                                </router-link>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
-                                                   class="decoration-0 flex justify-start items-center px-4 py-2 duration-500 bg-transparent hover:bg-gray-200 rounded-xl"
-                                                   @click="dropdownToggle(index);openManageModal()">
+                                                <router-link :to="{name:'manageBlog',params:{id:index}}"
+                                                   class="decoration-0 flex justify-start items-center px-4 py-2 duration-500 bg-transparent hover:bg-gray-200 rounded-xl">
                                                     <span class="min-w-[30px] inline-flex justify-start items-center">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[20px]">
                                                           <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                                         </svg>
                                                     </span>
                                                     Edit
-                                                </a>
+                                                </router-link>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)"
-                                                   class="decoration-0 flex justify-start items-center text-rose-600 px-4 py-2 duration-500 bg-transparent hover:bg-gray-200 rounded-xl"
+                                                <button type="button"
+                                                   class="decoration-0 w-full flex justify-start items-center text-rose-600 px-4 py-2 duration-500 bg-transparent hover:bg-gray-200 rounded-xl"
                                                    @click="dropdownToggle(index);openDeleteModal()">
                                                     <span class="min-w-[30px] inline-flex justify-start items-center">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[20px]">
@@ -103,7 +99,7 @@
                                                         </svg>
                                                     </span>
                                                     Delete
-                                                </a>
+                                                </button>
                                             </li>
                                         </ul>
                                     </div>
@@ -177,69 +173,9 @@
         </div>
     </div>
 
-    <!-- manage modal -->
-    <div class="fixed inset-0 size-full flex justify-center items-center duration-500 z-50" :class="{ 'invisible bg-black/35' : !isManageModal, 'visible bg-black/65' : isManageModal }" @click="isManageModal = false">
-        <form @submit.prevent="manageApi()" class="bg-white rounded-2xl w-full max-w-[550px] p-5 duration-500 origin-top" :class="{ '-translate-y-1/2 opacity-0' : !isManageModal, 'translate-y-0 opacity-100' : isManageModal }" @click.stop>
-            <div class="flex justify-between items-center mb-3">
-                <div class="text-[22px]"> <span v-if="id === null"> Create </span> <span v-if="id !== null"> Edit </span> Blog </div>
-                <button type="button" class="size-[35px] inline-flex justify-center items-center" @click="closeManageModal()">
-                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path class="stroke-black" d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke-width="1.5" stroke-linecap="round"></path>
-                            <path class="stroke-black" d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-width="1.5" stroke-linecap="round"></path>
-                        </g>
-                    </svg>
-                </button>
-            </div>
-            <div class="w-full mb-3">
-                <div class="mb-3 w-full">
-                    <label for="upload-thumbnail" class="w-full flex bg-gray-200 rounded-lg justify-center items-center h-[200px] text-[21px] cursor-pointer">
-                        <input type="file" name="upload-thumbnail" id="upload-thumbnail" hidden="hidden">
-                        Upload Thumbnail
-                    </label>
-                </div>
-                <div class="mb-3 w-full">
-                    <label for="blog-title" class="block mb-1 w-full"> Blog Title: </label>
-                    <input id="blog-title" type="text" name="blog-title" class="w-full px-4 py-3 outline-0 border border-gray-300 block rounded-lg duration-500 focus-within:border-blue-800" required autocomplete="off" />
-                </div>
-                <div class="mb-3 w-full">
-                    <label for="blog-tag" class="block mb-1 w-full"> Blog Tag: </label>
-                    <input id="blog-tag" type="text" name="blog-tag" class="w-full px-4 py-3 outline-0 border border-gray-300 block rounded-lg duration-500 focus-within:border-blue-800" required autocomplete="off" />
-                </div>
-                <div class="w-full">
-                    <label for="blog-description" class="block mb-1 w-full"> Blog Description: </label>
-                    <textarea name="blog-description" id="blog-description" cols="30" rows="5" class="w-full p-4 outline-0 border border-gray-300 block rounded-lg" required autocomplete="off"></textarea>
-                </div>
-            </div>
-            <div class="flex justify-end items-center gap-x-2">
-                <button type="button" class="min-w-[130px] px-5 py-2 inline-flex justify-center items-center bg-gray-200 duration-500 text-gray-700 hover:bg-gray-700 hover:text-white rounded-lg" @click="closeManageModal()">
-                    Cancel
-                </button>
-                <button type="submit" class="min-w-[130px] px-5 py-2 inline-flex justify-center items-center bg-blue-200 duration-500 text-blue-700 hover:bg-blue-800 hover:text-white rounded-lg">
-                    <span v-if="id === null"> Save </span> <span v-if="id !== null"> Update </span>
-                </button>
-            </div>
-        </form>
-    </div>
-
     <!-- delete modal -->
-    <div class="fixed inset-0 size-full flex justify-center items-center duration-500 z-50" :class="{ 'invisible bg-black/35' : !isDeleteModal, 'visible bg-black/65' : isDeleteModal }" @click="isDeleteModal = false">
-        <form @submit.prevent="deleteApi()" class="bg-white rounded-2xl w-full max-w-[450px] p-5 duration-500 origin-top" :class="{ '-translate-y-1/2 opacity-0' : !isDeleteModal, 'translate-y-0 opacity-100' : isDeleteModal }" @click.stop>
-            <div class="flex justify-between items-center mb-3">
-                <div class="text-[22px]"> Delete Blog </div>
-                <button type="button" class="size-[35px] inline-flex justify-center items-center" @click="closeDeleteModal()">
-                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path class="stroke-black" d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke-width="1.5" stroke-linecap="round"></path>
-                            <path class="stroke-black" d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-width="1.5" stroke-linecap="round"></path>
-                        </g>
-                    </svg>
-                </button>
-            </div>
+    <div class="fixed inset-0 size-full grid sm:justify-center items-center duration-500 z-50 overflow-y-auto scrollbar p-2 md:p-16" :class="{ 'invisible bg-black/35' : !isDeleteModal, 'visible bg-black/65' : isDeleteModal }" @click="isDeleteModal = false">
+        <form @submit.prevent="deleteApi()" class="bg-white rounded-2xl min-w-full sm:min-w-[450px] p-5 sm:p-10 duration-500 origin-top" :class="{ '-translate-y-1/2 opacity-0' : !isDeleteModal, 'translate-y-0 opacity-100' : isDeleteModal }" @click.stop>
             <div class="w-full mb-3">
                 <div class="mb-3 flex justify-center">
                     <svg viewBox="0 0 24 24" class="size-[75px]" fill="none" xmlns="http://www.w3.org/2000/svg">
