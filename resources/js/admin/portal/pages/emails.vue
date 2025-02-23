@@ -4,7 +4,7 @@
         <div class="bg-gray-200 rounded-2xl w-full h-[calc(100vh-130px)] overflow-hidden">
 
             <div class="w-full flex h-full p-2 gap-x-2 relative">
-                <div class="min-w-[250px] max-w-[250px] bg-white h-full p-2 rounded-none duration-500 md:rounded-xl absolute top-0 bottom-0 md:static z-20" @click.self="isEmailSidebarActive = false" :class="{ 'start-[0px]' : isEmailSidebarActive,'-start-[260px]' : !isEmailSidebarActive }" id="emailSidebar">
+                <div class="min-w-full sm:min-w-[250px] max-w-full sm:max-w-[250px] bg-white h-full p-2 rounded-none duration-500 md:rounded-xl absolute top-0 bottom-0 md:static z-20" @click.self="isEmailSidebarActive = false" :class="{ 'start-[0px]' : isEmailSidebarActive,'-start-[110%] sm:-start-[260px]' : !isEmailSidebarActive }" id="emailSidebar">
                     <div class="flex justify-between gap-2">
                         <button type="button" class="bg-blue-600 duration-500 outline-0 border-0 hover:bg-blue-800 w-full flex justify-center items-center py-2 px-5 text-white rounded-lg font-medium">
                             Compose
@@ -135,7 +135,7 @@
                                 </div>
                             </div>
                             <div class="flex justify-start items-center mb-2 bg-white/25 duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer" @click.stop="emailContent()">
-                                <img :src="'/images/agent-1.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                                <img :src="'/images/agent-1.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                                 <div class="ps-3 flex w-full">
                                     <div class="w-9/12">
                                         <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -147,7 +147,7 @@
                                 </div>
                             </div>
                             <div class="flex justify-start items-center mb-2 bg-white/25 duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer" @click.stop="emailContent()">
-                                <img :src="'/images/agent-2.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                                <img :src="'/images/agent-2.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                                 <div class="ps-3 flex w-full">
                                     <div class="w-9/12">
                                         <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -159,7 +159,7 @@
                                 </div>
                             </div>
                             <div class="flex justify-start items-center mb-2 bg-white/25 duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer" @click.stop="emailContent()">
-                                <img :src="'/images/agent-3.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                                <img :src="'/images/agent-3.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                                 <div class="ps-3 flex w-full">
                                     <div class="w-9/12">
                                         <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -171,7 +171,7 @@
                                 </div>
                             </div>
                             <div class="flex justify-start items-center mb-2 bg-white/25 duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer" @click.stop="emailContent()">
-                                <img :src="'/images/agent-4.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                                <img :src="'/images/agent-4.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                                 <div class="ps-3 flex w-full">
                                     <div class="w-9/12">
                                         <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -183,7 +183,7 @@
                                 </div>
                             </div>
                             <div class="flex justify-start items-center mb-2 bg-white/25 duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer" @click.stop="emailContent()">
-                                <img :src="'/images/agent-6.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                                <img :src="'/images/agent-6.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                                 <div class="ps-3 flex w-full">
                                     <div class="w-9/12">
                                         <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -195,7 +195,7 @@
                                 </div>
                             </div>
                             <div class="flex justify-start items-center mb-2 bg-white/25 duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer" @click.stop="emailContent()">
-                                <img :src="'/images/agent-7.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                                <img :src="'/images/agent-7.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                                 <div class="ps-3 flex w-full">
                                     <div class="w-9/12">
                                         <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>

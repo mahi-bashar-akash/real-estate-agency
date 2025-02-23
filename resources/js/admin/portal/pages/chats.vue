@@ -4,7 +4,7 @@
         <div class="bg-gray-200 rounded-2xl w-full h-[calc(100vh-130px)] overflow-hidden">
 
             <div class="flex justify-start items-start h-full relative">
-                <div class="max-w-[380px] min-w-[380px] h-full absolute bg-gray-200 z-30 top-0 bottom-0 overflow-y-auto scrollbar duration-500" @click.self="isChatSettingsSidebarActive = false" :class="{ 'start-0' : isChatSettingsSidebarActive, '-start-[380px]' : !isChatSettingsSidebarActive }" id="chatSettingsSidebar">
+                <div class="w-full max-w-full min-w-full sm:max-w-[380px] sm:min-w-[380px] h-full absolute bg-gray-200 z-30 top-0 bottom-0 overflow-y-auto scrollbar duration-500" @click.self="isChatSettingsSidebarActive = false" :class="{ 'start-[0px]' : isChatSettingsSidebarActive, '-start-[110%] sm:-start-[380px]' : !isChatSettingsSidebarActive }" id="chatSettingsSidebar">
                     <div class="ps-6 pe-5 py-3 flex justify-between items-center">
                         <div class="text-[25px]"> Settings </div>
                         <button type="button" class="bg-transparent outline-0 border-0 size-[35px] inline-flex justify-center items-center rounded-full hover:bg-white duration-500" @click="closeChatSettingsSidebar()">
@@ -24,7 +24,7 @@
                         <div>
                             <div>
                                 <div class="flex justify-start items-center py-3 bg-transparent px-3">
-                                    <div class="min-w-[45px] min-h-[45px] size-[45px] inline-flex justify-center items-center rounded-full group-hover:bg-white duration-500 bg-gray-200">
+                                    <div class="min-w-[35px] sm:min-w-[45px] min-h-[35px] sm:min-h-[45px] size-[35px] sm:size-[45px] inline-flex justify-center items-center rounded-full group-hover:bg-white duration-500 bg-gray-200">
                                         <svg class="size-[20px]" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#000000;" d="M159.131,169.721c5.635,58.338,43.367,96.867,96.871,96.867c53.502,0,91.23-38.53,96.867-96.867l7.988-63.029 C365.812,44.768,315.281,0,256.002,0c-59.281,0-109.812,44.768-104.86,106.692L159.131,169.721z"></path> <path class="st0" d="M463.213,422.569l-3.824-24.35c-3.203-20.417-16.035-38.042-34.475-47.361l-80.473-40.693 c-2.519-1.274-4.57-3.194-6.289-5.338c-23.297,24.632-51.6,39.12-82.15,39.12c-30.549,0-58.856-14.488-82.152-39.12 c-1.719,2.144-3.77,4.064-6.289,5.338l-80.472,40.693c-18.442,9.319-31.272,26.944-34.475,47.361l-3.826,24.35 c-1.363,8.692,0.436,21.448,8.222,27.825C67.42,458.907,105.875,512,256.002,512c150.125,0,188.578-53.093,198.988-61.606 C462.779,444.017,464.576,431.261,463.213,422.569z"></path> </g> </g></svg>
                                     </div>
                                     <div class="flex justify-between items-center w-full">
@@ -55,7 +55,7 @@
                         <div>
                             <div v-for="(item, index) in 4" :key="index">
                                 <div class="flex justify-start items-center py-3 bg-transparent cursor-pointer duration-500 hover:bg-gray-200 px-3 rounded-xl group" @click="setTab(index)">
-                                    <div class="min-w-[45px] min-h-[45px] size-[45px] inline-flex justify-center items-center rounded-full group-hover:bg-white duration-500 bg-gray-200"
+                                    <div class="min-w-[35px] sm:min-w-[45px] min-h-[35px] sm:min-h-[45px] size-[35px] sm:size-[45px] inline-flex justify-center items-center rounded-full group-hover:bg-white duration-500 bg-gray-200"
                                     >
                                         <template v-if="index === 0">
                                             <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -325,7 +325,7 @@
 
                     </div>
                 </div>
-                <div class="max-w-[380px] min-w-[380px] h-full absolute xl:static top-0 bottom-0 duration-500 z-20 bg-white xl:bg-transparent" @click.self="isChatSidebarActive = false" :class="{ '-start-[380px]' : !isChatSidebarActive, 'start-[0px]' : isChatSidebarActive }" id="chatSidebar">
+                <div class="w-full max-w-full min-w-full sm:max-w-[380px] sm:min-w-[380px] h-full absolute xl:static top-0 bottom-0 duration-500 z-20 bg-white xl:bg-transparent" @click.self="isChatSidebarActive = false" :class="{ '-start-[110%] sm:-start-[380px]' : !isChatSidebarActive, 'start-[0px]' : isChatSidebarActive }" id="chatSidebar">
                     <div class="px-5 py-3 text-[25px] flex justify-between xl:justify-start items-center">
                         Chats
                         <button type="button" class="bg-transparent outline-0 border-0 size-[35px] inline-flex xl:hidden justify-center items-center rounded-full hover:bg-white duration-500" @click="closeChatSidebar()">
@@ -373,14 +373,20 @@
                     <div class="px-5 pb-3">
                         <div class="text-[17px] font-medium mb-2"> Messages </div>
                         <div class="grid grid-cols-3 gap-2">
-                            <button type="button" class="bg-blue-800 duration-500 hover:bg-blue-950 py-2 text-white rounded-md"> Chat </button>
-                            <button type="button" class="bg-blue-800 duration-500 hover:bg-blue-950 py-2 text-white rounded-md"> Group </button>
-                            <button type="button" class="bg-blue-800 duration-500 hover:bg-blue-950 py-2 text-white rounded-md"> Contact </button>
+                            <button type="button" class="rounded-md" :class="{ 'bg-blue-800 text-white duration-500 hover:bg-blue-950 py-2' : tab === 1, 'bg-white text-blue-950 duration-500 hover:bg-blue-950 py-2 hover:text-white' : tab !== 1 }" @click="tab = 1">
+                                Chat
+                            </button>
+                            <button type="button" class="rounded-md" :class="{ 'bg-blue-800 text-white duration-500 hover:bg-blue-950 py-2' : tab === 2, 'bg-white text-blue-950 duration-500 hover:bg-blue-950 py-2 hover:text-white' : tab !== 2 }" @click="tab = 2">
+                                Group
+                            </button>
+                            <button type="button" class="rounded-md" :class="{ 'bg-blue-800 text-white duration-500 hover:bg-blue-950 py-2' : tab === 3, 'bg-white text-blue-950 duration-500 hover:bg-blue-950 py-2 hover:text-white' : tab !== 3 }" @click="tab = 3">
+                                Contact
+                            </button>
                         </div>
                     </div>
-                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] px-3 py-3 scrollbar">
+                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] px-3 py-3 scrollbar" v-if="tab === 1">
                         <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
-                            <img :src="'/images/agent-1.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                            <img :src="'/images/agent-1.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
                                     <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -392,7 +398,7 @@
                             </div>
                         </div>
                         <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
-                            <img :src="'/images/agent-2.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                            <img :src="'/images/agent-2.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
                                     <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -404,7 +410,7 @@
                             </div>
                         </div>
                         <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
-                            <img :src="'/images/agent-3.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                            <img :src="'/images/agent-3.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
                                     <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -416,7 +422,7 @@
                             </div>
                         </div>
                         <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
-                            <img :src="'/images/agent-4.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                            <img :src="'/images/agent-4.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
                                     <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -428,7 +434,7 @@
                             </div>
                         </div>
                         <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
-                            <img :src="'/images/agent-6.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                            <img :src="'/images/agent-6.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
                                     <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -440,7 +446,7 @@
                             </div>
                         </div>
                         <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
-                            <img :src="'/images/agent-7.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                            <img :src="'/images/agent-7.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
                                     <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -452,7 +458,7 @@
                             </div>
                         </div>
                         <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
-                            <img :src="'/images/agent-8.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                            <img :src="'/images/agent-8.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
                                     <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -464,7 +470,7 @@
                             </div>
                         </div>
                         <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
-                            <img :src="'/images/agent-9.jpg'" class="min-w-[65px] min-h-[65px] size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                            <img :src="'/images/agent-9.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
                                     <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -473,6 +479,51 @@
                                 <div class="w-3/12 text-end text-[13px] font-normal text-gray-700">
                                     03:25 PM
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] px-3 py-3 scrollbar" v-if="tab === 2">
+                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                            <div class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] inline-flex justify-center items-center bg-blue-200 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[25px]">
+                                    <path class="stroke-blue-950" stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                                </svg>
+                            </div>
+                            <div class="ps-3 flex w-full text-gray-600">
+                                Create New Group
+                            </div>
+                        </div>
+                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                            <div class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] inline-flex justify-center items-center bg-yellow-200 rounded-full text-[35px] text-yellow-700">
+                                G
+                            </div>
+                            <div class="ps-3 flex w-full">
+                                <div class="w-9/12">
+                                    <div class="font-medium text-gray-700 text-[17px]"> General </div>
+                                    <div class="text-gray-500 text-[14px]"> <div class="truncate-to-1-line"> <span class="text-blue-800"> HG: </span> Good morning everyone! </div> </div>
+                                </div>
+                                <div class="w-3/12 text-end text-[13px] font-normal text-gray-700">
+                                    03:25 PM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] px-3 py-3 scrollbar" v-if="tab === 3">
+                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                            <div class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] inline-flex justify-center items-center bg-blue-200 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[25px]">
+                                    <path class="stroke-blue-950" stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                                </svg>
+                            </div>
+                            <div class="ps-3 flex w-full text-gray-600">
+                                Add New Contact
+                            </div>
+                        </div>
+                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                            <img :src="'/images/agent-1.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
+                            <div class="ps-3 w-full">
+                                <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
+                                <div class="text-gray-500 text-[14px]"> <div class="truncate-to-1-line"> Keep going, you got this! </div> </div>
                             </div>
                         </div>
                     </div>
@@ -493,7 +544,7 @@
                                     </svg>
                                 </button>
                                 <div class="flex justify-start items-center py-3 bg-transparent pe-3 bg-white">
-                                    <img :src="'/images/agent-1.jpg'" class="size-[55px] min-w-[55px] min-h-[55px] rounded-full object-cover bg-cover object-top bg-top" alt="">
+                                    <img :src="'/images/agent-1.jpg'" class="size-[35px] sm:size-[55px] min-w-[35px] sm:min-w-[55px] min-h-[35px] sm:min-h-[55px] rounded-full object-cover bg-cover object-top bg-top" alt="">
                                     <div class="flex justify-between items-center w-full">
                                         <div class="ps-3 w-full">
                                             <div class="font-medium text-gray-700 text-[17px]">
@@ -519,7 +570,7 @@
                                         </g>
                                     </svg>
                                 </button>
-                                <ul class="absolute top-auto end-0 w-[170px] h-auto bg-white drop-shadow-xl rounded-lg p-2 mt-2" v-if="isChatDropdownActive" @click.stop>
+                                <ul class="absolute top-auto end-0 w-[170px] h-auto bg-white drop-shadow-xl rounded-lg p-2 mt-2 z-10" v-if="isChatDropdownActive" @click.stop>
                                     <li>
                                         <a href="javascript:void(0)" class="decoration-0 flex justify-start items-center px-3 py-2 bg-transparent duration-500 rounded-lg hover:bg-gray-200 text-[14px]" @click="chatDropdownToggle()">
                                             <span class="inline-flex min-w-[25px]">
@@ -565,14 +616,14 @@
                             <div class="w-full bg-gray-100 h-full rounded-xl p-3 overflow-y-auto scrollbar">
                                 <div v-for="(message, index) in messages" :key="index" class="flex mb-3" :class="{'justify-start': message.type === 'received', 'justify-end': message.type === 'sent'}">
                                     <div v-if="message.type === 'received'" class="me-2">
-                                        <img :src="message.avatar" class="size-[55px] min-w-[55px] min-h-[55px] rounded-full object-cover bg-cover object-center bg-center" alt="chat" />
+                                        <img :src="message.avatar" class="size-[35px] sm:size-[55px] min-w-[35px] sm:min-w-[55px] min-h-[35px] sm:min-h-[55px] rounded-full object-cover bg-cover object-center bg-center" alt="chat" />
                                     </div>
                                     <div :class="message.type === 'received' ? 'bg-white' : 'bg-blue-800 text-white'" class="px-4 py-2 drop-shadow-xl rounded-lg">
                                         <div class="font-medium"> {{ message.text }} </div>
                                         <div :class="message.type === 'received' ? 'text-gray-600 text-end' : 'text-white text-start'" class="text-[13px] mt-2"> {{ message.time }} </div>
                                     </div>
                                     <div v-if="message.type === 'sent'" class="ms-2">
-                                        <img :src="message.avatar" class="size-[55px] min-w-[55px] min-h-[55px] rounded-full object-cover bg-cover object-center bg-center" alt="chat" />
+                                        <img :src="message.avatar" class="size-[35px] sm:size-[55px] min-w-[35px] sm:min-w-[55px] min-h-[35px] sm:min-h-[55px] rounded-full object-cover bg-cover object-center bg-center" alt="chat" />
                                     </div>
                                 </div>
                             </div>
@@ -603,6 +654,7 @@
 export default {
     data(){
         return {
+            tab: 1,
             activeTab: null,
             accordionItems: [],
             isChatSettingsSidebarActive: false,
