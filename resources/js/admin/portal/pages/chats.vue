@@ -2,10 +2,9 @@
 
     <div class="px-3 md:px-5">
         <div class="bg-gray-200 rounded-2xl w-full h-[calc(100vh-130px)] overflow-hidden">
-
             <div class="flex justify-start items-start h-full relative">
                 <div class="w-full max-w-full min-w-full sm:max-w-[380px] sm:min-w-[380px] h-full absolute bg-gray-200 z-30 top-0 bottom-0 overflow-y-auto scrollbar duration-500" @click.self="isChatSettingsSidebarActive = false" :class="{ 'start-[0px]' : isChatSettingsSidebarActive, '-start-[110%] sm:-start-[380px]' : !isChatSettingsSidebarActive }" id="chatSettingsSidebar">
-                    <div class="ps-6 pe-5 py-3 flex justify-between items-center">
+                    <div class="px-3 py-2 flex justify-between items-center">
                         <div class="text-[25px]"> Settings </div>
                         <button type="button" class="bg-transparent outline-0 border-0 size-[35px] inline-flex justify-center items-center rounded-full hover:bg-white duration-500" @click="closeChatSettingsSidebar()">
                             <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,42 +18,39 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="px-3 py-3">
+                    <div class="px-3 py-2">
 
-                        <div>
-                            <div>
-                                <div class="flex justify-start items-center py-3 bg-transparent px-3">
-                                    <div class="min-w-[35px] sm:min-w-[45px] min-h-[35px] sm:min-h-[45px] size-[35px] sm:size-[45px] inline-flex justify-center items-center rounded-full group-hover:bg-white duration-500 bg-gray-200">
-                                        <svg class="size-[20px]" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#000000;" d="M159.131,169.721c5.635,58.338,43.367,96.867,96.871,96.867c53.502,0,91.23-38.53,96.867-96.867l7.988-63.029 C365.812,44.768,315.281,0,256.002,0c-59.281,0-109.812,44.768-104.86,106.692L159.131,169.721z"></path> <path class="st0" d="M463.213,422.569l-3.824-24.35c-3.203-20.417-16.035-38.042-34.475-47.361l-80.473-40.693 c-2.519-1.274-4.57-3.194-6.289-5.338c-23.297,24.632-51.6,39.12-82.15,39.12c-30.549,0-58.856-14.488-82.152-39.12 c-1.719,2.144-3.77,4.064-6.289,5.338l-80.472,40.693c-18.442,9.319-31.272,26.944-34.475,47.361l-3.826,24.35 c-1.363,8.692,0.436,21.448,8.222,27.825C67.42,458.907,105.875,512,256.002,512c150.125,0,188.578-53.093,198.988-61.606 C462.779,444.017,464.576,431.261,463.213,422.569z"></path> </g> </g></svg>
+                        <div class="flex justify-start items-center bg-transparent py-2">
+                            <div class="min-w-[35px] sm:min-w-[45px] min-h-[35px] sm:min-h-[45px] size-[35px] sm:size-[45px] inline-flex justify-center items-center rounded-full group-hover:bg-white duration-500 bg-gray-200">
+                                <svg class="size-[20px]" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#000000;" d="M159.131,169.721c5.635,58.338,43.367,96.867,96.871,96.867c53.502,0,91.23-38.53,96.867-96.867l7.988-63.029 C365.812,44.768,315.281,0,256.002,0c-59.281,0-109.812,44.768-104.86,106.692L159.131,169.721z"></path> <path class="st0" d="M463.213,422.569l-3.824-24.35c-3.203-20.417-16.035-38.042-34.475-47.361l-80.473-40.693 c-2.519-1.274-4.57-3.194-6.289-5.338c-23.297,24.632-51.6,39.12-82.15,39.12c-30.549,0-58.856-14.488-82.152-39.12 c-1.719,2.144-3.77,4.064-6.289,5.338l-80.472,40.693c-18.442,9.319-31.272,26.944-34.475,47.361l-3.826,24.35 c-1.363,8.692,0.436,21.448,8.222,27.825C67.42,458.907,105.875,512,256.002,512c150.125,0,188.578-53.093,198.988-61.606 C462.779,444.017,464.576,431.261,463.213,422.569z"></path> </g> </g></svg>
+                            </div>
+                            <div class="flex justify-between items-center w-full">
+                                <div class="ps-3 w-full">
+                                    <div class="font-medium text-gray-700 text-[17px]">
+                                        John Doe
                                     </div>
-                                    <div class="flex justify-between items-center w-full">
-                                        <div class="ps-3 w-full">
-                                            <div class="font-medium text-gray-700 text-[17px]">
-                                                John Doe
-                                            </div>
-                                            <div class="text-gray-500 text-[14px] font-medium">
-                                                <div class="truncate-to-1-line">
-                                                    JohnDoe@gmail.com
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <svg viewBox="0 0 24 24" class="size-[25px] fill-black duration-500 hover:fill-blue-600 cursor-pointer" xmlns="http://www.w3.org/2000/svg">
-                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                                <g id="SVGRepo_iconCarrier">
-                                                    <path d="M21,2H15a1,1,0,0,0-1,1V9a1,1,0,0,0,1,1h1v2h2V10h2v2h2V3A1,1,0,0,0,21,2ZM18,8H16V4h4V8ZM3,10H9a1,1,0,0,0,1-1V3A1,1,0,0,0,9,2H3A1,1,0,0,0,2,3V9A1,1,0,0,0,3,10ZM4,4H8V8H4ZM5,16v2H3V16ZM3,20H5v2H3Zm4-2v2H5V18Zm0-2H5V14H7V12H9v4ZM5,12v2H3V12Zm9,3v1H13V14H11v4h3v3a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V15a1,1,0,0,0-1-1H16V12H14Zm6,1v4H16V16ZM9,18h2v2h1v2H7V20H9ZM13,6H11V4h2ZM11,8h2v4H11ZM5,5H7V7H5ZM17,5h2V7H17Zm2,14H17V17h2Z"></path>
-                                                </g>
-                                            </svg>
+                                    <div class="text-gray-500 text-[14px] font-medium">
+                                        <div class="truncate-to-1-line">
+                                            JohnDoe@gmail.com
                                         </div>
                                     </div>
+                                </div>
+                                <div>
+                                    <svg viewBox="0 0 24 24" class="size-[25px] fill-black duration-500 hover:fill-blue-600 cursor-pointer" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path d="M21,2H15a1,1,0,0,0-1,1V9a1,1,0,0,0,1,1h1v2h2V10h2v2h2V3A1,1,0,0,0,21,2ZM18,8H16V4h4V8ZM3,10H9a1,1,0,0,0,1-1V3A1,1,0,0,0,9,2H3A1,1,0,0,0,2,3V9A1,1,0,0,0,3,10ZM4,4H8V8H4ZM5,16v2H3V16ZM3,20H5v2H3Zm4-2v2H5V18Zm0-2H5V14H7V12H9v4ZM5,12v2H3V12Zm9,3v1H13V14H11v4h3v3a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V15a1,1,0,0,0-1-1H16V12H14Zm6,1v4H16V16ZM9,18h2v2h1v2H7V20H9ZM13,6H11V4h2ZM11,8h2v4H11ZM5,5H7V7H5ZM17,5h2V7H17Zm2,14H17V17h2Z"></path>
+                                        </g>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
 
                         <div>
+                            <!-- accordion -->
                             <div v-for="(item, index) in 4" :key="index">
-                                <div class="flex justify-start items-center py-3 bg-transparent cursor-pointer duration-500 hover:bg-gray-200 px-3 rounded-xl group" @click="setTab(index)">
+                                <div class="flex justify-start items-center py-3 bg-transparent cursor-pointer duration-500 hover:bg-gray-200 rounded-xl group" @click="setTab(index)">
                                     <div class="min-w-[35px] sm:min-w-[45px] min-h-[35px] sm:min-h-[45px] size-[35px] sm:size-[45px] inline-flex justify-center items-center rounded-full group-hover:bg-white duration-500 bg-gray-200"
                                     >
                                         <template v-if="index === 0">
@@ -80,33 +76,17 @@
                                     <div class="flex justify-between items-center w-full">
                                         <div class="ps-3 w-full">
                                             <div class="font-medium text-gray-700 text-[17px]">
-                                                <template v-if="index === 0">
-                                                    Account
-                                                </template>
-                                                <template v-if="index === 1">
-                                                    Notification
-                                                </template>
-                                                <template v-if="index === 2">
-                                                    Storage and data
-                                                </template>
-                                                <template v-if="index === 3">
-                                                    Help
-                                                </template>
+                                                <template v-if="index === 0"> Account </template>
+                                                <template v-if="index === 1"> Notification </template>
+                                                <template v-if="index === 2"> Storage and data </template>
+                                                <template v-if="index === 3"> Help </template>
                                             </div>
                                             <div class="text-gray-500 text-[14px] font-medium">
                                                 <div class="truncate-to-1-line">
-                                                    <template v-if="index === 0">
-                                                        Privacy, security, change number
-                                                    </template>
-                                                    <template v-if="index === 1">
-                                                        Message, group, call tones
-                                                    </template>
-                                                    <template v-if="index === 2">
-                                                        Network usage, auto download
-                                                    </template>
-                                                    <template v-if="index === 3">
-                                                        Help center, contact us, privacy policy
-                                                    </template>
+                                                    <template v-if="index === 0"> Privacy, security, change number </template>
+                                                    <template v-if="index === 1"> Message, group, call tones </template>
+                                                    <template v-if="index === 2"> Network usage, auto download </template>
+                                                    <template v-if="index === 3"> Help center, contact us, privacy policy </template>
                                                 </div>
                                             </div>
                                         </div>
@@ -117,12 +97,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Accordion Content -->
-                                <div
-                                    class="bg-white mt-2 rounded-xl overflow-hidden transition-all duration-500"
-                                    :class="{ 'max-h-[900px] mb-2' : activeTab === index, 'max-h-0 mb-0' : activeTab !== index }"
-                                >
+                                <div class="bg-white mt-2 rounded-xl overflow-hidden transition-all duration-500" :class="{ 'max-h-[900px] mb-2' : activeTab === index, 'max-h-0 mb-0' : activeTab !== index }">
                                     <div class="p-3">
                                         <template v-if="index === 0">
                                             <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
@@ -226,7 +201,6 @@
                                                     </span>
                                                     <span>Silent</span>
                                                 </label>
-
                                                 <label for="vibrate" class="flex items-center gap-1 cursor-pointer text-gray-700">
                                                     <input type="radio" id="vibrate" name="sound-type" class="hidden peer" />
                                                     <span class="w-5 h-5 flex items-center justify-center rounded-full border-4 border-gray-300 peer-checked:border-blue-700">
@@ -234,7 +208,6 @@
                                                     </span>
                                                     <span>Vibrate</span>
                                                 </label>
-
                                                 <label for="default" class="flex items-center gap-1 cursor-pointer text-gray-700">
                                                     <input type="radio" id="default" name="sound-type" class="hidden peer" />
                                                     <span class="w-5 h-5 flex items-center justify-center rounded-full border-4 border-gray-300 peer-checked:border-blue-700">
@@ -245,7 +218,6 @@
                                             </div>
                                         </template>
                                         <template v-if="index === 2">
-
                                             <div class="flex justify-start items-center mb-3">
                                                 <div class="size-[55px] inline-flex justify-center items-center bg-gray-200 rounded-full">
                                                     <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 8.2C3 7.07989 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H9.67452C10.1637 5 10.4083 5 10.6385 5.05526C10.8425 5.10425 11.0376 5.18506 11.2166 5.29472C11.4184 5.4184 11.5914 5.59135 11.9373 5.93726L12.0627 6.06274C12.4086 6.40865 12.5816 6.5816 12.7834 6.70528C12.9624 6.81494 13.1575 6.89575 13.3615 6.94474C13.5917 7 13.8363 7 14.3255 7H17.8C18.9201 7 19.4802 7 19.908 7.21799C20.2843 7.40973 20.5903 7.71569 20.782 8.09202C21 8.51984 21 9.0799 21 10.2V15.8C21 16.9201 21 17.4802 20.782 17.908C20.5903 18.2843 20.2843 18.5903 19.908 18.782C19.4802 19 18.9201 19 17.8 19H6.2C5.07989 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -255,7 +227,6 @@
                                                     <div class="text-gray-700 text-[14px]"> 2.4 GB </div>
                                                 </div>
                                             </div>
-
                                             <div class="flex justify-start items-center">
                                                 <div class="size-[55px] inline-flex justify-center items-center bg-gray-200 rounded-full">
                                                     <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7 13.9998C12.777 13.9998 13.65 14.8952 13.65 15.9998C13.65 17.1043 12.777 17.9998 11.7 17.9998C10.623 17.9998 9.75 17.1043 9.75 15.9998C9.75 14.8952 10.623 13.9998 11.7 13.9998Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6.53734 11.4153C6.21454 11.6749 6.16328 12.147 6.42284 12.4698C6.68241 12.7926 7.15451 12.8438 7.47731 12.5843L6.53734 11.4153ZM15.9217 12.5843C16.2445 12.8438 16.7166 12.7926 16.9762 12.4698C17.2357 12.147 17.1845 11.6749 16.8617 11.4153L15.9217 12.5843ZM4.40719 8.91358C4.08343 9.17195 4.03042 9.64385 4.28878 9.96761C4.54714 10.2914 5.01905 10.3444 5.34281 10.086L4.40719 8.91358ZM18.0785 10.1024C18.4113 10.349 18.881 10.2791 19.1276 9.9463C19.3742 9.61349 19.3043 9.14379 18.9715 8.89719L18.0785 10.1024ZM7.47731 12.5843C9.95807 10.5895 13.441 10.5895 15.9217 12.5843L16.8617 11.4153C13.832 8.97915 9.56702 8.97915 6.53734 11.4153L7.47731 12.5843ZM5.34281 10.086C8.03641 7.9365 10.6227 7.52956 12.8154 7.84408C15.0378 8.16284 16.9034 9.23173 18.0785 10.1024L18.9715 8.89719C17.6808 7.94087 15.5835 6.72576 13.0284 6.35927C10.4437 5.98854 7.43782 6.4951 4.40719 8.91358L5.34281 10.086Z" fill="#000000"></path> </g></svg>
@@ -265,10 +236,8 @@
                                                     <div class="text-gray-700 text-[14px]"> 7.2 GB sent - 13.8 GB received </div>
                                                 </div>
                                             </div>
-
                                         </template>
                                         <template v-if="index === 3">
-
                                             <a href="javascript:void(0)" class="px-5 py-2 flex justify-start items-center text-gray-700 text-[14px] font-medium hover:opacity-65 duration-500">
                                                 <span class="me-2">
                                                     <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -322,11 +291,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="w-full max-w-full min-w-full sm:max-w-[380px] sm:min-w-[380px] h-full absolute xl:static top-0 bottom-0 duration-500 z-20 bg-white xl:bg-transparent" @click.self="isChatSidebarActive = false" :class="{ '-start-[110%] sm:-start-[380px]' : !isChatSidebarActive, 'start-[0px]' : isChatSidebarActive }" id="chatSidebar">
-                    <div class="px-5 py-3 text-[25px] flex justify-between xl:justify-start items-center">
+                    <div class="px-3 py-2 text-[25px] flex justify-between xl:justify-start items-center">
                         Chats
                         <button type="button" class="bg-transparent outline-0 border-0 size-[35px] inline-flex xl:hidden justify-center items-center rounded-full hover:bg-white duration-500" @click="closeChatSidebar()">
                             <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -340,11 +308,10 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="px-5 pb-3 flex justify-between items-center gap-3">
+                    <div class="px-3 pb-2 flex justify-between items-center gap-3">
                         <label for="search" hidden="hidden">keyword</label>
                         <div class="w-full max-w-[350px] relative">
-                            <div
-                                class="absolute top-0 bottom-0 start-0 ps-3 flex justify-center items-center pointer-events-none">
+                            <div class="absolute top-0 bottom-0 start-0 ps-3 flex justify-center items-center pointer-events-none">
                                 <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -370,7 +337,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="px-5 pb-3">
+                    <div class="px-3 pb-2">
                         <div class="text-[17px] font-medium mb-2"> Messages </div>
                         <div class="grid grid-cols-3 gap-2">
                             <button type="button" class="rounded-md" :class="{ 'bg-blue-800 text-white duration-500 hover:bg-blue-950 py-2' : tab === 1, 'bg-white text-blue-950 duration-500 hover:bg-blue-950 py-2 hover:text-white' : tab !== 1 }" @click="tab = 1">
@@ -384,8 +351,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] px-3 py-3 scrollbar" v-if="tab === 1">
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] ps-3 pe-2 scrollbar" v-if="tab === 1">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <img :src="'/images/agent-1.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
@@ -397,7 +364,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <img :src="'/images/agent-2.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
@@ -409,7 +376,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <img :src="'/images/agent-3.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
@@ -421,7 +388,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <img :src="'/images/agent-4.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
@@ -433,7 +400,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <img :src="'/images/agent-6.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
@@ -445,7 +412,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <img :src="'/images/agent-7.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
@@ -457,7 +424,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <img :src="'/images/agent-8.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
@@ -469,7 +436,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <img :src="'/images/agent-9.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 flex w-full">
                                 <div class="w-9/12">
@@ -482,8 +449,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] px-3 py-3 scrollbar" v-if="tab === 2">
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] ps-3 pe-2 scrollbar" v-if="tab === 2">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <div class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] inline-flex justify-center items-center bg-blue-200 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[25px]">
                                     <path class="stroke-blue-950" stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
@@ -493,7 +460,7 @@
                                 Create New Group
                             </div>
                         </div>
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <div class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] inline-flex justify-center items-center bg-yellow-200 rounded-full text-[35px] text-yellow-700">
                                 G
                             </div>
@@ -508,8 +475,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] px-3 py-3 scrollbar" v-if="tab === 3">
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                    <div class="w-full overflow-y-auto h-[calc(100vh-335px)] ps-3 pe-2 scrollbar" v-if="tab === 3">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <div class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] inline-flex justify-center items-center bg-blue-200 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[25px]">
                                     <path class="stroke-blue-950" stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
@@ -519,7 +486,7 @@
                                 Add New Contact
                             </div>
                         </div>
-                        <div class="flex justify-start items-center mb-3 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
+                        <div class="flex justify-start items-center mb-1 bg-transparent duration-500 px-3 py-2 rounded-xl hover:bg-white cursor-pointer">
                             <img :src="'/images/agent-1.jpg'" class="min-w-[45px] sm:min-w-[65px] min-h-[45px] sm:min-h-[65px] size-[45px] sm:size-[65px] object-cover bg-cover object-top bg-top rounded-full" alt="person" />
                             <div class="ps-3 w-full">
                                 <div class="font-medium text-gray-700 text-[17px]"> John Doe </div>
@@ -570,7 +537,7 @@
                                         </g>
                                     </svg>
                                 </button>
-                                <ul class="absolute top-auto end-0 w-[170px] h-auto bg-white drop-shadow-xl rounded-lg p-2 mt-2 z-10" v-if="isChatDropdownActive" @click.stop>
+                                <ul class="absolute top-auto end-0 w-[170px] h-auto bg-white drop-shadow-xl rounded-lg p-1 mt-2 z-10" v-if="isChatDropdownActive" @click.stop>
                                     <li>
                                         <a href="javascript:void(0)" class="decoration-0 flex justify-start items-center px-3 py-2 bg-transparent duration-500 rounded-lg hover:bg-gray-200 text-[14px]" @click="chatDropdownToggle()">
                                             <span class="inline-flex min-w-[25px]">
@@ -643,7 +610,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

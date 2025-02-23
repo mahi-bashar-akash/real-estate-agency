@@ -2,11 +2,10 @@
 
     <div class="px-3 md:px-5">
         <div class="bg-gray-200 rounded-2xl w-full h-[calc(100vh-130px)] overflow-hidden">
-
             <div class="w-full flex h-full p-2 gap-x-2 relative">
                 <div class="min-w-full sm:min-w-[250px] max-w-full sm:max-w-[250px] bg-white h-full p-2 rounded-none duration-500 md:rounded-xl absolute top-0 bottom-0 md:static z-20" @click.self="isEmailSidebarActive = false" :class="{ 'start-[0px]' : isEmailSidebarActive,'-start-[110%] sm:-start-[260px]' : !isEmailSidebarActive }" id="emailSidebar">
                     <div class="flex justify-between gap-2">
-                        <button type="button" class="bg-blue-600 duration-500 outline-0 border-0 hover:bg-blue-800 w-full flex justify-center items-center py-2 px-5 text-white rounded-lg font-medium">
+                        <button type="button" class="bg-blue-600 duration-500 outline-0 border-0 hover:bg-blue-800 w-full flex justify-center items-center py-2 px-5 text-white rounded-lg font-medium" @click="openComposerModal()">
                             Compose
                         </button>
                         <button type="button" class="bg-transparent outline-0 border-0 size-[35px] inline-flex md:hidden justify-center items-center rounded-full hover:bg-white duration-500" @click="closeEmailSidebar()">
@@ -261,8 +260,44 @@
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
+
+    <!-- modal -->
+    <div class="fixed inset-0 size-full flex justify-center items-center duration-500 z-50" :class="{ 'invisible bg-black/35' : !isComposerModal, 'visible bg-black/65' : isComposerModal }" @click="isComposerModal = false">
+        <form class="bg-white rounded-2xl w-full max-w-[550px] p-5 duration-500 origin-top" :class="{ '-translate-y-1/2 opacity-0' : !isComposerModal, 'translate-y-0 opacity-100' : isComposerModal }" @click.stop>
+            <div class="flex justify-between items-center mb-3">
+                <div class="text-[22px]"> New Message </div>
+                <button type="button" class="size-[35px] inline-flex justify-center items-center" @click="closeComposerModal()">
+                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path class="stroke-black" d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke-width="1.5" stroke-linecap="round"></path>
+                            <path class="stroke-black" d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-width="1.5" stroke-linecap="round"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full mb-3">
+                <div class="mb-3 w-full">
+                    <label for="to" class="block mb-1 w-full"> To: </label>
+                    <input id="to" type="text" name="to" class="w-full px-4 py-3 outline-0 border border-gray-300 block rounded-lg duration-500 focus-within:border-blue-800" required autocomplete="off" />
+                </div>
+                <div class="w-full">
+                    <label for="subject" class="block mb-1 w-full"> Subject: </label>
+                    <textarea name="subject" id="subject" cols="30" rows="5" class="w-full p-4 outline-0 border border-gray-300 block rounded-lg duration-500 focus-within:border-blue-800" required autocomplete="off"></textarea>
+                </div>
+            </div>
+            <div class="flex justify-end items-center gap-x-2">
+                <button type="button" class="min-w-[130px] px-5 py-2 inline-flex justify-center items-center bg-gray-200 duration-500 text-gray-700 hover:bg-gray-700 hover:text-white rounded-lg" @click="closeComposerModal()">
+                    Cancel
+                </button>
+                <button type="submit" class="min-w-[130px] px-5 py-2 inline-flex justify-center items-center bg-blue-200 duration-500 text-blue-700 hover:bg-blue-800 hover:text-white rounded-lg">
+                    Send
+                </button>
+            </div>
+        </form>
     </div>
 
 </template>
@@ -275,6 +310,7 @@ export default {
             // Data properties
             isEmailContentActive: false,
             isEmailSidebarActive: false,
+            isComposerModal: false,
         }
     },
     mounted() {
@@ -322,6 +358,16 @@ export default {
             if (!event.target.closest("#emailSidebar") && this.isEmailSidebarActive) {
                 this.isEmailSidebarActive = false;
             }
+        },
+
+        // Open composer modal
+        openComposerModal() {
+            this.isComposerModal = true;
+        },
+
+        // Open composer modal
+        closeComposerModal() {
+            this.isComposerModal = false;
         },
 
     }
