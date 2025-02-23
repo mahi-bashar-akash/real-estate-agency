@@ -654,6 +654,7 @@
 export default {
     data(){
         return {
+            // Data properties
             tab: 1,
             activeTab: null,
             accordionItems: [],
@@ -679,45 +680,65 @@ export default {
         }
     },
     mounted() {
+        // Mounted properties
         window.addEventListener("click", this.handleChatDropdownClose);
         window.addEventListener("click", (event) => this.handleChatSettingsSidebarClose(event))
         window.addEventListener("click", (event) => this.handleChatSidebarClose(event))
     },
     unmounted() {
+        // Before unmounted properties
         window.removeEventListener("click", this.handleChatDropdownClose);
         window.removeEventListener("click", this.handleChatSettingsSidebarClose);
         window.removeEventListener("click", this.handleChatSidebarClose);
     },
     methods: {
+
+        // Set Active tab index use for accordion
         setTab(index) {
             this.activeTab = this.activeTab === index ? null : index;
         },
+
+        // Open chat settings sidebar in responsive
         openChatSettingsSidebar() {
             this.isChatSettingsSidebarActive = true;
             this.isChatSidebarActive = false;
         },
+
+        // Close chat settings sidebar in responsive
         closeChatSettingsSidebar() {
             this.isChatSettingsSidebarActive = false;
         },
+
+        // Handle chat setting sidebar close in responsive
         handleChatSettingsSidebarClose(event) {
             if (!event.target.closest("#chatSettingsSidebar") && this.isChatSettingsSidebarActive) {
                 this.isChatSettingsSidebarActive = false;
             }
         },
+
+        // Open chat sidebar in responsive
         openChatSidebar() {
             this.isChatSidebarActive = true;
         },
+
+        // Close chat sidebar in responsive
         closeChatSidebar() {
             this.isChatSidebarActive = false;
         },
+
+        // Handle chat sidebar close in responsive
         handleChatSidebarClose(event) {
             if (!event.target.closest("#chatSidebar") && this.isChatSidebarActive) {
                 this.isChatSidebarActive = false;
             }
         },
+
+        // Chat dropdown toggle
         chatDropdownToggle() {
             this.isChatDropdownActive = !this.isChatDropdownActive;
         },
+
+        // Handle Chat dropdown close
         handleChatDropdownClose() {
             if(!event.target.closest("#profileChatDropdown")) {
                 this.isChatDropdownActive = false;

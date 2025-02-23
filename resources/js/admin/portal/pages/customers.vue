@@ -188,27 +188,13 @@
 export default {
     data() {
         return {
-            propertyStatus: 'rent',
-            isDropdownActive: false,
+
         }
     },
     mounted() {
-        window.addEventListener("click", this.closeDropdown);
-    },
-    beforeUnmount() {
-        window.removeEventListener("click", this.closeDropdown);
+
     },
     methods: {
-
-        dropdownToggle(index) {
-            this.isDropdownActive = this.isDropdownActive === index ? null : index;
-        },
-
-        closeDropdown(event) {
-            if (!event.target.closest("#dropdown")) {
-                this.isDropdownActive = null;
-            }
-        },
 
     }
 }

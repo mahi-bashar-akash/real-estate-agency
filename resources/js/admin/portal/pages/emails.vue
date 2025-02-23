@@ -272,44 +272,58 @@
 export default {
     data(){
         return {
+            // Data properties
             isEmailContentActive: false,
             isEmailSidebarActive: false,
         }
     },
     mounted() {
+        // Mounted properties
         window.addEventListener("click", (event) => this.handleEmailContentClose(event))
         window.addEventListener("click", (event) => this.handleEmailSidebarClose(event))
     },
     unmounted() {
+        // Before unmounted properties
         window.removeEventListener("click", this.handleEmailContentClose);
         window.removeEventListener("click", this.handleEmailSidebarClose);
     },
     methods: {
+
+        // Email content active as toggle in responsive
         emailContent() {
             if (this.isEmailSidebarActive) {
                 this.isEmailSidebarActive = false;
             }
             this.isEmailContentActive = !this.isEmailContentActive;
         },
+
+        // Open email sidebar in responsive
         openEmailSidebar() {
             if(this.isEmailContentActive) {
                 this.isEmailSidebarActive = false;
             }
             this.isEmailSidebarActive = true;
         },
+
+        // Close email sidebar in responsive
         closeEmailSidebar() {
             this.isEmailSidebarActive = false;
         },
+
+        // Handle email content close
         handleEmailContentClose(event) {
             if (!event.target.closest("#emailContent") && this.isEmailContentActive) {
                 this.isEmailContentActive = false;
             }
         },
+
+        // Handle email sidebar close
         handleEmailSidebarClose(event) {
             if (!event.target.closest("#emailSidebar") && this.isEmailSidebarActive) {
                 this.isEmailSidebarActive = false;
             }
         },
+
     }
 }
 

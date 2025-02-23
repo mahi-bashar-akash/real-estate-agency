@@ -50,6 +50,7 @@
 export default {
     data(){
         return {
+            // Data properties
             password: '',
             passwordFieldType: 'password',
         }
@@ -59,10 +60,12 @@ export default {
     },
     methods: {
 
+        // Password visibility
         passwordVisibility() {
             this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
         },
 
+        // Login Api integration
         logIn() {
 
         },

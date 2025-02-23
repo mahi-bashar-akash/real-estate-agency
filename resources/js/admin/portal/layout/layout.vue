@@ -266,22 +266,25 @@
 export default {
     data(){
         return {
+            // Data properties
             isFullScreen: false,
             isDropdownActive: false,
             isSidebarActive: false,
         }
     },
     mounted() {
+        // Mounted properties
         window.addEventListener("click", this.handleDropdownClose);
         window.addEventListener("click", (event) => this.handleSidebarClose(event));
     },
     beforeUnmount() {
+        // Before unmounted properties
         window.removeEventListener("click", this.handleDropdownClose);
         window.removeEventListener("click", this.handleSidebarClose);
     },
     methods: {
 
-        // full screen
+        // Full screen toggle which is take full screen as browser support
         fullscreen() {
             this.isFullScreen = !this.isFullScreen;
             if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
@@ -303,29 +306,29 @@ export default {
             }
         },
 
-        // toggle dropdown
+        // Toggle dropdown
         dropdownToggle() {
             this.isDropdownActive = !this.isDropdownActive;
         },
 
-        // handle dropdown close
+        // Handle dropdown close
         handleDropdownClose() {
             if(!event.target.closest("#profileDropdown")) {
                 this.isDropdownActive = false;
             }
         },
 
-        // open sidebar
+        // Open sidebar
         toggleSidebar() {
             this.isSidebarActive = !this.isSidebarActive;
         },
 
-        // close sidebar
+        // Close sidebar
         closeSidebar() {
             this.isSidebarActive = false;
         },
 
-        // handle sidebar close
+        // Handle sidebar close
         handleSidebarClose(event) {
             if(window.innerWidth <= 991) {
                 if (!event.target.closest("#sidebar") && this.isSidebarActive) {

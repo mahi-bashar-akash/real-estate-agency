@@ -185,21 +185,26 @@
 export default {
     data() {
         return {
+            // Data properties
             isDropdownActive: false,
         }
     },
     mounted() {
+        // Mounted properties
         window.addEventListener("click", this.closeDropdown);
     },
     beforeUnmount() {
+        // Before unmounted properties
         window.removeEventListener("click", this.closeDropdown);
     },
     methods: {
 
+        // Dropdown toggle
         dropdownToggle(index) {
             this.isDropdownActive = this.isDropdownActive === index ? null : index;
         },
 
+        // Close dropdown
         closeDropdown(event) {
             if (!event.target.closest("#dropdown")) {
                 this.isDropdownActive = null;
