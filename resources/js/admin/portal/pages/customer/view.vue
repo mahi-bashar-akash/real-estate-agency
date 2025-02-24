@@ -29,8 +29,8 @@
                 <div class="text-[25px] mb-5 font-medium"> Recent Order History</div>
 
                 <div class="w-full bg-transparent relative">
-                    <div class="overflow-hidden flex justify-center items-center w-full">
-                        <div class="flex w-full" :style="translateStyle">
+                    <div class="overflow-hidden flex justify-center items-center w-full rounded-xl">
+                        <div class="w-full" :style="translateStyle">
                             <div v-for="(item, index) in items" :key="index" class="w-full shrink-0 relative group">
                                 <div class="absolute top-0 end-0 p-5">
                                     <div class="bg-blue-800 text-white px-4 py-1 rounded-md">
@@ -153,8 +153,8 @@ export default {
             return {
                 transform: `translateX(-${this.currentIndex * 100}%)`,
                 transition: 'transform 0.5s ease-in-out',
-                width: `${this.items.length * 100}%`, // Ensure container is wide enough
-                display: 'flex', // Make sure all items align in a row
+                width: `${this.items.length * 100}%`,
+                display: 'flex',
             };
         },
     },

@@ -168,7 +168,7 @@
                     2
                 </button>
                 <button type="button"
-                        class="outline-0 border-0 bg-white px-4 rounded-lg rounded-lg hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
+                        class="outline-0 border-0 bg-white px-4 rounded-lg hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
                     3
                 </button>
                 <button type="button"
