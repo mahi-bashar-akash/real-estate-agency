@@ -101,7 +101,7 @@
 
                     <!-- Navigation Buttons -->
                     <div class="absolute top-0 bottom-0 start-0 flex items-center p-5 bg-transparent">
-                        <button type="button" class="outline-none border-0 p-0 m-0 size-[55px] inline-flex justify-center items-center bg-transparent duration-500 hover:bg-gray-400/45 rounded-full backdrop-blur-md" @click="prevSlide">
+                        <button type="button" class="outline-none border-0 p-0 m-0 size-[55px] inline-flex justify-center items-center bg-transparent duration-500 hover:bg-gray-900/25 rounded-full backdrop-blur-md" @click="prevSlide">
                             <svg viewBox="0 0 24 24" class="size-[35px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     class="fill-black"
@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="absolute top-0 bottom-0 end-0 flex items-center p-5 bg-transparent">
-                        <button type="button" class="outline-none border-0 p-0 m-0 size-[55px] inline-flex justify-center items-center bg-transparent duration-500 hover:bg-gray-400/45 rounded-full backdrop-blur-md" @click="nextSlide">
+                        <button type="button" class="outline-none border-0 p-0 m-0 size-[55px] inline-flex justify-center items-center bg-transparent duration-500 hover:bg-gray-900/25 rounded-full backdrop-blur-md" @click="nextSlide">
                             <svg viewBox="0 0 24 24" class="size-[35px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     fill-rule="evenodd"

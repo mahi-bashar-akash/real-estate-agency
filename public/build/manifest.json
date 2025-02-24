@@ -4,12 +4,12 @@
     "name": "vue-router"
   },
   "resources/css/app.css": {
-    "file": "assets/app-pKTNOZPJ.css",
+    "file": "assets/app-YZf4HeOc.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-k3874Ltz.js",
+    "file": "assets/app-YTq5Sywj.js",
     "name": "app",
     "src": "resources/js/admin/app.js",
     "isEntry": true,
@@ -17,7 +17,7 @@
       "_vue-router-BMUf83QF.js"
     ],
     "css": [
-      "assets/app-D6ejEVuj.css"
+      "assets/app-B8derrt1.css"
     ]
   },
   "resources/js/visitor/app.js": {
