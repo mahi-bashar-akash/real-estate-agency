@@ -1,7 +1,7 @@
 <template>
 
     <div class="px-3 md:px-5">
-        <div class="bg-gray-200 px-3 md:px-7 py-3 md:py-5 rounded-2xl w-full">
+        <div class="bg-gray-200 p-3  rounded-2xl w-full">
 
             <!-- head part -->
             <div class="flex justify-between items-center mb-3">
@@ -352,7 +352,7 @@
             </div>
 
             <!-- pagination part -->
-            <div class="flex justify-center items-center gap-x-2 mt-4 font-medium">
+            <div class="flex justify-center items-center gap-x-2 py-4 font-medium">
                 <button type="button"
                         class="outline-0 border-0 rounded-lg bg-white px-4 hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
                     Previous

@@ -1,7 +1,7 @@
 <template>
 
     <div class="px-3 md:px-5">
-        <div class="bg-gray-200 px-3 md:px-7 py-3 md:py-5 rounded-2xl w-full">
+        <div class="bg-gray-200 p-3  rounded-2xl w-full">
 
             <!-- head part -->
             <div class="flex justify-between items-center mb-3">
@@ -119,25 +119,25 @@
             </div>
 
             <!-- pagination part -->
-            <div class="flex justify-center items-center mt-4 gap-x-2 font-medium">
+            <div class="flex justify-center items-center gap-x-2 py-4 font-medium">
                 <button type="button"
-                        class="outline-0 border-0 bg-white px-4 rounded-lg hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
+                        class="outline-0 border-0 rounded-lg bg-white px-4 hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
                     Previous
                 </button>
                 <button type="button"
-                        class="outline-0 border-0 px-4 bg-blue-700 rounded-lg duration-500 text-white py-2 text-[14px]">
+                        class="outline-0 border-0 rounded-lg px-4 bg-blue-700 duration-500 text-white py-2 text-[14px]">
                     1
                 </button>
                 <button type="button"
-                        class="outline-0 border-0 bg-white px-4 rounded-lg hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
+                        class="outline-0 border-0 rounded-lg bg-white px-4 hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
                     2
                 </button>
                 <button type="button"
-                        class="outline-0 border-0 bg-white px-4 rounded-lg hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
+                        class="outline-0 border-0 rounded-lg bg-white px-4 hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
                     3
                 </button>
                 <button type="button"
-                        class="outline-0 border-0 bg-white px-4 hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
+                        class="outline-0 border-0 rounded-lg bg-white px-4 hover:bg-blue-700 duration-500 hover:text-white py-2 text-[14px]">
                     Next
                 </button>
             </div>
