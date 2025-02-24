@@ -23,10 +23,11 @@ import manageService from "../portal/pages/service/manage.vue";
 import viewService from "../portal/pages/service/view.vue";
 
 import chats from "../portal/pages/chats.vue";
-import customers from "../portal/pages/customers.vue";
+import customers from "../portal/pages/customer/list.vue";
+import viewCustomer from "../portal/pages/customer/view.vue";
 import emails from "../portal/pages/emails.vue";
-import orders from "../portal/pages/orders.vue";
-import reviews from "../portal/pages/reviews.vue";
+import orders from "../portal/pages/customer/orders.vue";
+import reviews from "../portal/pages/customer/reviews.vue";
 
 const title = "Admin Panel - ";
 
@@ -42,10 +43,7 @@ const routes = [
         children: [
             {path: '', name: 'analysis', component: analysis, meta: { title: title + 'Analysis' } },
             {path: 'chats', name: 'chats', component: chats, meta: { title: title + 'Chats' } },
-            {path: 'customers', name: 'customers', component: customers, meta: { title: title + 'Customers' } },
             {path: 'emails', name: 'emails', component: emails, meta: { title: title + 'Emails' } },
-            {path: 'orders', name: 'orders', component: orders, meta: { title: title + 'Orders' } },
-            {path: 'reviews', name: 'reviews', component: reviews, meta: { title: title + 'Reviews' } },
             // Agent
             {path: 'agents', name: 'agents', component: agents, meta: { title: title + 'Agents' } },
             {path: 'agent/manage/:id', name: 'manageAgent', component: manageAgent, meta: { title: title + 'Manage Agent' } },
@@ -62,6 +60,11 @@ const routes = [
             {path: 'services', name: 'services', component: services, meta: { title: title + 'Services' } },
             {path: 'service/manage/:id', name: 'manageService', component: manageService, meta: { title: title + 'Manage Service' } },
             {path: 'service/view/:id', name: 'viewService', component: viewService, meta: { title: title + 'View Service' } },
+            // Customer
+            {path: 'customers/list', name: 'customers', component: customers, meta: { title: title + 'Customer List' } },
+            {path: 'customer/view/:id', name: 'viewCustomer', component: viewCustomer, meta: { title : title + 'View Customer'} },
+            {path: 'customers/order', name: 'orders', component: orders, meta: { title: title + 'Customer Order List' } },
+            {path: 'customers/review', name: 'reviews', component: reviews, meta: { title: title + 'Customer Review List' } },
         ]
     },
 ];
