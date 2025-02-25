@@ -23,6 +23,8 @@ import AuthLayout from "../auth/layout/layout.vue";
     import Forgot from "../auth/pages/forgot.vue";
     import Reset from "../auth/pages/reset.vue";
 
+import Chat from "../chat/chats.vue";
+
     const company_name = "Realer Living Solution";
 
 const routes = [
@@ -46,7 +48,8 @@ const routes = [
             {path: 'forgot', name: 'Forgot', component: Forgot, meta: {title: company_name + ' Forgot'}},
             {path: 'reset', name: 'Reset', component: Reset, meta: {title: company_name + ' Reset'}},
         ]
-    }
+    },
+    {path: '/chat', name: 'Chat', component: Chat, meta: {title: company_name + ' Chat'}},
 ];
 
 const router = createRouter({
