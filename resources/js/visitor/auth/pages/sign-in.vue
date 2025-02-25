@@ -6,7 +6,9 @@
             <input id="email" type="email" name="email" placeholder="Enter your email" class="rounded-md duration-500 focus-visible:border-blue-600 w-full px-3 py-2 outline-0 border border-gray-300" required autocomplete="off" />
         </div>
         <div class="mb-3 w-full">
-            <label for="password" class="block mb-1"> Password </label>
+            <label for="password" class="flex justify-between items-center mb-1">
+                <span> Password </span>
+                <span> <a href="javascript:void(0)" class="decoration-0"> Forgot Password? </a> </span> </label>
             <input id="password" type="password" name="password" placeholder="Enter your password" class="rounded-md duration-500 focus-visible:border-blue-600 w-full px-3 py-2 outline-0 border border-gray-300" required autocomplete="off" />
         </div>
         <div class="mb-3 w-full">

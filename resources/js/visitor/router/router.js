@@ -37,16 +37,16 @@ const routes = [
             {path: 'properties', name: 'Properties', component: Properties, meta: {title: company_name + ' Properties'}},
             {path: 'property-details/:id', name: 'PropertyDetails', component: PropertyDetails, meta: {title: company_name + ' Property Details'}},
             {path: 'service-details/:id', name: 'ServiceDetails', component: ServiceDetails, meta: {title: company_name + ' Service Details'}},
-            {path: 'auth/', name: 'AuthLayout', component: AuthLayout,
-                children: [
-                    {path: 'sign-in', name: 'SignIn', component: SignIn, meta: {title: company_name + ' Sign In'}},
-                    {path: 'sign-up', name: 'SignUp', component: SignUp, meta: {title: company_name + ' Sign Up'}},
-                    {path: 'forgot', name: 'Forgot', component: Forgot, meta: {title: company_name + ' Forgot'}},
-                    {path: 'reset', name: 'Reset', component: Reset, meta: {title: company_name + ' Reset'}},
-                ]
-            }
         ]
     },
+    {path: '/auth/', name: 'AuthLayout', component: AuthLayout,
+        children: [
+            {path: 'sign-in', name: 'SignIn', component: SignIn, meta: {title: company_name + ' Sign In'}},
+            {path: 'sign-up', name: 'SignUp', component: SignUp, meta: {title: company_name + ' Sign Up'}},
+            {path: 'forgot', name: 'Forgot', component: Forgot, meta: {title: company_name + ' Forgot'}},
+            {path: 'reset', name: 'Reset', component: Reset, meta: {title: company_name + ' Reset'}},
+        ]
+    }
 ];
 
 const router = createRouter({
