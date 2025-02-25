@@ -105,7 +105,7 @@
                                 <div class="w-full">
 
                                     <div class="block lg:flex justify-start items-start p-5">
-                                        <img :src="'/images/image-27.png'"
+                                        <img :src="'/images/agent-4.jpg'"
                                              class="min-w-[85px] min-h-[85px] max-h-[85px] object-cover bg-cover bg-top object-top rounded-xl"
                                              alt="agent"/>
                                         <div class="pt-5 lg:pt-0 lg:ps-5 w-10/12">

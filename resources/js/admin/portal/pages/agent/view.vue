@@ -5,7 +5,7 @@
         <div class="mx-auto max-w-[850px]">
 
             <div class="mb-3 w-full flex justify-center">
-                <img :src="'/images/agent-1.jpg'" class="size-[200px] flex bg-gray-200 rounded-full justify-center items-center text-[21px]" alt="agent" />
+                <img :src="'/images/agent-4.jpg'" class="size-[200px] flex bg-gray-200 rounded-full justify-center items-center text-[21px]" alt="agent" />
             </div>
             <div class="mb-3 w-full bg-gray-200 rounded-xl p-5">
                 <div class="block mb-1 w-full"> Full Name </div>
