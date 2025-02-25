@@ -1,32 +1,32 @@
 {
-  "_vue-router-BMUf83QF.js": {
-    "file": "assets/vue-router-BMUf83QF.js",
+  "_vue-router-BHGXdPS-.js": {
+    "file": "assets/vue-router-BHGXdPS-.js",
     "name": "vue-router"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DO2m41i5.css",
+    "file": "assets/app-CDhn-XQT.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-BDKpOJqs.js",
+    "file": "assets/app-O75AZU-p.js",
     "name": "app",
     "src": "resources/js/admin/app.js",
     "isEntry": true,
     "imports": [
-      "_vue-router-BMUf83QF.js"
+      "_vue-router-BHGXdPS-.js"
     ],
     "css": [
       "assets/app-BZpbCgcQ.css"
     ]
   },
   "resources/js/visitor/app.js": {
-    "file": "assets/app-BYY-R_0c.js",
+    "file": "assets/app-DHOEGFF4.js",
     "name": "app",
     "src": "resources/js/visitor/app.js",
     "isEntry": true,
     "imports": [
-      "_vue-router-BMUf83QF.js"
+      "_vue-router-BHGXdPS-.js"
     ]
   }
 }
