@@ -957,7 +957,8 @@
                                 <div class="text-[20px] font-bold">Michel Smith</div>
                                 <div class="text-[14px] text-gray-800"> Property Expert</div>
                             </div>
-                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
+                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}"
+                                         class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -987,7 +988,8 @@
                                 <div class="text-[20px] font-bold">Sara Prova</div>
                                 <div class="text-[14px] text-gray-800"> Property Expert</div>
                             </div>
-                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
+                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}"
+                                         class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1017,7 +1019,8 @@
                                 <div class="text-[20px] font-bold">Jani Mai</div>
                                 <div class="text-[14px] text-gray-800"> Property Expert</div>
                             </div>
-                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
+                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}"
+                                         class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1047,7 +1050,8 @@
                                 <div class="text-[20px] font-bold">Michel Jorden</div>
                                 <div class="text-[14px] text-gray-800"> Property Expert</div>
                             </div>
-                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
+                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}"
+                                         class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1190,80 +1194,46 @@
             </div>
             <div class="w-full flex flex-wrap items-center">
                 <div class="w-full sm:w-1/2 p-3 group">
-                    <div class="rounded-3xl overflow-hidden duration-500 group-hover:bg-white/10">
-                        <div class="rounded-3xl overflow-hidden">
-                            <img :src="'/images/image-37.png'" loading="lazy"
-                                 class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
-                                 alt="image"/>
-                        </div>
-                        <div class="p-7">
-                            <div class="my-3 text-[13px] flex justify-between items-center text-white">
-                                <span> April 17, 2024 </span>
-                                <span> 3 min read </span>
+                    <router-link :to="{name:'BlogDetails',params:{id:1}}" class="decoration-0">
+                        <div class="rounded-3xl overflow-hidden duration-500 group-hover:bg-white/10">
+                            <div class="rounded-3xl overflow-hidden">
+                                <img :src="'/images/image-37.png'" loading="lazy"
+                                     class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
+                                     alt="image"/>
                             </div>
-                            <div class="mt-3 mb-10 text-[25px] font-bold text-white"> Enrich Your Mind Envision Your
-                                Future
-                                Education for Success
-                            </div>
-                            <div class="flex justify-start">
-                                <router-link title="show blog description" :to="{name:'BlogDetails',params:{id:1}}"
-                                             class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
-                                <span class="w-full flex justify-center items-center">
-                                    Read more
-                                    <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                           stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path class="stroke-white duration-500 group-hover/item:stroke-black"
-                                                  d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                </span>
-                                </router-link>
+                            <div class="p-7">
+                                <div class="my-3 text-[13px] flex justify-between items-center text-white">
+                                    <span> April 17, 2024 </span>
+                                    <span> 3 min read </span>
+                                </div>
+                                <div class="mt-3 mb-10 text-[25px] font-bold text-white"> Enrich Your Mind Envision Your
+                                    Future
+                                    Education for Success
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
                 <div class="w-full sm:w-1/2 p-3 group">
-                    <div class="rounded-3xl overflow-hidden duration-500 group-hover:bg-white/10">
-                        <div class="rounded-3xl overflow-hidden">
-                            <img :src="'/images/image-38.png'" loading="lazy"
-                                 class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
-                                 alt="image"/>
-                        </div>
-                        <div class="p-7">
-                            <div class="my-3 text-[13px] flex justify-between items-center text-white">
-                                <span> April 17, 2024 </span>
-                                <span> 3 min read </span>
+                    <router-link :to="{name:'BlogDetails',params:{id:1}}" class="decoration-0">
+                        <div class="rounded-3xl overflow-hidden duration-500 group-hover:bg-white/10">
+                            <div class="rounded-3xl overflow-hidden">
+                                <img :src="'/images/image-38.png'" loading="lazy"
+                                     class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
+                                     alt="image"/>
                             </div>
-                            <div class="mt-3 mb-10 text-[25px] font-bold text-white"> Enrich Your Mind Envision Your
-                                Future
-                                Education for Success
-                            </div>
-                            <div class="flex justify-start">
-                                <router-link title="show blog description" :to="{name:'BlogDetails',params:{id:2}}"
-                                             class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
-                                <span class="w-full flex justify-center items-center">
-                                    Read more
-                                    <svg viewBox="0 0 24 24" class="size-[26px] ms-3" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                           stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path class="stroke-white duration-500 group-hover/item:stroke-black"
-                                                  d="M5 12H19M19 12L13 6M19 12L13 18" stroke-width="2"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                </span>
-                                </router-link>
+                            <div class="p-7">
+                                <div class="my-3 text-[13px] flex justify-between items-center text-white">
+                                    <span> April 17, 2024 </span>
+                                    <span> 3 min read </span>
+                                </div>
+                                <div class="mt-3 mb-10 text-[25px] font-bold text-white"> Enrich Your Mind Envision Your
+                                    Future
+                                    Education for Success
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
             </div>
         </div>
