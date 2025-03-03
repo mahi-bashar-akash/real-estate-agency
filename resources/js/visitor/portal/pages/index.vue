@@ -9,9 +9,12 @@
                 <div class="w-full lg:w-1/2 p-5">
                     <router-link :to="{name:'PropertyDetails',params:{id:'1'}}" class="decoration-0 block h-full">
                         <div class="overflow-hidden group h-full rounded-3xl max-h-[687.87px]">
-                            <img :src="'/images/image-01.png'" loading="lazy"
-                                 class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
-                                 alt="image-1"/>
+                            <picture>
+                                <source :srcset="'/images/image-01.webp'" type="image/webp">
+                                <img :src="'/images/image-01.png'" loading="lazy"
+                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
+                                     alt="image" />
+                            </picture>
                         </div>
                     </router-link>
                 </div>
@@ -50,17 +53,23 @@
 
                         <router-link :to="{name:'PropertyDetails',params:{id:'1'}}">
                             <div class="overflow-hidden group h-full rounded-3xl">
-                                <img :src="'/images/image-02.png'" loading="lazy"
-                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
-                                     alt="image-1"/>
+                                <picture>
+                                    <source :srcset="'/images/image-02.webp'" type="image/webp">
+                                    <img :src="'/images/image-02.png'" loading="lazy"
+                                         class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
+                                         alt="image" />
+                                </picture>
                             </div>
                         </router-link>
 
                         <router-link :to="{name:'About'}">
                             <div class="overflow-hidden group h-full rounded-3xl">
-                                <img :src="'/images/image-03.png'" loading="lazy"
-                                     class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
-                                     alt="image-1"/>
+                                <picture>
+                                    <source :srcset="'/images/image-03.webp'" type="image/webp">
+                                    <img :src="'/images/image-03.png'" loading="lazy"
+                                         class="object-cover bg-cover w-full rounded-3xl min-h-full duration-500 scale-100 group-hover:scale-125"
+                                         alt="image" />
+                                </picture>
                             </div>
                         </router-link>
 
@@ -193,13 +202,19 @@
 
                 <div class="w-full lg:w-1/2 p-5">
                     <div class="relative sm:p-10">
-                        <img :src="'/images/image-07.png'" loading="lazy"
-                             class="object-cover bg-cover bg-center w-full h-[450px] sm:h-[650px] rounded-3xl"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-07.webp'" type="image/webp">
+                            <img :src="'/images/image-07.png'" loading="lazy"
+                                 class="object-cover bg-cover bg-center w-full h-[450px] sm:h-[650px] rounded-3xl"
+                                 alt="image" />
+                        </picture>
                         <div class="absolute bottom-5 lg:-bottom-10 start-5 lg:-start-16">
-                            <img :src="'/images/image-06.png'" loading="lazy"
-                                 class="object-cover bg-cover bg-center w-[200px] h-[200px] sm:w-[350px] duration-500 ease-linear sm:h-[350px] rounded-3xl border-8 border-gray-200 up-down-animation"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-06.webp'" type="image/webp">
+                                <img :src="'/images/image-06.png'" loading="lazy"
+                                     class="object-cover bg-cover bg-center w-[200px] h-[200px] sm:w-[350px] duration-500 ease-linear sm:h-[350px] rounded-3xl border-8 border-gray-200 up-down-animation"
+                                     alt="image" />
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -254,9 +269,12 @@
 
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-08.png'" loading="lazy"
-                             class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-08.webp'" type="image/webp">
+                            <img :src="'/images/image-08.png'" loading="lazy"
+                                 class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                                 alt="image" />
+                        </picture>
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Property Valuation</div>
                     <div class="text-gray-800 text-[14px] sm:text-[18px] mb-5">
@@ -267,9 +285,12 @@
 
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-09.png'" loading="lazy"
-                             class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-09.webp'" type="image/webp">
+                            <img :src="'/images/image-09.png'" loading="lazy"
+                                 class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                                 alt="image" />
+                        </picture>
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Property Management</div>
                     <div class="text-gray-800 text-[14px] sm:text-[18px] mb-5">
@@ -280,9 +301,12 @@
 
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-10.png'" loading="lazy"
-                             class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-10.webp'" type="image/webp">
+                            <img :src="'/images/image-10.png'" loading="lazy"
+                                 class="object-cover bg-cover bg-center w-full h-[300px] rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                                 alt="image" />
+                        </picture>
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Invest Opportunities</div>
                     <div class="text-gray-800 text-[14px] sm:text-[18px] mb-5">
@@ -339,9 +363,12 @@
 
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-11.png'" loading="lazy"
-                             class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-11.webp'" type="image/webp">
+                            <img :src="'/images/image-11.png'" loading="lazy"
+                                 class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                                 alt="image" />
+                        </picture>
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Vroondal</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
@@ -354,9 +381,12 @@
 
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-12.png'" loading="lazy"
-                             class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-12.webp'" type="image/webp">
+                            <img :src="'/images/image-12.png'" loading="lazy"
+                                 class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                                 alt="image" />
+                        </picture>
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Sakura</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
@@ -369,9 +399,12 @@
 
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-13.png'" loading="lazy"
-                             class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-13.webp'" type="image/webp">
+                            <img :src="'/images/image-13.png'" loading="lazy"
+                                 class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                                 alt="image" />
+                        </picture>
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Vroondal</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
@@ -384,9 +417,12 @@
 
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="overflow-hidden rounded-3xl">
-                        <img :src="'/images/image-14.png'" loading="lazy"
-                             class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-14.webp'" type="image/webp">
+                            <img :src="'/images/image-14.png'" loading="lazy"
+                                 class="object-cover bg-cover bg-center w-full h-[200px] xl:h-[300px] rounded-xl xl:rounded-3xl duration-500 scale-100 group-hover:scale-125"
+                                 alt="image" />
+                        </picture>
                     </div>
                     <div class="text-white my-3 text-[20px] xl:text-[30px]"> Villa Joidarpark</div>
                     <div class="text-white text-[14px] xl:text-[14px] sm:text-[18px] mb-5">
@@ -529,9 +565,12 @@
                     <div class="border border-gray-300 bg-white rounded-3xl">
 
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-18.png'" loading="lazy"
-                                 class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-18.webp'" type="image/webp">
+                                <img :src="'/images/image-18.png'" loading="lazy"
+                                     class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
+                                     alt="image" />
+                            </picture>
                         </div>
 
                         <div class="px-5 xl:px-10 py-5">
@@ -596,9 +635,12 @@
                     <div class="border border-gray-300 bg-white rounded-3xl">
 
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-19.png'" loading="lazy"
-                                 class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-19.webp'" type="image/webp">
+                                <img :src="'/images/image-19.png'" loading="lazy"
+                                     class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
+                                     alt="image" />
+                            </picture>
                         </div>
 
                         <div class="px-5 xl:px-10 py-5">
@@ -662,9 +704,12 @@
                     <div class="border border-gray-300 bg-white rounded-3xl">
 
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-20.png'" loading="lazy"
-                                 class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-20.webp'" type="image/webp">
+                                <img :src="'/images/image-20.png'" loading="lazy"
+                                     class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
+                                     alt="image" />
+                            </picture>
                         </div>
 
                         <div class="px-5 xl:px-10 py-5">
@@ -728,9 +773,12 @@
                     <div class="border border-gray-300 bg-white rounded-3xl">
 
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-21.png'" loading="lazy"
-                                 class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-21.webp'" type="image/webp">
+                                <img :src="'/images/image-21.png'" loading="lazy"
+                                     class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
+                                     alt="image" />
+                            </picture>
                         </div>
 
                         <div class="px-5 xl:px-10 py-5">
@@ -794,9 +842,12 @@
                     <div class="border border-gray-300 bg-white rounded-3xl">
 
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-22.png'" loading="lazy"
-                                 class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-22.webp'" type="image/webp">
+                                <img :src="'/images/image-22.png'" loading="lazy"
+                                     class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
+                                     alt="image" />
+                            </picture>
                         </div>
 
                         <div class="px-5 xl:px-10 py-5">
@@ -856,9 +907,12 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-3 group">
                     <div class="border border-gray-300 bg-white rounded-3xl">
                         <div class="overflow-hidden rounded-3xl">
-                            <img :src="'/images/image-23.png'" loading="lazy"
-                                 class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-23.webp'" type="image/webp">
+                                <img :src="'/images/image-23.png'" loading="lazy"
+                                     class="object-cover bg-cover bg-center w-full h-[250px] drop-shadow-xl rounded-3xl scale-100 duration-500 group-hover:scale-125"
+                                     alt="image" />
+                            </picture>
                         </div>
                         <div class="px-5 xl:px-10 py-5">
                             <div class="my-3 text-[19px] sm:text-[25px] font-bold"> Toronto Townhouse</div>
@@ -948,9 +1002,12 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-25.png'" loading="lazy"
-                                 class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-25.webp'" type="image/webp">
+                                <img :src="'/images/image-25.png'" loading="lazy"
+                                     class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
+                                     alt="image" />
+                            </picture>
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
@@ -979,9 +1036,12 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-26.png'" loading="lazy"
-                                 class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-26.webp'" type="image/webp">
+                                <img :src="'/images/image-26.png'" loading="lazy"
+                                     class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
+                                     alt="image" />
+                            </picture>
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
@@ -1010,9 +1070,12 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-27.png'" loading="lazy"
-                                 class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-27.webp'" type="image/webp">
+                                <img :src="'/images/image-27.png'" loading="lazy"
+                                     class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
+                                     alt="image" />
+                            </picture>
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
@@ -1041,9 +1104,12 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-3 group">
                     <div class="border border-gray-300 rounded-3xl overflow-hidden">
                         <div class="overflow-hidden rounded-t-3xl">
-                            <img :src="'/images/image-28.png'" loading="lazy"
-                                 class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
-                                 alt="image"/>
+                            <picture>
+                                <source :srcset="'/images/image-28.webp'" type="image/webp">
+                                <img :src="'/images/image-28.png'" loading="lazy"
+                                     class="duration-500 w-full object-cover object-center group-hover:object-top h-[350px]"
+                                     alt="image" />
+                            </picture>
                         </div>
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
@@ -1090,9 +1156,12 @@
             <div class="w-full flex flex-wrap items-center pb-16">
                 <div class="w-full sm:w-1/2 xl:w-1/3 p-3 group">
                     <div class="w-full lg:py-16 xl:py-0 lg:pe-16 lg:flex justify-start items-end">
-                        <img :src="'/images/image-36.png'" loading="lazy"
-                             class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-36.webp'" type="image/webp">
+                            <img :src="'/images/image-36.png'" loading="lazy"
+                                 class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl"
+                                 alt="image" />
+                        </picture>
                         <div
                             class="rounded-3xl p-10 md:min-w-[350px] mb-5 mt-5 lg:mt-0 lg:-ml-[320px] lg:-mb-[60px] bg-white text-[14px] text-gray-700 font-medium leading-6 duration-500 group-hover:lg:-mb-[95px] group-hover:lg:-ml-[300px]">
                             <q> Home is where love resides, memories are created, and dreams are nurtured. I have found
@@ -1102,7 +1171,7 @@
                             <div class="flex justify-start items-center mt-5">
                                 <img :src="'/images/image-32.png'" loading="lazy"
                                      class="size-[45px] min-w-[45px] min-h-[45px] bg-center rounded-full bg-cover object-cover"
-                                     alt="image"/>
+                                     alt="image" />
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Andrew Simon</div>
                                     <div class="font-normal -mt-1 text-[13px] text-gray-800"> Property Expert</div>
@@ -1113,9 +1182,12 @@
                 </div>
                 <div class="w-full sm:w-1/2 xl:w-1/3 p-3 group">
                     <div class="w-full lg:py-16 xl:py-0 lg:pe-16 lg:flex justify-start items-end">
-                        <img :src="'/images/image-37.png'" loading="lazy"
-                             class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-37.webp'" type="image/webp">
+                            <img :src="'/images/image-37.png'" loading="lazy"
+                                 class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl"
+                                 alt="image" />
+                        </picture>
                         <div
                             class="rounded-3xl p-10 md:min-w-[350px] mb-5 mt-5 lg:mt-0 lg:-ml-[320px] lg:-mb-[60px] bg-white text-[14px] text-gray-700 font-medium leading-6 duration-500 group-hover:lg:-mb-[95px] group-hover:lg:-ml-[300px]">
                             <q> Home is where love resides, memories are created, and dreams are nurtured. I have found
@@ -1125,7 +1197,7 @@
                             <div class="flex justify-start items-center mt-5">
                                 <img :src="'/images/image-34.png'" loading="lazy"
                                      class="size-[45px] min-w-[45px] min-h-[45px] bg-center rounded-full bg-cover object-cover"
-                                     alt="image"/>
+                                     alt="image" />
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Ralph Edwards</div>
                                     <div class="font-normal -mt-1 text-[13px] text-gray-800"> Property Expert</div>
@@ -1136,9 +1208,12 @@
                 </div>
                 <div class="w-full sm:w-1/2 xl:w-1/3 p-3 group">
                     <div class="w-full lg:py-16 xl:py-0 lg:pe-16 lg:flex justify-start items-end">
-                        <img :src="'/images/image-38.png'" loading="lazy"
-                             class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl"
-                             alt="image"/>
+                        <picture>
+                            <source :srcset="'/images/image-38.webp'" type="image/webp">
+                            <img :src="'/images/image-38.png'" loading="lazy"
+                                 class="w-full object-cover bg-cover h-[250px] lg:h-[350px] rounded-xl sm:rounded-3xl"
+                                 alt="image" />
+                        </picture>
                         <div
                             class="rounded-3xl p-10 md:min-w-[350px] mb-5 mt-5 lg:mt-0 lg:-ml-[320px] lg:-mb-[60px] bg-white text-[14px] text-gray-700 font-medium leading-6 duration-500 group-hover:lg:-mb-[95px] group-hover:lg:-ml-[300px]">
                             <q> Home is where love resides, memories are created, and dreams are nurtured. I have found
@@ -1148,7 +1223,7 @@
                             <div class="flex justify-start items-center mt-5">
                                 <img :src="'/images/image-36.png'" loading="lazy"
                                      class="size-[45px] min-w-[45px] min-h-[45px] bg-center rounded-full bg-cover object-cover"
-                                     alt="image"/>
+                                     alt="image" />
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Andrew Jorden</div>
                                     <div class="font-normal -mt-1 text-[13px] text-gray-800"> Property Expert</div>
@@ -1197,9 +1272,12 @@
                     <router-link :to="{name:'BlogDetails',params:{id:1}}" class="decoration-0">
                         <div class="rounded-3xl overflow-hidden duration-500 group-hover:bg-white/10">
                             <div class="rounded-3xl overflow-hidden">
-                                <img :src="'/images/image-37.png'" loading="lazy"
-                                     class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
-                                     alt="image"/>
+                                <picture>
+                                    <source :srcset="'/images/image-37.webp'" type="image/webp">
+                                    <img :src="'/images/image-37.png'" loading="lazy"
+                                         class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
+                                         alt="image" />
+                                </picture>
                             </div>
                             <div class="p-7">
                                 <div class="my-3 text-[13px] flex justify-between items-center text-white">
@@ -1218,9 +1296,12 @@
                     <router-link :to="{name:'BlogDetails',params:{id:1}}" class="decoration-0">
                         <div class="rounded-3xl overflow-hidden duration-500 group-hover:bg-white/10">
                             <div class="rounded-3xl overflow-hidden">
-                                <img :src="'/images/image-38.png'" loading="lazy"
-                                     class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
-                                     alt="image"/>
+                                <picture>
+                                    <source :srcset="'/images/image-38.webp'" type="image/webp">
+                                    <img :src="'/images/image-38.png'" loading="lazy"
+                                         class="object-cover bg-cover bg-center w-full h-[250px] duration-500 scale-100 group-hover:scale-125 drop-shadow-xl rounded-3xl"
+                                         alt="image" />
+                                </picture>
                             </div>
                             <div class="p-7">
                                 <div class="my-3 text-[13px] flex justify-between items-center text-white">
