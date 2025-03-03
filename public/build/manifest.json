@@ -3,11 +3,6 @@
     "file": "assets/vue-router-BvlsWJPf.js",
     "name": "vue-router"
   },
-  "resources/css/app.css": {
-    "file": "assets/app-BrdU0axM.css",
-    "src": "resources/css/app.css",
-    "isEntry": true
-  },
   "resources/js/admin/app.js": {
     "file": "assets/app-DTWxcMJo.js",
     "name": "app",

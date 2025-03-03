@@ -7,7 +7,6 @@ export default defineConfig({
         vue(),
         laravel({
             input: [
-                'resources/css/app.css',
                 'resources/js/visitor/app.js',
                 'resources/js/admin/app.js',
             ],
@@ -15,6 +14,7 @@ export default defineConfig({
         }),
     ],
     build: {
-        sourcemap: true, // Enable source maps for production builds
+        sourcemap: true,
+        minify: 'esbuild',
     },
 });
