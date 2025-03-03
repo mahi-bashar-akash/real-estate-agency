@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import vue from "@vitejs/plugin-vue";
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
     plugins: [
@@ -14,4 +14,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        sourcemap: true, // Enable source maps for production builds
+    },
 });
