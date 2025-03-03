@@ -30,7 +30,7 @@
                 <div class="w-full sm:w-[280px] lg:w-auto p-5 top-0 bottom-0 h-screen lg:h-auto z-50 fixed lg:sticky bg-white lg:bg-transparent lg:flex justify-end items-center gap-x-3 font-medium duration-500" :class="{ '-start-[110%] sm:-start-[280px]' : !isSidebarActive, 'start-0' : isSidebarActive }">
 
                     <div class="flex justify-end items-center mb-5 lg:hidden">
-                        <button type="button" class="outline-0 border-0 bg-transparent" @click="navbarToggle()">
+                        <button type="button" title="navbar-toggle" class="outline-0 border-0 bg-transparent" @click="navbarToggle()">
                             <svg viewBox="0 0 24 24" class="size-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -42,31 +42,31 @@
                         </button>
                     </div>
 
-                    <router-link :to="{name: 'Index'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Index', 'text-blue-500' : $route.name === 'Index' }" @click="navbarToggle()">
+                    <router-link :to="{name: 'Index'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Index', 'text-blue-900' : $route.name === 'Index' }" @click="navbarToggle()">
                         Home
                     </router-link>
 
-                    <router-link :to="{name: 'About'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'About', 'text-blue-500' : $route.name === 'About' }" @click="navbarToggle()">
+                    <router-link :to="{name: 'About'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'About', 'text-blue-900' : $route.name === 'About' }" @click="navbarToggle()">
                         About
                     </router-link>
 
-                    <router-link :to="{name: 'Properties'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Properties', 'text-blue-500' : $route.name === 'Properties' }" @click="navbarToggle()">
+                    <router-link :to="{name: 'Properties'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Properties', 'text-blue-900' : $route.name === 'Properties' }" @click="navbarToggle()">
                         Properties
                     </router-link>
 
-                    <router-link :to="{name: 'Teams'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Teams', 'text-blue-500' : $route.name === 'Teams' }" @click="navbarToggle()">
+                    <router-link :to="{name: 'Teams'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Teams', 'text-blue-900' : $route.name === 'Teams' }" @click="navbarToggle()">
                         Teams
                     </router-link>
 
-                    <router-link :to="{name: 'Blogs'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Blogs', 'text-blue-500' : $route.name === 'Blogs' }" @click="navbarToggle()">
+                    <router-link :to="{name: 'Blogs'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'Blogs', 'text-blue-900' : $route.name === 'Blogs' }" @click="navbarToggle()">
                         Blogs
                     </router-link>
 
-                    <router-link :to="{name: 'SignIn'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'SignIn', 'text-blue-500' : $route.name === 'SignIn' }" @click="navbarToggle()">
+                    <router-link :to="{name: 'SignIn'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'SignIn', 'text-blue-900' : $route.name === 'SignIn' }" @click="navbarToggle()">
                         SignIn
                     </router-link>
 
-                    <router-link :to="{name: 'SignUp'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'SignUp', 'text-blue-500' : $route.name === 'SignUp' }" @click="navbarToggle()">
+                    <router-link :to="{name: 'SignUp'}" class="decoration-0 px-2 py-1 block lg:inline-block" :class="{ 'text-black' : $route.name !== 'SignUp', 'text-blue-900' : $route.name === 'SignUp' }" @click="navbarToggle()">
                         SignUp
                     </router-link>
 

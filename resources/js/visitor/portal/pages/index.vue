@@ -24,7 +24,7 @@
                         Living Space
                     </div>
 
-                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
+                    <div class="text-gray-800 text-[14px] sm:text-[18px] mb-5">
                         We aim to build contemporary homes whose beauty perishes in the delicate touches of minutiae
                         lines and shapes. Within our plan, we endowed Villa with interestingly high-contrast spatial
                         experiences.
@@ -102,7 +102,7 @@
 
                     <div class="text-[25px] sm:text-[35px] xl:text-[45px] font-semibold mb-5"> About Us</div>
 
-                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
+                    <div class="text-gray-800 text-[14px] sm:text-[18px] mb-5">
                         We are a real estate firm with over 20 years of expertise, and our main goal is to provide
                         amazing locations to our partners and clients. Within the luxury real estate market,
                         our agency offers customized solutions. We are a real estate firm with over 20 years
@@ -259,7 +259,7 @@
                              alt="image"/>
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Property Valuation</div>
-                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
+                    <div class="text-gray-800 text-[14px] sm:text-[18px] mb-5">
                         All-inclusive real estate services to facilitate the easy
                         and confident purchase, sale, and management of your properties.
                     </div>
@@ -272,7 +272,7 @@
                              alt="image"/>
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Property Management</div>
-                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
+                    <div class="text-gray-800 text-[14px] sm:text-[18px] mb-5">
                         All-inclusive real estate services to facilitate the easy
                         and confident purchase, sale, and management of your properties.
                     </div>
@@ -285,7 +285,7 @@
                              alt="image"/>
                     </div>
                     <div class="my-3 text-[20px] sm:text-[28px]"> Invest Opportunities</div>
-                    <div class="text-gray-500 text-[14px] sm:text-[18px] mb-5">
+                    <div class="text-gray-800 text-[14px] sm:text-[18px] mb-5">
                         All-inclusive real estate services to facilitate the easy and
                         confident purchase, sale, and management of your properties.
                     </div>
@@ -553,14 +553,14 @@
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
 
-                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
+                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-800">
                                 <div class="truncate-to-2-line">
                                     All-inclusive real estate services to facilitate the easy and
                                     confident purchase, sale, and management of your properties.
                                 </div>
                             </div>
 
-                            <div class="flex justify-around items-center text-gray-500">
+                            <div class="flex justify-around items-center text-gray-800">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
@@ -620,14 +620,14 @@
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
 
-                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
+                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-800">
                                 <div class="truncate-to-2-line">
                                     All-inclusive real estate services to facilitate the easy and
                                     confident purchase, sale, and management of your properties.
                                 </div>
                             </div>
 
-                            <div class="flex justify-around items-center text-gray-500">
+                            <div class="flex justify-around items-center text-gray-800">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
@@ -686,14 +686,14 @@
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
 
-                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
+                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-800">
                                 <div class="truncate-to-2-line">
                                     All-inclusive real estate services to facilitate the
                                     easy and confident purchase, sale, and management of your properties.
                                 </div>
                             </div>
 
-                            <div class="flex justify-around items-center text-gray-500">
+                            <div class="flex justify-around items-center text-gray-800">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
@@ -752,14 +752,14 @@
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
 
-                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
+                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-800">
                                 <div class="truncate-to-2-line">
                                     All-inclusive real estate services to facilitate the easy and confident purchase,
                                     sale, and management of your properties.
                                 </div>
                             </div>
 
-                            <div class="flex justify-around items-center text-gray-500">
+                            <div class="flex justify-around items-center text-gray-800">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
@@ -818,14 +818,14 @@
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
 
-                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
+                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-800">
                                 <div class="truncate-to-2-line">
                                     All-inclusive real estate services to facilitate the easy and
                                     confident purchase, sale, and management of your properties.
                                 </div>
                             </div>
 
-                            <div class="flex justify-around items-center text-gray-500">
+                            <div class="flex justify-around items-center text-gray-800">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
@@ -876,13 +876,13 @@
                                 </svg>
                                 Inner Circular Lamar Street, Houston, Texas
                             </div>
-                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-500">
+                            <div class="text-[14px] sm:text-[18px] mb-5 text-gray-800">
                                 <div class="truncate-to-2-line">
                                     All-inclusive real estate services to facilitate the easy and confident purchase,
                                     sale, and management of your properties.
                                 </div>
                             </div>
-                            <div class="flex justify-around items-center text-gray-500">
+                            <div class="flex justify-around items-center text-gray-800">
                                 <div class="border-r border-r-gray-400 w-full text-center"> Bed 6</div>
                                 <div class=" w-full text-center"> Bed 2</div>
                                 <div class="border-l border-l-gray-400 w-full text-center"> 1690 Sqft</div>
@@ -955,9 +955,9 @@
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
                                 <div class="text-[20px] font-bold">Michel Smith</div>
-                                <div class="text-[14px] text-gray-400"> Property Expert</div>
+                                <div class="text-[14px] text-gray-800"> Property Expert</div>
                             </div>
-                            <router-link :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
+                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -985,9 +985,9 @@
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
                                 <div class="text-[20px] font-bold">Sara Prova</div>
-                                <div class="text-[14px] text-gray-400"> Property Expert</div>
+                                <div class="text-[14px] text-gray-800"> Property Expert</div>
                             </div>
-                            <router-link :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
+                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1015,9 +1015,9 @@
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
                                 <div class="text-[20px] font-bold">Jani Mai</div>
-                                <div class="text-[14px] text-gray-400"> Property Expert</div>
+                                <div class="text-[14px] text-gray-800"> Property Expert</div>
                             </div>
-                            <router-link :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
+                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1045,9 +1045,9 @@
                         <div class="px-5 py-5 flex justify-between items-center bg-white">
                             <div>
                                 <div class="text-[20px] font-bold">Michel Jorden</div>
-                                <div class="text-[14px] text-gray-400"> Property Expert</div>
+                                <div class="text-[14px] text-gray-800"> Property Expert</div>
                             </div>
-                            <router-link :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
+                            <router-link title="team-details-content-show" :to="{name:'TeamDetails',params:{id:'1'}}" class="decoration-0">
                                 <svg viewBox="0 0 24 24" class="size-[25px]" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1101,7 +1101,7 @@
                                      alt="image"/>
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Andrew Simon</div>
-                                    <div class="font-normal -mt-1 text-[13px] text-gray-400"> Property Expert</div>
+                                    <div class="font-normal -mt-1 text-[13px] text-gray-800"> Property Expert</div>
                                 </div>
                             </div>
                         </div>
@@ -1124,7 +1124,7 @@
                                      alt="image"/>
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Ralph Edwards</div>
-                                    <div class="font-normal -mt-1 text-[13px] text-gray-400"> Property Expert</div>
+                                    <div class="font-normal -mt-1 text-[13px] text-gray-800"> Property Expert</div>
                                 </div>
                             </div>
                         </div>
@@ -1147,7 +1147,7 @@
                                      alt="image"/>
                                 <div class="ms-4">
                                     <div class="font-bold text-[17px] text-black"> Andrew Jorden</div>
-                                    <div class="font-normal -mt-1 text-[13px] text-gray-400"> Property Expert</div>
+                                    <div class="font-normal -mt-1 text-[13px] text-gray-800"> Property Expert</div>
                                 </div>
                             </div>
                         </div>
