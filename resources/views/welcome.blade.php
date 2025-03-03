@@ -22,6 +22,8 @@
     <meta name="author" content="Real Estate Agency">
     <meta name="robots" content="index, follow">
 
+    <meta name="Publisher" content="Real Estate Agency - Find Your Dream Home">
+
     <meta property="og:site_name" content="Real Estate Agency">
     <meta property="og:title" content="Real Estate Agency - Find Your Dream Home">
     <meta property="og:type" content="website">
