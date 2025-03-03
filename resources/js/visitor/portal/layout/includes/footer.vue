@@ -128,7 +128,7 @@
             </div>
         </div>
         <div class="w-full text-center border-t border-t-gray-300 mt-10 py-5 text-white bg-[#364440]">
-            Copyright © 2020 <a href="https://benefits.thethemeai.com/" class="decoration-0 text-green-600 duration-500 hover:text-green-300"> benefits </a>. All Rights Reserved.
+            Copyright © 2020 <a href="https://benefits.thethemeai.com/" class="decoration-0 text-white duration-500 hover:text-green-300"> benefits </a>. All Rights Reserved.
         </div>
     </footer>
 

@@ -1206,7 +1206,7 @@
                                 Education for Success
                             </div>
                             <div class="flex justify-start">
-                                <router-link title="show blog description as following id" aria-description="show blog description" :to="{name:'BlogDetails',params:{id:1}}"
+                                <router-link title="show blog description" :to="{name:'BlogDetails',params:{id:1}}"
                                              class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
                                 <span class="w-full flex justify-center items-center">
                                     Read more
@@ -1244,7 +1244,7 @@
                                 Education for Success
                             </div>
                             <div class="flex justify-start">
-                                <router-link title="show blog description as following id" aria-description="show blog description" :to="{name:'BlogDetails',params:{id:2}}"
+                                <router-link title="show blog description" :to="{name:'BlogDetails',params:{id:2}}"
                                              class="text-white flex justify-center group/item items-center w-auto px-5 sm:px-10 py-2 sm:py-3 rounded-[50px] border border-white duration-500 hover:bg-white hover:text-black">
                                 <span class="w-full flex justify-center items-center">
                                     Read more
