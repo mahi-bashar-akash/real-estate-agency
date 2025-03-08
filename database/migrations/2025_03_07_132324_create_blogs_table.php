@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('description')->nullable();;
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->nullable()->useCurrentOnUpdate();
-            $table->timestamps();
         });
     }
 

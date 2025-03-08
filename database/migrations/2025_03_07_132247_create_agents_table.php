@@ -25,7 +25,6 @@ return new class extends Migration
             $table->text('bio')->nullable();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->nullable()->useCurrentOnUpdate();
-            $table->timestamps();
         });
     }
 

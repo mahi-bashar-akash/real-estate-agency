@@ -30,7 +30,6 @@ return new class extends Migration
             $table->string('addition_room')->nullable();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->nullable()->useCurrentOnUpdate();
-            $table->timestamps();
         });
     }
 
