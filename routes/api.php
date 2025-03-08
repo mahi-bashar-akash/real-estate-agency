@@ -24,6 +24,7 @@ Route::prefix('auth')->group(function () {
     Route::post('register', [AuthenticationController::class, 'register']);
     Route::post('forgot', [AuthenticationController::class, 'forgot']);
     Route::post('reset', [AuthenticationController::class, 'reset']);
+    Route::post('verification', [AuthenticationController::class, 'verification']);
 });
 
 Route::prefix('profile')->group(function () {
