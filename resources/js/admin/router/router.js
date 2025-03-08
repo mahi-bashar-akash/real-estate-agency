@@ -2,6 +2,8 @@ import {createRouter, createWebHistory} from "vue-router";
 
 import AuthLayout from "../auth/layout/layout.vue";
 import SignIn from "../auth/pages/sign-in.vue";
+import Forgot from "../auth/pages/forgot.vue";
+import Reset from "../auth/pages/reset.vue";
 
 import portalLayout from "../portal/layout/layout.vue";
 import analysis from "../portal/pages/analysis.vue";
@@ -36,6 +38,8 @@ const routes = [
         path: '/admin/auth', name: 'AuthLayout', component: AuthLayout,
         children: [
             { path: 'sign-in', name: 'SignIn', component: SignIn, meta: { title: 'Sign In' } },
+            { path: 'forgot', name: 'Forgot', component: Forgot, meta: { title: 'Forgot' } },
+            { path: 'reset', name: 'Reset', component: Reset, meta: { title: 'Reset' } },
         ]
     },
     {
