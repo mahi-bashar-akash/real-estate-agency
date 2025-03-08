@@ -16,6 +16,7 @@ import AuthLayout from "../auth/layout/layout.vue";
     import SignUp from "../auth/pages/sign-up.vue";
     import Forgot from "../auth/pages/forgot.vue";
     import Reset from "../auth/pages/reset.vue";
+    import Verification from "../auth/pages/verification.vue";
 
 import Chat from "../chat/chats.vue";
 
@@ -43,6 +44,7 @@ const routes = [
             {path: 'sign-up', name: 'SignUp', component: SignUp, meta: {title: company_name + ' Sign Up'}},
             {path: 'forgot', name: 'Forgot', component: Forgot, meta: {title: company_name + ' Forgot'}},
             {path: 'reset', name: 'Reset', component: Reset, meta: {title: company_name + ' Reset'}},
+            {path: 'verification', name: 'Verification', component: Verification, meta: {title: company_name + ' Verification'}},
         ]
     },
     // chat part

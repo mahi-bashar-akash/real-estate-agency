@@ -4,6 +4,7 @@ import AuthLayout from "../auth/layout/layout.vue";
 import SignIn from "../auth/pages/sign-in.vue";
 import Forgot from "../auth/pages/forgot.vue";
 import Reset from "../auth/pages/reset.vue";
+import Verification from "../auth/pages/verification.vue";
 
 import portalLayout from "../portal/layout/layout.vue";
 import analysis from "../portal/pages/analysis.vue";
@@ -40,6 +41,7 @@ const routes = [
             { path: 'sign-in', name: 'SignIn', component: SignIn, meta: { title: 'Sign In' } },
             { path: 'forgot', name: 'Forgot', component: Forgot, meta: { title: 'Forgot' } },
             { path: 'reset', name: 'Reset', component: Reset, meta: { title: 'Reset' } },
+            { path: 'verification', name: 'Verification', component: Verification, meta: { title: 'Verification' } },
         ]
     },
     {
