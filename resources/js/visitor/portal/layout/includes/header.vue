@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="w-1/2 flex lg:hidden justify-end items-center">
-                    <button type="button" class="outline-0 border-0 bg-transparent" @click="navbarToggle()">
+                    <button type="button" class="outline-0 border-0 bg-transparent" @click.stop="navbarToggle()">
                         <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -27,7 +27,7 @@
                     </button>
                 </div>
 
-                <div class="w-full sm:w-[280px] lg:w-auto p-5 top-0 bottom-0 h-screen lg:h-auto z-50 fixed lg:sticky bg-white lg:bg-transparent lg:flex justify-end items-center gap-x-3 font-medium duration-500" :class="{ '-start-[110%] sm:-start-[280px]' : !isSidebarActive, 'start-0' : isSidebarActive }">
+                <div class="w-full sm:w-[280px] lg:w-auto p-5 top-0 bottom-0 h-screen lg:h-auto z-50 fixed lg:sticky bg-white lg:bg-transparent lg:flex justify-end items-center gap-x-3 font-medium duration-500"  @click.self="isSidebarActive = false" :class="{ '-start-[110%] sm:-start-[280px]' : !isSidebarActive, 'start-0' : isSidebarActive }">
 
                     <div class="flex justify-end items-center mb-5 lg:hidden">
                         <button type="button" title="navbar-toggle" class="outline-0 border-0 bg-transparent" @click="navbarToggle()">
@@ -89,7 +89,10 @@ export default {
         }
     },
     mounted() {
-
+        window.addEventListener("click", (event) => this.handleSidebarClose(event));
+    },
+    unmounted() {
+        window.removeEventListener("click", this.handleSidebarClose);
     },
     methods: {
 
@@ -97,7 +100,16 @@ export default {
             if (window.innerWidth <= 1024) {
                 this.isSidebarActive = !this.isSidebarActive;
             }
-        }
+        },
+
+        // Handle sidebar close
+        handleSidebarClose(event) {
+            if(window.innerWidth <= 991) {
+                if (!event.target.closest("#sidebar") && this.isSidebarActive) {
+                    this.isSidebarActive = false;
+                }
+            }
+        },
 
     }
 }
