@@ -1,9 +1,6 @@
 <template>
 
-    <form @submit.prevent="logIn()" class="w-full mx-auto max-w-[470px] p-5 sm:p-10 bg-white/45 backdrop-blur-md shadow-[0_0_16px_#888888]">
-        <div class="mb-5 text-center text-[25px] font-semibold">
-            Administration
-        </div>
+    <form @submit.prevent="logIn()" class="w-full">
         <div class="mb-3 block w-full">
             <label for="email" class="block mb-1 font-medium">
                 Email
