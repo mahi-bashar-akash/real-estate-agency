@@ -15,7 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('phone');
+            $table->string('preset_address');
+            $table->text('bio');
+            $table->enum('user_type', ['admin', 'client', 'agent'])->default('client');
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('verification_code')->nullable();
+            $table->string('reset_code')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
