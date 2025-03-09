@@ -1,11 +1,12 @@
 <template>
 
     <form @submit.prevent="forgot()" class="w-full">
-        <div class="mb-3 w-full">
+        <div class="mb-3 block w-full">
             <label for="email" class="block mb-1"> Email </label>
-            <input id="email" type="email" name="email" placeholder="Enter your email" v-model="formData.email" class="rounded-md duration-500 focus-visible:border-blue-600 w-full px-3 py-2 outline-0 border border-gray-300" required autocomplete="off" />
+            <input id="email" type="email" name="email" placeholder="Enter your email" v-model="formData.email" class="rounded-md duration-500 focus-visible:border-blue-600 w-full px-3 py-2 outline-0 border border-gray-300" autocomplete="off" />
+            <div class="mt-1 text-rose-700" v-if="error.email"> {{error.email[0]}} </div>
         </div>
-        <div class="mb-3 w-full">
+        <div class="mb-3 block w-full">
             <button type="submit" class="rounded-md bg-blue-600 text-center decoration-0 text-white duration-500 hover:bg-blue-950 px-4 py-2 whitespace-break-spaces block w-full">
                 Send
             </button>
@@ -22,12 +23,16 @@
 
 <script>
 
+import axios from "axios";
+
 export default {
     data(){
         return {
             formData: {
                 email: '',
-            }
+            },
+            loading: false,
+            error: {},
         }
     },
     mounted() {
@@ -36,7 +41,14 @@ export default {
     methods: {
 
         forgot() {
-
+            this.loading = true;
+            axios.post(`/api/auth/forgot`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{
+                console.log(response)
+            }).catch((error) => {
+                this.error = error.response.data.errors;
+            }).finally(()=>{
+                this.loading = false;
+            })
         }
 
     }

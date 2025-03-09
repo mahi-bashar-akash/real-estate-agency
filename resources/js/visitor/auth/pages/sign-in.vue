@@ -3,7 +3,8 @@
     <form @submit.prevent="signIn()" class="w-full">
         <div class="mb-3 w-full">
             <label for="email" class="block mb-1"> Email </label>
-            <input id="email" type="email" name="email" placeholder="Enter your email" v-model="formData.email" class="rounded-md duration-500 focus-visible:border-blue-600 w-full px-3 py-2 outline-0 border border-gray-300" required autocomplete="off" />
+            <input id="email" type="email" name="email" placeholder="Enter your email" v-model="formData.email" class="rounded-md duration-500 focus-visible:border-blue-600 w-full px-3 py-2 outline-0 border border-gray-300" autocomplete="off" />
+            <div class="mt-1 text-rose-700" v-if="error.email"> {{error.email[0]}} </div>
         </div>
         <div class="mb-3 w-full">
             <label for="password" class="flex justify-between items-center mb-1">
@@ -15,7 +16,7 @@
                 </span>
             </label>
             <div class="relative w-full">
-                <input id="password" type="password" name="password" placeholder="Enter your password" v-model="formData.password" class="rounded-md duration-500 focus-visible:border-blue-600 w-full px-3 py-2 outline-0 border border-gray-300" required autocomplete="off" />
+                <input id="password" type="password" name="password" placeholder="Enter your password" v-model="formData.password" class="rounded-md duration-500 focus-visible:border-blue-600 w-full px-3 py-2 outline-0 border border-gray-300" autocomplete="off" />
                 <div class="absolute end-0 top-0 bottom-0 pe-3">
                     <button type="button" class="bg-transparent border-0 group outline-0 size-[25px] flex justify-end items-center h-full" @click="passwordVisibility()">
                         <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="passwordFieldType === 'text'">
@@ -35,6 +36,7 @@
                     </button>
                 </div>
             </div>
+            <div class="mt-1 text-rose-700" v-if="error.password"> {{error.password[0]}} </div>
         </div>
         <div class="mb-3 w-full">
             <button type="submit" class="rounded-md bg-blue-600 text-center decoration-0 text-white duration-500 hover:bg-blue-950 px-4 py-2 whitespace-break-spaces block w-full">
@@ -53,6 +55,8 @@
 
 <script>
 
+import axios from "axios";
+
 export default {
     data(){
         return {
@@ -62,6 +66,8 @@ export default {
             },
             password: '',
             passwordFieldType: 'password',
+            loading: false,
+            error: {},
         }
     },
     mounted() {
@@ -74,9 +80,16 @@ export default {
             this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
         },
 
-        signIn() {
-
-        }
+        async signIn() {
+            this.loading = true;
+            axios.post(`/api/auth/login`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{
+                console.log(response)
+            }).catch((error) => {
+                this.error = error.response.data.errors;
+            }).finally(()=>{
+                this.loading = false;
+            })
+        },
 
     }
 }

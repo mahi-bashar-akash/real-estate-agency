@@ -5,14 +5,15 @@
             <label for="email" class="block mb-1 font-medium">
                 Email
             </label>
-            <input id="email" type="email" name="email" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your email" required autocomplete="off" />
+            <input id="email" type="email" name="email" v-model="formData.email" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your email" autocomplete="off" />
+            <div class="mt-1 text-rose-700" v-if="error.email"> {{error.email[0]}} </div>
         </div>
         <div class="mb-5 block w-full">
             <label for="password" class="block mb-1 font-medium">
                 Password
             </label>
             <div class="relative w-full">
-                <input id="password" :type="passwordFieldType" name="password" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your password" required autocomplete="off" />
+                <input id="password" :type="passwordFieldType" name="password" v-model="formData.password" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your password" autocomplete="off" />
                 <div class="absolute end-0 top-0 bottom-0 pe-3">
                     <button type="button" class="bg-transparent border-0 group outline-0 size-[25px] flex justify-end items-center h-full" @click="passwordVisibility()">
                         <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="passwordFieldType === 'text'">
@@ -32,6 +33,7 @@
                     </button>
                 </div>
             </div>
+            <div class="mt-1 text-rose-700" v-if="error.password"> {{error.password[0]}} </div>
         </div>
         <div class="flex justify-end items-center">
             <router-link :to="{name:'Forgot'}" class="decoration-0 text-rose-700">
@@ -49,12 +51,20 @@
 
 <script>
 
+import axios from "axios";
+
 export default {
     data(){
         return {
             // Data properties
+            formData: {
+                email: '',
+                password: '',
+            },
             password: '',
             passwordFieldType: 'password',
+            loading: false,
+            error: {},
         }
     },
     mounted() {
@@ -69,7 +79,14 @@ export default {
 
         // Login Api integration
         logIn() {
-
+            this.loading = true;
+            axios.post(`/api/auth/login`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{
+                console.log(response)
+            }).catch((error) => {
+                this.error = error.response.data.errors;
+            }).finally(()=>{
+                this.loading = false;
+            })
         },
 
     }

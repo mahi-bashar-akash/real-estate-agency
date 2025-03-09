@@ -38,13 +38,13 @@ class AuthenticationController extends BaseController
     public function registration(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
+            'name' => 'nullable|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'phone' => 'required|string|max:20',
-            'preset_address' => 'required|string',
+            'phone' => 'nullable|string|max:20',
+            'preset_address' => 'nullable|string',
             'bio' => 'nullable|string',
-            'password' => 'required|string|min:6',
-            'user_type' => 'required|in:admin,client,agent' // Validating user_type
+            'password' => 'required|min:6|confirmed',
+            'user_type' => 'required|in:admin,client,agent'
         ]);
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()], 422);
@@ -115,7 +115,7 @@ class AuthenticationController extends BaseController
     {
         return response()->json([
             'user' => $request->user(),
-            'user_type' => $request->user()->user_type // Return user_type
+            'user_type' => $request->user()->user_type
         ]);
     }
 

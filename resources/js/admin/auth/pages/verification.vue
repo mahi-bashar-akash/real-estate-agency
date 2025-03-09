@@ -2,7 +2,7 @@
 
     <div class="text-center mb-5 text-[21px]"> Please check your email </div>
     <div class="grid grid-cols-4 gap-3">
-        <input v-for="(input, index) in verificationCodeArray" :key="index" v-model="verificationCodeArray[index]" type="text" maxlength="1" class="w-full h-full text-center text-[25px] py-4 outline-0 border-0 bg-white shadow-xl rounded-lg" placeholder="0" @input="onInput(index)" :ref="`input${index}`" />
+        <input v-for="(input, index) in verificationCodeArray" :key="index" v-model="verificationCodeArray[index]" type="text" maxlength="1" class="w-full backdrop-blur-2xl h-full text-center text-[25px] py-4 outline-0 border-0 bg-blue-700 text-white placeholder-white shadow-xl rounded-lg" placeholder="0" @input="onInput(index)" :ref="`input${index}`" />
     </div>
     <div class="mt-3 text-center"> {{timer}} </div>
     <div class="mt-3 text-center">
@@ -12,6 +12,9 @@
 </template>
 
 <script>
+
+import axios from "axios";
+
 export default {
     data() {
         return {
