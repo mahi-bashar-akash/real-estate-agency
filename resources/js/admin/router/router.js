@@ -1,7 +1,8 @@
 import {createRouter, createWebHistory} from "vue-router";
 
-import AuthLayout from "../auth/layout/layout.vue";
+import authLayout from "../auth/layout/layout.vue";
 import SignIn from "../auth/pages/sign-in.vue";
+import SignUp from "../auth/pages/sign-up.vue";
 import Forgot from "../auth/pages/forgot.vue";
 import Reset from "../auth/pages/reset.vue";
 import Verification from "../auth/pages/verification.vue";
@@ -36,12 +37,13 @@ const title = "Admin Panel - ";
 
 const routes = [
     {
-        path: '/admin/auth', name: 'AuthLayout', component: AuthLayout,
+        path: '/admin/auth', name: 'authLayout', component: authLayout,
         children: [
-            { path: 'sign-in', name: 'SignIn', component: SignIn, meta: { title: 'Sign In' } },
-            { path: 'forgot', name: 'Forgot', component: Forgot, meta: { title: 'Forgot' } },
-            { path: 'reset', name: 'Reset', component: Reset, meta: { title: 'Reset' } },
-            { path: 'verification', name: 'Verification', component: Verification, meta: { title: 'Verification' } },
+            { path: 'sign-in', name: 'signIn', component: SignIn, meta: { title: 'Sign In' } },
+            { path: 'sign-up', name: 'signUp', component: SignUp, meta: { title: 'Sign Up' } },
+            { path: 'forgot', name: 'forgot', component: Forgot, meta: { title: 'Forgot' } },
+            { path: 'reset', name: 'reset', component: Reset, meta: { title: 'Reset' } },
+            { path: 'verification', name: 'verification', component: Verification, meta: { title: 'Verification' } },
         ]
     },
     {
@@ -83,6 +85,19 @@ const router = createRouter({
         } else {
             return {top: 0, behavior: 'smooth'};
         }
+    }
+});
+
+router.beforeEach((to, from, next) => {
+    const userType = localStorage.getItem("user_type");
+    const isAuthenticated = userType === "admin";
+
+    if (to.path.startsWith("/admin/auth")) {
+        if (isAuthenticated) { next({ name: "analysis" }); } else { next(); }
+    } else if (to.path.startsWith("/admin")) {
+        if (!isAuthenticated) { next({ name: "signIn" }); } else { next(); }
+    } else {
+        next();
     }
 });
 

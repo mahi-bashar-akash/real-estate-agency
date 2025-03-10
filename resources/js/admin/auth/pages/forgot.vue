@@ -15,7 +15,7 @@
         </div>
         <div class="text-center">
             Remember password! <br/>
-            <router-link :to="{name:'SignIn'}" class="decoration-0 text-blue-950 font-medium">
+            <router-link :to="{name:'signIn'}" class="decoration-0 text-blue-950 font-medium">
                 Sign IN
             </router-link>
         </div>

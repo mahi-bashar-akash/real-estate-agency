@@ -235,7 +235,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" class="decoration-0 flex text-md justify-start items-center px-3 py-2 w-full text-md bg-transparent duration-500 hover:bg-gray-300 rounded-md" @click="dropdownToggle()">
+                                    <button type="button" class="decoration-0 flex text-md justify-start items-center px-3 py-2 w-full text-md bg-transparent duration-500 hover:bg-gray-300 rounded-md" @click="logOut()">
                                         <span class="me-2">
                                             <svg class="size-[20px] fill-[#1c252e]" fill="#000000" viewBox="0 0 20 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -249,7 +249,7 @@
                                         <span class="text-[#1c252e]">
                                             Logout
                                         </span>
-                                    </a>
+                                    </button>
                                 </li>
                             </ul>
                         </div>
@@ -262,6 +262,8 @@
 </template>
 
 <script>
+
+import axios from "axios";
 
 export default {
     data(){
@@ -335,6 +337,32 @@ export default {
                     this.isSidebarActive = false;
                 }
             }
+        },
+
+        // Logout Api integration
+        logOut() {
+            this.loading = true;
+            const token = localStorage.getItem('token');
+
+            if (!token) {
+                this.$router.push({ name: 'signIn' });
+                return;
+            }
+            axios.post(`/api/profile/logout`, null, {headers: {'Content-Type': 'application/json; charset=utf-8', 'Authorization': `Bearer ${token}`}}).then((response) => {
+                localStorage.removeItem('token');
+                localStorage.removeItem('user_type');
+                this.$router.push({ name: 'signIn' });
+            }).catch((error) => {
+                if (error.response && error.response.status === 401) {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('user_type');
+                    this.$router.push({ name: 'signIn' });
+                } else {
+                    this.error = error.response?.data?.message || "An error occurred during logout";
+                }
+            }).finally(() => {
+                this.loading = false;
+            });
         },
 
     }

@@ -36,14 +36,20 @@
             <div class="mt-1 text-rose-700" v-if="error.password"> {{error.password[0]}} </div>
         </div>
         <div class="flex justify-end items-center">
-            <router-link :to="{name:'Forgot'}" class="decoration-0 text-rose-700">
+            <router-link :to="{name:'forgot'}" class="decoration-0 text-rose-700">
                 Forgot Password?
             </router-link>
         </div>
-        <div class="block w-full">
+        <div class="block w-full mb-5">
             <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces">
                 Sign In
             </button>
+        </div>
+        <div class="text-center">
+            Don't have any account <br/>
+            <router-link :to="{name:'signUp'}" class="decoration-0 text-blue-950 font-medium">
+                Sign Up
+            </router-link>
         </div>
     </form>
 
@@ -65,10 +71,11 @@ export default {
             passwordFieldType: 'password',
             loading: false,
             error: {},
+            Core: window.core.user_type,
         }
     },
     mounted() {
-
+        console.log(this.Core);
     },
     methods: {
 
@@ -80,13 +87,22 @@ export default {
         // Login Api integration
         logIn() {
             this.loading = true;
-            axios.post(`/api/auth/login`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{
-                console.log(response)
-            }).catch((error) => {
-                this.error = error.response.data.errors;
-            }).finally(()=>{
-                this.loading = false;
-            })
+            axios.post('/api/auth/login', this.formData,{ headers: { 'Content-Type': 'application/json; charset=utf-8' }}).then(response => {
+                const user = response.data.user || {};
+                const userType = user.user_type || null;
+                window.core = window.core || {};
+                window.core.user_type = userType;
+                localStorage.setItem('token', response.data.token);
+                localStorage.setItem('user_type', userType);
+                if (userType === 'admin') {
+                    console.log("Redirecting to admin analysis...");
+                    this.$router.push({name:'analysis'});
+                }
+            }).catch(error => {
+                this.error = error.response.data.errors
+            }).finally(()=> {
+                this.loading = false
+            });
         },
 
     }

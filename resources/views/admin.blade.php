@@ -32,6 +32,10 @@
             });
         });
 
+        window.core = {
+            user_type: @json(auth()->check() ? auth()->user()->user_type : null),
+        }
+
     </script>
 
 </body>

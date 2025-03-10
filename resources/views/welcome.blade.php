@@ -89,6 +89,12 @@
             });
         });
 
+        window.core = {
+            @if(auth()->check() && (auth()->user()->user_type === 'client' || auth()->user()->user_type === 'agent'))
+                user_type: 'client' || 'agent',
+            @endif
+        }
+
     </script>
 
 </body>

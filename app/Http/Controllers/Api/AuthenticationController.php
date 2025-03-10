@@ -56,12 +56,12 @@ class AuthenticationController extends BaseController
             'preset_address' => $request->preset_address,
             'bio' => $request->bio,
             'password' => Hash::make($request->password),
-            'user_type' => $request->user_type, // Assigning user_type during registration
+            'user_type' => $request->user_type,
         ]);
         return response()->json([
             'message' => 'User registered successfully',
             'user' => $user,
-            'user_type' => $user->user_type // Returning user_type in the response
+            'user_type' => $user->user_type
         ]);
     }
 
@@ -147,8 +147,17 @@ class AuthenticationController extends BaseController
 
     public function logout(Request $request): JsonResponse
     {
-        $request->user()->tokens()->delete();
-        return response()->json(['message' => 'Logged out successfully']);
+        $user = $request->user();
+        if ($user) {
+            $user->tokens->each(function ($token) {
+                $token->delete();
+            });
+            return response()->json([
+                'message' => 'Logout successful',
+            ]);
+        }
+        return response()->json(['message' => 'Not authenticated'], 401);
     }
+
 
 }
