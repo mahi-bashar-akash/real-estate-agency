@@ -219,7 +219,7 @@
                             </button>
                             <ul class="w-[150px] bg-white drop-shadow-2xl rounded-md overflow-hidden border border-gray-200 p-1 absolute end-0 mt-1" v-if="isDropdownActive" @click.stop>
                                 <li>
-                                    <a href="javascript:void(0)" class="decoration-0 flex text-md justify-start items-center px-3 py-2 w-full text-md bg-transparent duration-500 hover:bg-gray-300 rounded-md" @click="dropdownToggle()">
+                                    <router-link :to="{name:'profile'}" class="decoration-0 flex text-md justify-start items-center px-3 py-2 w-full text-md bg-transparent duration-500 hover:bg-gray-300 rounded-md" @click="dropdownToggle()">
                                         <span class="me-2">
                                             <svg class="fill-[#1c252e] size-[20px]" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -232,7 +232,7 @@
                                         <span class="text-[#1c252e]">
                                             Profile
                                         </span>
-                                    </a>
+                                    </router-link>
                                 </li>
                                 <li>
                                     <button type="button" class="decoration-0 flex text-md justify-start items-center px-3 py-2 w-full text-md bg-transparent duration-500 hover:bg-gray-300 rounded-md" @click="logOut()">
@@ -340,7 +340,7 @@ export default {
         },
 
         // Logout Api integration
-        logOut() {
+        async logOut() {
             this.loading = true;
             const token = localStorage.getItem('token');
 

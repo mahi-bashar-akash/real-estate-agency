@@ -32,6 +32,7 @@ import viewCustomer from "../portal/pages/customer/view.vue";
 import emails from "../portal/pages/emails.vue";
 import orders from "../portal/pages/customer/orders.vue";
 import reviews from "../portal/pages/customer/reviews.vue";
+import profile from "../portal/pages/profile.vue";
 
 const title = "Admin Panel - ";
 
@@ -73,6 +74,7 @@ const routes = [
             {path: 'customer/view/:id', name: 'viewCustomer', component: viewCustomer, meta: { title : title + 'View Customer'} },
             {path: 'customers/order', name: 'orders', component: orders, meta: { title: title + 'Customer Order List' } },
             {path: 'customers/review', name: 'reviews', component: reviews, meta: { title: title + 'Customer Review List' } },
+            {path: 'profile', name: 'profile', component: profile, meta: { title: title + 'Profile' } },
         ]
     },
 ];

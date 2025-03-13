@@ -85,7 +85,7 @@ export default {
         },
 
         // Login Api integration
-        logIn() {
+        async logIn() {
             this.loading = true;
             axios.post('/api/auth/login', this.formData,{ headers: { 'Content-Type': 'application/json; charset=utf-8' }}).then(response => {
                 const user = response.data.user || {};

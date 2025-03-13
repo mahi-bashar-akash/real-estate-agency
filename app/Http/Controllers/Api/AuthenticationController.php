@@ -113,9 +113,15 @@ class AuthenticationController extends BaseController
 
     public function details(Request $request): JsonResponse
     {
+        $user = $request->user();
+
+        if (!$user) {
+            return response()->json(['message' => 'Not authenticated'], 401);
+        }
+
         return response()->json([
-            'user' => $request->user(),
-            'user_type' => $request->user()->user_type
+            'user' => $user,
+            'user_type' => $user->user_type
         ]);
     }
 
