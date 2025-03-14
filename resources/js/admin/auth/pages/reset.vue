@@ -61,9 +61,12 @@
             </div>
             <div class="mt-1 text-rose-700" v-if="error.password_confirmation"> {{error.password_confirmation[0]}} </div>
         </div>
-        <div class="block w-full">
-            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces rounded-lg">
-                Sign In
+        <div class="w-full flex items-center mb-3">
+            <button type="submit" class="min-w-[150px] bg-blue-600 text-center h-[48px] inline-flex justify-center items-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 whitespace-break-spaces rounded-lg" v-if="!loading">
+                Submit
+            </button>
+            <button type="button" class="min-w-[150px] bg-blue-600 text-center h-[48px] inline-flex justify-center items-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 whitespace-break-spaces rounded-lg" v-if="loading">
+                <span class="inline-flex justify-center items-center border-2 border-transparent animate-spin border-t-white rounded-full size-[15px]"></span>
             </button>
         </div>
     </form>

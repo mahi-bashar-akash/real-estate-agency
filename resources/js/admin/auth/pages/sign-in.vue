@@ -1,7 +1,7 @@
 <template>
 
     <form @submit.prevent="logIn()" class="w-full">
-        <div class="mt-1 text-rose-700 text-center" v-if="credentialError"> {{credentialError}} </div>
+        <div class="text-rose-700 text-center p-3 bg-rose-100 rounded-lg font-medium mb-3" v-if="credentialError"> {{credentialError}} </div>
         <div class="mb-3 block w-full">
             <label for="email" class="block mb-1 font-medium">
                 Email
@@ -37,13 +37,16 @@
             <div class="mt-1 text-rose-700" v-if="error.password"> {{error.password[0]}} </div>
         </div>
         <div class="flex justify-end items-center">
-            <router-link :to="{name:'forgot'}" class="decoration-0 text-rose-700">
+            <router-link :to="{name:'forgot'}" class="decoration-0 text-rose-700 font-medium">
                 Forgot Password?
             </router-link>
         </div>
-        <div class="block w-full">
-            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces rounded-lg">
+        <div class="w-full flex items-center">
+            <button type="submit" class="min-w-[150px] bg-blue-600 text-center h-[48px] inline-flex justify-center items-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 whitespace-break-spaces rounded-lg" v-if="!loading">
                 Sign In
+            </button>
+            <button type="button" class="min-w-[150px] bg-blue-600 text-center h-[48px] inline-flex justify-center items-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 whitespace-break-spaces rounded-lg" v-if="loading">
+                <span class="inline-flex justify-center items-center border-2 border-transparent animate-spin border-t-white rounded-full size-[15px]"></span>
             </button>
         </div>
     </form>

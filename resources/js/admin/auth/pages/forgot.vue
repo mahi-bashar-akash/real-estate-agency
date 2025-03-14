@@ -8,9 +8,12 @@
             <input id="email" type="email" name="email" v-model="formData.email" class="w-full outline-0 border-0 bg-white py-3 px-5 rounded-lg" placeholder="Enter your email" autocomplete="off" />
             <div class="mt-1 text-rose-700" v-if="error.email"> {{error.email[0]}} </div>
         </div>
-        <div class="block w-full mb-3">
-            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces rounded-lg">
+        <div class="w-full flex items-center mb-3">
+            <button type="submit" class="min-w-[150px] bg-blue-600 text-center h-[48px] inline-flex justify-center items-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 whitespace-break-spaces rounded-lg" v-if="!loading">
                 Send
+            </button>
+            <button type="button" class="min-w-[150px] bg-blue-600 text-center h-[48px] inline-flex justify-center items-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 whitespace-break-spaces rounded-lg" v-if="loading">
+                <span class="inline-flex justify-center items-center border-2 border-transparent animate-spin border-t-white rounded-full size-[15px]"></span>
             </button>
         </div>
         <div class="text-center">
