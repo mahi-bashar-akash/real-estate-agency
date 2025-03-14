@@ -90,9 +90,7 @@
         });
 
         window.core = {
-            @if(auth()->check() && (auth()->user()->user_type === 'client' || auth()->user()->user_type === 'agent'))
-                user_type: 'client' || 'agent',
-            @endif
+            user_type: @json(auth()->check() ? auth()->user()->user_type : null),
         }
 
     </script>

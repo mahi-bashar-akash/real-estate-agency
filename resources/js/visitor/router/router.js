@@ -18,7 +18,8 @@ import AuthLayout from "../auth/layout/layout.vue";
     import Reset from "../auth/pages/reset.vue";
     import Verification from "../auth/pages/verification.vue";
 
-import Chat from "../chat/chats.vue";
+import ChatLayout from "../chat/layout/layout.vue";
+    import Chat from "../chat/pages/chats.vue";
 
 const company_name = "Realer Living Solution";
 
@@ -48,7 +49,12 @@ const routes = [
         ]
     },
     // chat part
-    {path: '/chat', name: 'Chat', component: Chat, meta: {title: company_name + ' Chat'}},
+    {
+        path: '/chat', name: 'ChatLayout', component: ChatLayout,
+        children: [
+            {path: '', name: 'Chat', component: Chat, meta: {title: company_name + ' Chat'}},
+        ]
+    }
 
 ];
 
@@ -60,6 +66,26 @@ const router = createRouter({
         } else {
             return {top: 0, behavior: 'smooth'};
         }
+    }
+});
+
+router.beforeEach((to, from, next) => {
+    const userType = localStorage.getItem("user_type");
+    const isAuthenticated = userType === "client";
+    if (to.path.startsWith("/auth")) {
+        if (isAuthenticated) {
+            next({ name: "Chat" });
+        } else {
+            next();
+        }
+    } else if (to.path.startsWith("/chat")) {
+        if (!isAuthenticated) {
+            next({ name: "SignIn" });
+        } else {
+            next();
+        }
+    } else {
+        next();
     }
 });
 

@@ -1,6 +1,7 @@
 <template>
 
     <form @submit.prevent="signIn()" class="w-full">
+        <div class="text-rose-700 text-center p-3 bg-rose-100 rounded-lg font-medium mb-3" v-if="credentialError"> {{credentialError}} </div>
         <div class="mb-3 w-full">
             <label for="email" class="block mb-1"> Email </label>
             <input id="email" type="email" name="email" placeholder="Enter your email" v-model="formData.email" class="rounded-md duration-500 focus-visible:border-blue-600 w-full px-3 py-2 outline-0 border border-gray-300" autocomplete="off" />
@@ -68,6 +69,8 @@ export default {
             passwordFieldType: 'password',
             loading: false,
             error: {},
+            Core: window.core.user_type,
+            credentialError: '',
         }
     },
     mounted() {
@@ -82,10 +85,24 @@ export default {
 
         async signIn() {
             this.loading = true;
+            this.error = {};
+            this.credentialError = '';
             axios.post(`/api/auth/login`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{
-                console.log(response)
+                const user = response.data.user || {};
+                const userType = user.user_type || null;
+                window.core = window.core || {};
+                window.core.user_type = userType;
+                localStorage.setItem('token', response.data.token);
+                localStorage.setItem('user_type', userType);
+                if (userType === 'client') {
+                    this.$router.push({name:'chat'});
+                }
             }).catch((error) => {
-                this.error = error.response.data.errors;
+                if(error.response.data.errors) {
+                    this.error = error.response.data.errors
+                } else {
+                    this.credentialError = error.response.data.credential
+                }
             }).finally(()=>{
                 this.loading = false;
             })

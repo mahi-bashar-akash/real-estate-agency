@@ -39,10 +39,10 @@ const routes = [
     {
         path: '/admin/auth', name: 'authLayout', component: authLayout,
         children: [
-            { path: 'sign-in', name: 'signIn', component: SignIn, meta: { title: 'Sign In' } },
-            { path: 'forgot', name: 'forgot', component: Forgot, meta: { title: 'Forgot' } },
-            { path: 'reset', name: 'reset', component: Reset, meta: { title: 'Reset' } },
-            { path: 'verification', name: 'verification', component: Verification, meta: { title: 'Verification' } },
+            { path: 'sign-in', name: 'signIn', component: SignIn, meta: { title: title + 'Sign In' } },
+            { path: 'forgot', name: 'forgot', component: Forgot, meta: { title: title + 'Forgot' } },
+            { path: 'reset', name: 'reset', component: Reset, meta: { title: title + 'Reset' } },
+            { path: 'verification', name: 'verification', component: Verification, meta: { title: title + 'Verification' } },
         ]
     },
     {

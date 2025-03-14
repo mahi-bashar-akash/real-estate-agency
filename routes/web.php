@@ -20,3 +20,6 @@ Route::get('/admin', [AppController::class, 'admin'])->where('any', '.*')->name(
 Route::get('/admin/{any}', [AppController::class, 'admin'])->where('any', '.*')->name('lvs.admin.any');
 
 Route::get('{any}', [AppController::class, 'visitor'])->where('any', '.*')->name('lvs.visitor.any');
+Route::get('/chat/{any}', [AppController::class, 'visitor'])->where('any', '.*')->name('lvs.visitor.any');
+Route::get('/auth', function () { return redirect()->route('lvs.visitor.auth.any', 'sign-in'); } );
+Route::get('/auth/{any}', [AppController::class, 'visitor'])->where('any', '.*')->name('lvs.visitor.auth.any');

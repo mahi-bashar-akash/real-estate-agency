@@ -1,5 +1,4 @@
 <template>
-
     <div class="p-3 md:p-5">
         <div class="bg-gray-200 rounded-2xl w-full h-full overflow-hidden">
             <div class="flex justify-start items-start h-full relative">
@@ -51,8 +50,7 @@
                             <!-- accordion -->
                             <div v-for="(item, index) in 4" :key="index">
                                 <div class="flex justify-start items-center py-3 bg-transparent cursor-pointer duration-500 hover:bg-gray-200 rounded-xl group" @click="setTab(index)">
-                                    <div class="min-w-[35px] sm:min-w-[45px] min-h-[35px] sm:min-h-[45px] size-[35px] sm:size-[45px] inline-flex justify-center items-center rounded-full group-hover:bg-white duration-500 bg-gray-200"
-                                    >
+                                    <div class="min-w-[35px] sm:min-w-[45px] min-h-[35px] sm:min-h-[45px] size-[35px] sm:size-[45px] inline-flex justify-center items-center rounded-full group-hover:bg-white duration-500 bg-gray-200">
                                         <template v-if="index === 0">
                                             <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -326,15 +324,48 @@
                                    class="w-full outline-0 bg-white border border-white placeholder-[#1c252e] duration-500  h-[45px] focus-within:border-[#1c252e] py-2 ps-10 pe-4 rounded-xl"
                                    required autocomplete="off"/>
                         </div>
-                        <div class="min-w-[45px] min-h-[45px] flex justify-center items-center duration-500 bg-transparent hover:bg-white rounded-full cursor-pointer" @click.stop="openChatSettingsSidebar()">
-                            <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path stroke="#1c252e" d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path stroke="#1c252e" d="M12.9046 3.06005C12.6988 3 12.4659 3 12 3C11.5341 3 11.3012 3 11.0954 3.06005C10.7942 3.14794 10.5281 3.32808 10.3346 3.57511C10.2024 3.74388 10.1159 3.96016 9.94291 4.39272C9.69419 5.01452 9.00393 5.33471 8.36857 5.123L7.79779 4.93281C7.3929 4.79785 7.19045 4.73036 6.99196 4.7188C6.70039 4.70181 6.4102 4.77032 6.15701 4.9159C5.98465 5.01501 5.83376 5.16591 5.53197 5.4677C5.21122 5.78845 5.05084 5.94882 4.94896 6.13189C4.79927 6.40084 4.73595 6.70934 4.76759 7.01551C4.78912 7.2239 4.87335 7.43449 5.04182 7.85566C5.30565 8.51523 5.05184 9.26878 4.44272 9.63433L4.16521 9.80087C3.74031 10.0558 3.52786 10.1833 3.37354 10.3588C3.23698 10.5141 3.13401 10.696 3.07109 10.893C3 11.1156 3 11.3658 3 11.8663C3 12.4589 3 12.7551 3.09462 13.0088C3.17823 13.2329 3.31422 13.4337 3.49124 13.5946C3.69158 13.7766 3.96395 13.8856 4.50866 14.1035C5.06534 14.3261 5.35196 14.9441 5.16236 15.5129L4.94721 16.1584C4.79819 16.6054 4.72367 16.829 4.7169 17.0486C4.70875 17.3127 4.77049 17.5742 4.89587 17.8067C5.00015 18.0002 5.16678 18.1668 5.5 18.5C5.83323 18.8332 5.99985 18.9998 6.19325 19.1041C6.4258 19.2295 6.68733 19.2913 6.9514 19.2831C7.17102 19.2763 7.39456 19.2018 7.84164 19.0528L8.36862 18.8771C9.00393 18.6654 9.6942 18.9855 9.94291 19.6073C10.1159 20.0398 10.2024 20.2561 10.3346 20.4249C10.5281 20.6719 10.7942 20.8521 11.0954 20.94C11.3012 21 11.5341 21 12 21C12.4659 21 12.6988 21 12.9046 20.94C13.2058 20.8521 13.4719 20.6719 13.6654 20.4249C13.7976 20.2561 13.8841 20.0398 14.0571 19.6073C14.3058 18.9855 14.9961 18.6654 15.6313 18.8773L16.1579 19.0529C16.605 19.2019 16.8286 19.2764 17.0482 19.2832C17.3123 19.2913 17.5738 19.2296 17.8063 19.1042C17.9997 18.9999 18.1664 18.8333 18.4996 18.5001C18.8328 18.1669 18.9994 18.0002 19.1037 17.8068C19.2291 17.5743 19.2908 17.3127 19.2827 17.0487C19.2759 16.8291 19.2014 16.6055 19.0524 16.1584L18.8374 15.5134C18.6477 14.9444 18.9344 14.3262 19.4913 14.1035C20.036 13.8856 20.3084 13.7766 20.5088 13.5946C20.6858 13.4337 20.8218 13.2329 20.9054 13.0088C21 12.7551 21 12.4589 21 11.8663C21 11.3658 21 11.1156 20.9289 10.893C20.866 10.696 20.763 10.5141 20.6265 10.3588C20.4721 10.1833 20.2597 10.0558 19.8348 9.80087L19.5569 9.63416C18.9478 9.26867 18.6939 8.51514 18.9578 7.85558C19.1262 7.43443 19.2105 7.22383 19.232 7.01543C19.2636 6.70926 19.2003 6.40077 19.0506 6.13181C18.9487 5.94875 18.7884 5.78837 18.4676 5.46762C18.1658 5.16584 18.0149 5.01494 17.8426 4.91583C17.5894 4.77024 17.2992 4.70174 17.0076 4.71872C16.8091 4.73029 16.6067 4.79777 16.2018 4.93273L15.6314 5.12287C14.9961 5.33464 14.3058 5.0145 14.0571 4.39272C13.8841 3.96016 13.7976 3.74388 13.6654 3.57511C13.4719 3.32808 13.2058 3.14794 12.9046 3.06005Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
+                        <div class="relative">
+                            <div class="min-w-[45px] min-h-[45px] flex justify-center items-center duration-500 bg-transparent hover:bg-white rounded-full cursor-pointer" @click.stop="profileDropdownToggle()">
+                                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-three-dots-vertical size-[25px]">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <ul class="absolute mt-2 top-auto end-0 bg-white rounded-xl min-w-[160px] p-2" @click.self="isProfileDropdownActive = false" :class="{ 'hidden' : !isProfileDropdownActive, 'block' : isProfileDropdownActive }" id="profileDropdown">
+                                <li>
+                                    <button type="button" class="flex justify-start items-center w-full duration-500 bg-transparent rounded-xl hover:bg-gray-200 p-2" @click.stop="openChatSettingsSidebar()">
+                                        <span class="me-2">
+                                            <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path stroke="#1c252e" d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path stroke="#1c252e" d="M12.9046 3.06005C12.6988 3 12.4659 3 12 3C11.5341 3 11.3012 3 11.0954 3.06005C10.7942 3.14794 10.5281 3.32808 10.3346 3.57511C10.2024 3.74388 10.1159 3.96016 9.94291 4.39272C9.69419 5.01452 9.00393 5.33471 8.36857 5.123L7.79779 4.93281C7.3929 4.79785 7.19045 4.73036 6.99196 4.7188C6.70039 4.70181 6.4102 4.77032 6.15701 4.9159C5.98465 5.01501 5.83376 5.16591 5.53197 5.4677C5.21122 5.78845 5.05084 5.94882 4.94896 6.13189C4.79927 6.40084 4.73595 6.70934 4.76759 7.01551C4.78912 7.2239 4.87335 7.43449 5.04182 7.85566C5.30565 8.51523 5.05184 9.26878 4.44272 9.63433L4.16521 9.80087C3.74031 10.0558 3.52786 10.1833 3.37354 10.3588C3.23698 10.5141 3.13401 10.696 3.07109 10.893C3 11.1156 3 11.3658 3 11.8663C3 12.4589 3 12.7551 3.09462 13.0088C3.17823 13.2329 3.31422 13.4337 3.49124 13.5946C3.69158 13.7766 3.96395 13.8856 4.50866 14.1035C5.06534 14.3261 5.35196 14.9441 5.16236 15.5129L4.94721 16.1584C4.79819 16.6054 4.72367 16.829 4.7169 17.0486C4.70875 17.3127 4.77049 17.5742 4.89587 17.8067C5.00015 18.0002 5.16678 18.1668 5.5 18.5C5.83323 18.8332 5.99985 18.9998 6.19325 19.1041C6.4258 19.2295 6.68733 19.2913 6.9514 19.2831C7.17102 19.2763 7.39456 19.2018 7.84164 19.0528L8.36862 18.8771C9.00393 18.6654 9.6942 18.9855 9.94291 19.6073C10.1159 20.0398 10.2024 20.2561 10.3346 20.4249C10.5281 20.6719 10.7942 20.8521 11.0954 20.94C11.3012 21 11.5341 21 12 21C12.4659 21 12.6988 21 12.9046 20.94C13.2058 20.8521 13.4719 20.6719 13.6654 20.4249C13.7976 20.2561 13.8841 20.0398 14.0571 19.6073C14.3058 18.9855 14.9961 18.6654 15.6313 18.8773L16.1579 19.0529C16.605 19.2019 16.8286 19.2764 17.0482 19.2832C17.3123 19.2913 17.5738 19.2296 17.8063 19.1042C17.9997 18.9999 18.1664 18.8333 18.4996 18.5001C18.8328 18.1669 18.9994 18.0002 19.1037 17.8068C19.2291 17.5743 19.2908 17.3127 19.2827 17.0487C19.2759 16.8291 19.2014 16.6055 19.0524 16.1584L18.8374 15.5134C18.6477 14.9444 18.9344 14.3262 19.4913 14.1035C20.036 13.8856 20.3084 13.7766 20.5088 13.5946C20.6858 13.4337 20.8218 13.2329 20.9054 13.0088C21 12.7551 21 12.4589 21 11.8663C21 11.3658 21 11.1156 20.9289 10.893C20.866 10.696 20.763 10.5141 20.6265 10.3588C20.4721 10.1833 20.2597 10.0558 19.8348 9.80087L19.5569 9.63416C18.9478 9.26867 18.6939 8.51514 18.9578 7.85558C19.1262 7.43443 19.2105 7.22383 19.232 7.01543C19.2636 6.70926 19.2003 6.40077 19.0506 6.13181C18.9487 5.94875 18.7884 5.78837 18.4676 5.46762C18.1658 5.16584 18.0149 5.01494 17.8426 4.91583C17.5894 4.77024 17.2992 4.70174 17.0076 4.71872C16.8091 4.73029 16.6067 4.79777 16.2018 4.93273L15.6314 5.12287C14.9961 5.33464 14.3058 5.0145 14.0571 4.39272C13.8841 3.96016 13.7976 3.74388 13.6654 3.57511C13.4719 3.32808 13.2058 3.14794 12.9046 3.06005Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        Settings
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="flex justify-start items-center w-full duration-500 bg-transparent rounded-xl hover:bg-gray-200 p-2" @click="logOut()">
+                                        <span class="me-2">
+                                            <svg class="size-[20px] fill-[#1c252e]" viewBox="0 0 20 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <title>logout</title>
+                                                    <path d="M0 9.875v12.219c0 1.125 0.469 2.125 1.219 2.906 0.75 0.75 1.719 1.156 2.844 1.156h6.125v-2.531h-6.125c-0.844 0-1.5-0.688-1.5-1.531v-12.219c0-0.844 0.656-1.5 1.5-1.5h6.125v-2.563h-6.125c-1.125 0-2.094 0.438-2.844 1.188-0.75 0.781-1.219 1.75-1.219 2.875zM6.719 13.563v4.875c0 0.563 0.5 1.031 1.063 1.031h5.656v3.844c0 0.344 0.188 0.625 0.5 0.781 0.125 0.031 0.25 0.031 0.313 0.031 0.219 0 0.406-0.063 0.563-0.219l7.344-7.344c0.344-0.281 0.313-0.844 0-1.156l-7.344-7.313c-0.438-0.469-1.375-0.188-1.375 0.563v3.875h-5.656c-0.563 0-1.063 0.469-1.063 1.031z"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        Logout
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="px-3 pb-2">
@@ -495,127 +526,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full h-full bg-gray-200 p-3">
-                    <div class="w-full h-full bg-white rounded-xl overflow-hidden">
-                        <div class="flex justify-between items-center w-full pe-3">
-                            <div class="flex justify-start items-center ps-3 gap-x-2">
-                                <button type="button" class="min-w-[55px] min-h-[55px] size-[55px] rounded-full inline-flex xl:hidden justify-center items-center bg-transparent duration-500 hover:bg-gray-300" @click.stop="openChatSidebar()">
-                                    <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path d="M5 7H19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M5 12L14 12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M5 17L19 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                    </svg>
-                                </button>
-                                <div class="flex justify-start items-center py-3 bg-transparent pe-3 bg-white">
-                                    <img :src="'/images/agent-4.jpg'" class="size-[35px] sm:size-[55px] min-w-[35px] sm:min-w-[55px] min-h-[35px] sm:min-h-[55px] rounded-full object-cover bg-cover object-top bg-top" alt="">
-                                    <div class="flex justify-between items-center w-full">
-                                        <div class="ps-3 w-full">
-                                            <div class="font-medium text-gray-700 text-[17px]">
-                                                John Doe
-                                            </div>
-                                            <div class="text-green-500 text-[14px] font-medium flex items-center justify-start gap-x-2">
-                                                Active <span class="inline-block bg-green-500 h-3 w-3 rounded-full"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="relative" id="profileChatDropdown">
-                                <button type="button" class="outline-0 border-0 inline-flex justify-center items-center size-[45px] rounded-full bg-transparent duration-500 cursor-pointer hover:bg-gray-200" @click.stop="chatDropdownToggle()">
-                                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"
-                                         class="bi bi-three-dots-vertical size-[20px]">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                           stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path
-                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path>
-                                        </g>
-                                    </svg>
-                                </button>
-                                <ul class="absolute top-auto end-0 w-[170px] h-auto bg-white drop-shadow-xl rounded-lg p-1 mt-2 z-10" v-if="isChatDropdownActive" @click.stop>
-                                    <li>
-                                        <a href="javascript:void(0)" class="decoration-0 flex justify-start items-center px-3 py-2 bg-transparent duration-500 rounded-lg hover:bg-gray-200 text-[14px]" @click="chatDropdownToggle()">
-                                            <span class="inline-flex min-w-[25px]">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-[20px]">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                                </svg>
-                                            </span>
-                                            View Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="decoration-0 flex justify-start items-center px-3 py-2 bg-transparent duration-500 rounded-lg hover:bg-gray-200 text-[14px]" @click="chatDropdownToggle()">
-                                            <span class="inline-flex min-w-[25px]">
-                                                <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path class="stroke-black" stroke-width="1.5" d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                    </g>
-                                                </svg>
-                                            </span>
-                                            Call
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="decoration-0 flex justify-start items-center px-3 py-2 bg-transparent duration-500 rounded-lg hover:bg-gray-200 text-[14px]" @click="chatDropdownToggle()">
-                                            <span class="inline-flex min-w-[25px]">
-                                                <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                                    <g id="SVGRepo_iconCarrier">
-                                                        <path class="stroke-black" d="M16 10L18.5768 8.45392C19.3699 7.97803 19.7665 7.74009 20.0928 7.77051C20.3773 7.79703 20.6369 7.944 20.806 8.17433C21 8.43848 21 8.90095 21 9.8259V14.1741C21 15.099 21 15.5615 20.806 15.8257C20.6369 16.056 20.3773 16.203 20.0928 16.2295C19.7665 16.2599 19.3699 16.022 18.5768 15.5461L16 14M6.2 18H12.8C13.9201 18 14.4802 18 14.908 17.782C15.2843 17.5903 15.5903 17.2843 15.782 16.908C16 16.4802 16 15.9201 16 14.8V9.2C16 8.0799 16 7.51984 15.782 7.09202C15.5903 6.71569 15.2843 6.40973 14.908 6.21799C14.4802 6 13.9201 6 12.8 6H6.2C5.0799 6 4.51984 6 4.09202 6.21799C3.71569 6.40973 3.40973 6.71569 3.21799 7.09202C3 7.51984 3 8.07989 3 9.2V14.8C3 15.9201 3 16.4802 3.21799 16.908C3.40973 17.2843 3.71569 17.5903 4.09202 17.782C4.51984 18 5.07989 18 6.2 18Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                    </g>
-                                                </svg>
-                                            </span>
-                                            Video Call
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="p-3 h-[calc(100vh-220px)]">
-                            <div class="w-full bg-gray-100 h-full rounded-xl p-3 overflow-y-auto scrollbar">
-                                <div v-for="(message, index) in messages" :key="index" class="flex mb-3" :class="{'justify-start': message.type === 'received', 'justify-end': message.type === 'sent'}">
-                                    <div v-if="message.type === 'received'" class="me-2">
-                                        <img :src="message.avatar" class="size-[35px] sm:size-[55px] min-w-[35px] sm:min-w-[55px] min-h-[35px] sm:min-h-[55px] rounded-full object-cover bg-cover object-center bg-center" alt="chat" />
-                                    </div>
-                                    <div :class="message.type === 'received' ? 'bg-white' : 'bg-blue-800 text-white'" class="px-4 py-2 drop-shadow-xl rounded-lg">
-                                        <div class="font-medium"> {{ message.text }} </div>
-                                        <div :class="message.type === 'received' ? 'text-gray-600 text-end' : 'text-white text-start'" class="text-[13px] mt-2"> {{ message.time }} </div>
-                                    </div>
-                                    <div v-if="message.type === 'sent'" class="ms-2">
-                                        <img :src="message.avatar" class="size-[35px] sm:size-[55px] min-w-[35px] sm:min-w-[55px] min-h-[35px] sm:min-h-[55px] rounded-full object-cover bg-cover object-center bg-center" alt="chat" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center pb-3 px-3 gap-x-3">
-                            <input type="text" name="message" placeholder="Type Here ..." class="w-full px-5 py-4 rounded-xl outline-0 border-0 bg-gray-200" required autocomplete="off" />
-                            <button type="submit" class="min-w-[57px] py-4 inline-flex justify-center items-center bg-gray-200 duration-500 hover:bg-blue-800 rounded-xl group">
-                                <svg viewBox="0 0 24 24" class="size-[25px]" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path class="duration-500 stroke-black group-hover:stroke-white" stroke="#000000" d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <router-view/>
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
+
+import axios from "axios";
 
 export default {
     data(){
@@ -626,38 +545,34 @@ export default {
             accordionItems: [],
             isChatSettingsSidebarActive: false,
             isChatSidebarActive: false,
-            isChatDropdownActive: false,
-            messages: [
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-4.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-6.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-4.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-6.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-4.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-6.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-4.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-6.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-4.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-6.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-4.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-6.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "received", avatar: "/images/agent-4.jpg" },
-                { text: "Keep going, you got this!", time: "10:30 AM", type: "sent", avatar: "/images/agent-6.jpg" },
-            ]
+            isProfileDropdownActive: false,
         }
     },
     mounted() {
-        // Mounted properties
-        window.addEventListener("click", this.handleChatDropdownClose);
+        this.getProfile();
         window.addEventListener("click", (event) => this.handleChatSettingsSidebarClose(event))
         window.addEventListener("click", (event) => this.handleChatSidebarClose(event))
+        window.addEventListener("click", this.handleProfileDropdownClose);
     },
     unmounted() {
         // Before unmounted properties
-        window.removeEventListener("click", this.handleChatDropdownClose);
         window.removeEventListener("click", this.handleChatSettingsSidebarClose);
         window.removeEventListener("click", this.handleChatSidebarClose);
+        window.removeEventListener("click", this.handleProfileDropdownClose);
     },
     methods: {
+
+        // Profile dropdown toggle
+        profileDropdownToggle() {
+            this.isProfileDropdownActive = !this.isProfileDropdownActive
+        },
+
+        // Handle profile dropdown close
+        handleProfileDropdownClose() {
+            if (!event.target.closest("#profileDropdown")) {
+                this.isProfileDropdownActive = false;
+            }
+        },
 
         // Set Active tab index use for accordion
         setTab(index) {
@@ -682,11 +597,6 @@ export default {
             }
         },
 
-        // Open chat sidebar in responsive
-        openChatSidebar() {
-            this.isChatSidebarActive = true;
-        },
-
         // Close chat sidebar in responsive
         closeChatSidebar() {
             this.isChatSidebarActive = false;
@@ -699,16 +609,63 @@ export default {
             }
         },
 
-        // Chat dropdown toggle
-        chatDropdownToggle() {
-            this.isChatDropdownActive = !this.isChatDropdownActive;
+        async getProfile() {
+            this.loading = true;
+            if (!this.token) {
+                this.$router.push({name: 'SignIn'});
+                return;
+            }
+            axios.post('/api/profile/details', null, {
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8',
+                    'Authorization': `Bearer ${this.token}`
+                }
+            }).then(response => {
+                this.profileData = response.data.user;
+                this.profileParam = JSON.parse(JSON.stringify(response.data.user));
+            }).catch(error => {
+                console.error("Error fetching profile:", error.response?.data?.message);
+                if (error.response?.status === 401) {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('user_type');
+                    this.$router.push({name: 'SignIn'});
+                } else {
+                    this.error = error.response?.data?.message || "Failed to fetch profile.";
+                }
+            }).finally(() => {
+                this.loading = false;
+            });
         },
 
-        // Handle Chat dropdown close
-        handleChatDropdownClose() {
-            if(!event.target.closest("#profileChatDropdown")) {
-                this.isChatDropdownActive = false;
+        // Logout Api integration
+        async logOut() {
+            this.loading = true;
+            const token = localStorage.getItem('token');
+
+            if (!token) {
+                this.$router.push({name: 'signIn'});
+                return;
             }
+            axios.post(`/api/profile/logout`, null, {
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8',
+                    'Authorization': `Bearer ${token}`
+                }
+            }).then((response) => {
+                localStorage.removeItem('token');
+                localStorage.removeItem('user_type');
+                this.$router.push({name: 'signIn'});
+            }).catch((error) => {
+                if (error.response && error.response.status === 401) {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('user_type');
+                    this.$router.push({name: 'signIn'});
+                } else {
+                    this.error = error.response?.data?.message || "An error occurred during logout";
+                }
+            }).finally(() => {
+                this.loading = false;
+            });
         },
 
     }

@@ -42,7 +42,7 @@ export default {
                 email: '',
                 password: '',
                 password_confirmation: '',
-                user_type: 'client'
+                user_type: 'client',
             },
             loading: false,
             error: {},
@@ -55,8 +55,9 @@ export default {
 
         async signUp() {
             this.loading = true;
+            this.error = {};
             axios.post(`/api/auth/registration`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{
-                console.log(response)
+                this.$router.push({name:'SignIn'})
             }).catch((error) => {
                 this.error = error.response.data.errors;
             }).finally(()=>{
