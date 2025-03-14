@@ -13,6 +13,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Mail\Message;
+use Carbon\Carbon;
 
 class AuthenticationController extends BaseController
 {
@@ -25,7 +26,7 @@ class AuthenticationController extends BaseController
             'password' => 'required'
         ]);
         if (!Auth::attempt($credentials)) {
-            return response()->json(['message' => 'Invalid credentials'], 401);
+            return response()->json(['credential' => 'Invalid credentials'], 401);
         }
         $user = Auth::user();
         $token = $user->createToken('auth_token')->plainTextToken;
@@ -99,7 +100,11 @@ class AuthenticationController extends BaseController
             return response()->json(['message' => 'Invalid verification code'], 400);
         }
         $resetCode = Str::random(6);
-        $user->update(['reset_code' => $resetCode, 'verification_code' => null]);
+        $user->update([
+            'reset_code' => $resetCode,
+            'verification_code' => null,
+            'email_verified_at' => Carbon::now()
+        ]);
         Mail::raw("Your reset code is: " . $resetCode, function (Message $message) use ($user) {
             $message->to($user->email)
                 ->subject('Your Reset Code');

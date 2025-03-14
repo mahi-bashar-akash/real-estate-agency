@@ -31,6 +31,8 @@ export default {
                 email: localStorage.getItem('email'),
                 verification_code: ''
             },
+            error: {},
+            loading: false,
         };
     },
     mounted() {

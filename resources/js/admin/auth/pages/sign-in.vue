@@ -1,6 +1,7 @@
 <template>
 
     <form @submit.prevent="logIn()" class="w-full">
+        <div class="mt-1 text-rose-700 text-center" v-if="credentialError"> {{credentialError}} </div>
         <div class="mb-3 block w-full">
             <label for="email" class="block mb-1 font-medium">
                 Email
@@ -40,16 +41,10 @@
                 Forgot Password?
             </router-link>
         </div>
-        <div class="block w-full mb-5">
+        <div class="block w-full">
             <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces">
                 Sign In
             </button>
-        </div>
-        <div class="text-center">
-            Don't have any account <br/>
-            <router-link :to="{name:'signUp'}" class="decoration-0 text-blue-950 font-medium">
-                Sign Up
-            </router-link>
         </div>
     </form>
 
@@ -72,10 +67,11 @@ export default {
             loading: false,
             error: {},
             Core: window.core.user_type,
+            credentialError: '',
         }
     },
     mounted() {
-        console.log(this.Core);
+
     },
     methods: {
 
@@ -87,6 +83,8 @@ export default {
         // Login api integration
         async logIn() {
             this.loading = true;
+            this.error = {};
+            this.credentialError = '';
             axios.post('/api/auth/login', this.formData,{ headers: { 'Content-Type': 'application/json; charset=utf-8' }}).then(response => {
                 const user = response.data.user || {};
                 const userType = user.user_type || null;
@@ -95,11 +93,14 @@ export default {
                 localStorage.setItem('token', response.data.token);
                 localStorage.setItem('user_type', userType);
                 if (userType === 'admin') {
-                    console.log("Redirecting to admin analysis...");
                     this.$router.push({name:'analysis'});
                 }
             }).catch(error => {
-                this.error = error.response.data.errors
+                if(error.response.data.errors) {
+                    this.error = error.response.data.errors
+                } else {
+                    this.credentialError = error.response.data.credential
+                }
             }).finally(()=> {
                 this.loading = false
             });
