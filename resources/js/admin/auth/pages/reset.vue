@@ -2,23 +2,19 @@
 
     <form @submit.prevent="reset()" class="w-full">
         <div class="mb-3 block w-full">
-            <label for="email" class="block mb-1 font-medium">
-                Email
-            </label>
-            <input id="email" type="email" name="email" v-model="formData.email" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your email" autocomplete="off" />
+            <label for="email" class="block mb-1 font-medium"> Email </label>
+            <input id="email" type="email" name="email" v-model="formData.email" class="w-full outline-0 border-0 bg-white py-3 px-5 rounded-lg" placeholder="Enter your email" autocomplete="off" />
+            <div class="mt-1 text-rose-700" v-if="error.email"> {{error.email[0]}} </div>
         </div>
         <div class="mb-3 block w-full">
-            <label for="email" class="block mb-1 font-medium">
-                Code
-            </label>
-            <input id="code" type="text" name="reset_code" v-model="formData.reset_code" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your code" autocomplete="off" />
+            <label for="reset_code" class="block mb-1 font-medium"> Code </label>
+            <input id="reset_code" type="text" name="reset_code" v-model="formData.reset_code" class="w-full outline-0 border-0 bg-white py-3 px-5 rounded-lg" placeholder="Enter your code" autocomplete="off" />
+            <div class="mt-1 text-rose-700" v-if="error.reset_code"> {{error.reset_code[0]}} </div>
         </div>
         <div class="mb-3 block w-full">
-            <label for="password" class="block mb-1 font-medium">
-                New Password
-            </label>
+            <label for="password" class="block mb-1 font-medium"> New Password </label>
             <div class="relative w-full">
-                <input id="password" :type="newPasswordFieldType" name="password" v-model="formData.password" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your password" autocomplete="off" />
+                <input id="password" :type="newPasswordFieldType" name="password" v-model="formData.password" class="w-full outline-0 border-0 bg-white py-3 px-5 rounded-lg" placeholder="Enter your password" autocomplete="off" />
                 <div class="absolute end-0 top-0 bottom-0 pe-3">
                     <button type="button" class="bg-transparent border-0 group outline-0 size-[25px] flex justify-end items-center h-full" @click="newPasswordVisibility()">
                         <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="newPasswordFieldType === 'text'">
@@ -41,11 +37,9 @@
             <div class="mt-1 text-rose-700" v-if="error.password"> {{error.password[0]}} </div>
         </div>
         <div class="mb-5 block w-full">
-            <label for="password" class="block mb-1 font-medium">
-                Confirm New Password
-            </label>
+            <label for="password" class="block mb-1 font-medium"> Confirm New Password </label>
             <div class="relative w-full">
-                <input id="password" :type="confirmNewPasswordFieldType" name="password_confirmation" v-model="formData.password_confirmation" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your password confirmation" autocomplete="off" />
+                <input id="password" :type="confirmNewPasswordFieldType" name="password_confirmation" v-model="formData.password_confirmation" class="w-full outline-0 border-0 bg-white py-3 px-5 rounded-lg" placeholder="Enter your password confirmation" autocomplete="off" />
                 <div class="absolute end-0 top-0 bottom-0 pe-3">
                     <button type="button" class="bg-transparent border-0 group outline-0 size-[25px] flex justify-end items-center h-full" @click="confirmPasswordVisibility()">
                         <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="confirmNewPasswordFieldType === 'text'">
@@ -68,7 +62,7 @@
             <div class="mt-1 text-rose-700" v-if="error.password_confirmation"> {{error.password_confirmation[0]}} </div>
         </div>
         <div class="block w-full">
-            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces">
+            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces rounded-lg">
                 Sign In
             </button>
         </div>

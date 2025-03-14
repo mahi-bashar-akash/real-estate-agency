@@ -3,10 +3,11 @@
     <form @submit.prevent="verification()" class="w-full">
         <div class="text-center mb-5 text-[21px]"> Please check your email </div>
         <div class="mb-3">
-            <input type="text" name="verification_code" placeholder="Enter verification code" v-model="formData.verification_code" class="w-full outline-0 border-0 bg-white py-3 px-5" required autocomplete="off" />
+            <input type="text" name="verification_code" placeholder="Enter verification code" v-model="formData.verification_code" class="w-full outline-0 border-0 bg-white py-3 px-5 rounded-lg" required autocomplete="off" />
+            <div class="mt-1 text-rose-700" v-if="error.verification_code"> {{error.verification_code[0]}} </div>
         </div>
         <div class="block w-full mb-3">
-            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces">
+            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces rounded-lg">
                 Send
             </button>
         </div>

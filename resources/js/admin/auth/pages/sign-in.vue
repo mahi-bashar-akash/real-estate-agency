@@ -6,7 +6,7 @@
             <label for="email" class="block mb-1 font-medium">
                 Email
             </label>
-            <input id="email" type="email" name="email" v-model="formData.email" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your email" autocomplete="off" />
+            <input id="email" type="email" name="email" v-model="formData.email" class="w-full outline-0 border-0 bg-white py-3 px-5 rounded-lg" placeholder="Enter your email" autocomplete="off" />
             <div class="mt-1 text-rose-700" v-if="error.email"> {{error.email[0]}} </div>
         </div>
         <div class="mb-5 block w-full">
@@ -14,7 +14,7 @@
                 Password
             </label>
             <div class="relative w-full">
-                <input id="password" :type="passwordFieldType" name="password" v-model="formData.password" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your password" autocomplete="off" />
+                <input id="password" :type="passwordFieldType" name="password" v-model="formData.password" class="w-full outline-0 border-0 bg-white py-3 px-5 rounded-lg" placeholder="Enter your password" autocomplete="off" />
                 <div class="absolute end-0 top-0 bottom-0 pe-3">
                     <button type="button" class="bg-transparent border-0 group outline-0 size-[25px] flex justify-end items-center h-full" @click="passwordVisibility()">
                         <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="passwordFieldType === 'text'">
@@ -42,7 +42,7 @@
             </router-link>
         </div>
         <div class="block w-full">
-            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces">
+            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces rounded-lg">
                 Sign In
             </button>
         </div>
