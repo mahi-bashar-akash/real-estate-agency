@@ -8,9 +8,11 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Controller as BaseController;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Mail\Message;
 
 class AuthenticationController extends BaseController
 {
@@ -68,57 +70,65 @@ class AuthenticationController extends BaseController
     public function forgot(Request $request): JsonResponse
     {
         $request->validate(['email' => 'required|email']);
-        $token = bin2hex(random_bytes(50));
-        DB::table('password_resets')->updateOrInsert(
-            ['email' => $request->email],
-            ['token' => $token, 'created_at' => now()]
-        );
-        return response()->json(['message' => 'Reset token generated', 'token' => $token]);
-    }
-
-    public function reset(Request $request): JsonResponse
-    {
-        $request->validate([
-            'email' => 'required|email',
-            'token' => 'required',
-            'password' => 'required|string|min:6|confirmed'
-        ]);
-        $reset = DB::table('password_resets')->where('email', $request->email)->where('token', $request->token)->first();
-        if (!$reset) {
-            return response()->json(['message' => 'Invalid token or email'], 400);
-        }
         $user = User::where('email', $request->email)->first();
         if (!$user) {
-            return response()->json(['message' => 'User not found'], 404);
+            return response()->json(['message' => 'Email not found'], 404);
         }
-        $user->update(['password' => Hash::make($request->password)]);
-        DB::table('password_resets')->where('email', $request->email)->delete();
-        return response()->json(['message' => 'Password reset successfully']);
+        $verificationCode = Str::random(6);
+        $user->update(['verification_code' => $verificationCode]);
+        Mail::raw("Your verification code is: " . $verificationCode, function (Message $message) use ($user) {
+            $message->to($user->email)->subject('Your Verification Code');
+        });
+        return response()->json([
+            'message' => 'Verification code sent to email',
+            'verification_code' => $verificationCode,
+        ]);
     }
 
     public function verification(Request $request): JsonResponse
     {
         $request->validate([
             'email' => 'required|email',
-            'code' => 'required|digits:6'
+            'verification_code' => 'required'
         ]);
-        $verification = DB::table('verification_codes')->where('email', $request->email)->where('code', $request->code)->first();
-        if (!$verification) {
+        $user = User::where('email', $request->email)->first();
+        if (!$user) {
+            return response()->json(['message' => 'User not found'], 404);
+        }
+        if ($user->verification_code !== $request->verification_code) {
             return response()->json(['message' => 'Invalid verification code'], 400);
         }
-        User::where('email', $request->email)->update(['email_verified_at' => now()]);
-        DB::table('verification_codes')->where('email', $request->email)->delete();
-        return response()->json(['message' => 'Email verified successfully.']);
+        $resetCode = Str::random(6);
+        $user->update(['reset_code' => $resetCode, 'verification_code' => null]);
+        Mail::raw("Your reset code is: " . $resetCode, function (Message $message) use ($user) {
+            $message->to($user->email)
+                ->subject('Your Reset Code');
+        });
+        return response()->json(['message' => 'Verification successful. Reset code sent to email']);
+    }
+
+    public function reset(Request $request): JsonResponse
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'reset_code' => 'required',
+            'password' => 'required|string|min:6|confirmed'
+        ]);
+        $user = User::where('email', $request->email)->first();
+        if (!$user) {
+            return response()->json(['message' => 'User not found'], 404);
+        }
+        if ($user->reset_code !== $request->reset_code) {
+            return response()->json(['message' => 'Invalid reset code'], 400);
+        }
+        $user->update(['password' => Hash::make($request->password), 'reset_code' => null]);
+        return response()->json(['message' => 'Password reset successfully']);
     }
 
     public function details(Request $request): JsonResponse
     {
         $user = $request->user();
-
-        if (!$user) {
-            return response()->json(['message' => 'Not authenticated'], 401);
-        }
-
+        if (!$user) { return response()->json(['message' => 'Not authenticated'], 401); }
         return response()->json([
             'user' => $user,
             'user_type' => $user->user_type
@@ -155,12 +165,8 @@ class AuthenticationController extends BaseController
     {
         $user = $request->user();
         if ($user) {
-            $user->tokens->each(function ($token) {
-                $token->delete();
-            });
-            return response()->json([
-                'message' => 'Logout successful',
-            ]);
+            $user->tokens->each(function ($token) { $token->delete(); });
+            return response()->json([ 'message' => 'Logout successful' ]);
         }
         return response()->json(['message' => 'Not authenticated'], 401);
     }

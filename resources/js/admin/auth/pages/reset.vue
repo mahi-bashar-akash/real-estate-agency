@@ -2,6 +2,18 @@
 
     <form @submit.prevent="reset()" class="w-full">
         <div class="mb-3 block w-full">
+            <label for="email" class="block mb-1 font-medium">
+                Email
+            </label>
+            <input id="email" type="email" name="email" v-model="formData.email" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your email" autocomplete="off" />
+        </div>
+        <div class="mb-3 block w-full">
+            <label for="email" class="block mb-1 font-medium">
+                Code
+            </label>
+            <input id="code" type="text" name="reset_code" v-model="formData.reset_code" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your code" autocomplete="off" />
+        </div>
+        <div class="mb-3 block w-full">
             <label for="password" class="block mb-1 font-medium">
                 New Password
             </label>
@@ -33,7 +45,7 @@
                 Confirm New Password
             </label>
             <div class="relative w-full">
-                <input id="password" :type="confirmNewPasswordFieldType" name="password" v-model="formData.password_confirmation" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your password" autocomplete="off" />
+                <input id="password" :type="confirmNewPasswordFieldType" name="password_confirmation" v-model="formData.password_confirmation" class="w-full outline-0 border-0 bg-white py-3 px-5" placeholder="Enter your password confirmation" autocomplete="off" />
                 <div class="absolute end-0 top-0 bottom-0 pe-3">
                     <button type="button" class="bg-transparent border-0 group outline-0 size-[25px] flex justify-end items-center h-full" @click="confirmPasswordVisibility()">
                         <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="confirmNewPasswordFieldType === 'text'">
@@ -76,6 +88,8 @@ export default {
             newPasswordFieldType: 'password',
             confirmNewPasswordFieldType: 'password',
             formData: {
+                email: localStorage.getItem('email'),
+                reset_code: '',
                 password: '',
                 password_confirmation: '',
             },
@@ -84,7 +98,9 @@ export default {
         }
     },
     mounted() {
-
+        if(!this.formData.email) {
+            this.$router.push({name:'forgot'})
+        }
     },
     methods: {
 
@@ -96,11 +112,12 @@ export default {
             this.confirmNewPasswordFieldType = this.confirmNewPasswordFieldType === "password" ? "text" : "password";
         },
 
-        // Reset Api integration
-        reset() {
+        // Reset api integration
+        async reset() {
             this.loading = true;
             axios.post(`/api/auth/reset`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{
-                console.log(response)
+                localStorage.removeItem('email', this.formData.email);
+                this.$router.push({name:'signIn'});
             }).catch((error) => {
                 this.error = error.response.data.errors;
             }).finally(()=>{

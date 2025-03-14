@@ -25,6 +25,9 @@ class User extends Authenticatable
         'preset_address',
         'bio',
         'user_type',
+        'email_verified_at',
+        'reset_code',
+        'verification_code',
     ];
 
     /**

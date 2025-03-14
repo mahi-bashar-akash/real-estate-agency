@@ -1,13 +1,22 @@
 <template>
 
-    <div class="text-center mb-5 text-[21px]"> Please check your email </div>
-    <div class="grid grid-cols-4 gap-3">
-        <input v-for="(input, index) in verificationCodeArray" :key="index" v-model="verificationCodeArray[index]" type="text" maxlength="1" class="w-full backdrop-blur-2xl h-full text-center text-[25px] py-4 outline-0 border-0 bg-blue-700 text-white placeholder-white shadow-xl rounded-lg" placeholder="0" @input="onInput(index)" :ref="`input${index}`" />
-    </div>
-    <div class="mt-3 text-center"> {{timer}} </div>
-    <div class="mt-3 text-center">
-        <a class="cursor-pointer text-gray-700" @click="resend()"> Resend </a>
-    </div>
+    <form @submit.prevent="verification()" class="w-full">
+        <div class="text-center mb-5 text-[21px]"> Please check your email </div>
+        <div class="mb-3">
+            <input type="text" name="verification_code" placeholder="Enter verification code" v-model="formData.verification_code" class="w-full outline-0 border-0 bg-white py-3 px-5" required autocomplete="off" />
+        </div>
+        <div class="block w-full mb-3">
+            <button type="submit" class="bg-blue-600 text-center font-medium decoration-0 text-white duration-500 hover:bg-blue-950 px-6 py-3 whitespace-break-spaces">
+                Send
+            </button>
+        </div>
+        <div class="text-center">
+            Remember password! <br/>
+            <router-link :to="{name:'signIn'}" class="decoration-0 text-blue-950 font-medium">
+                Sign In
+            </router-link>
+        </div>
+    </form>
 
 </template>
 
@@ -18,59 +27,32 @@ import axios from "axios";
 export default {
     data() {
         return {
-            verificationCodeArray: ["", "", "", ""],
-            timer: "01:00",
-            timerInterval: null,
+            formData: {
+                email: localStorage.getItem('email'),
+                verification_code: ''
+            },
         };
     },
     mounted() {
-        this.startCountdown();
-    },
-    beforeDestroy() {
-        clearInterval(this.timerInterval);
+        if(!this.formData.email) {
+            this.$router.push({name:'forgot'})
+        }
     },
     methods: {
 
-        resend() {
-            clearInterval(this.timerInterval);
-            this.verificationCodeArray = ["", "", "", ""];
-            this.timer = "01:00";
-            this.startCountdown();
+        // Forgot Api integration
+        verification() {
+            this.loading = true;
+            axios.post(`/api/auth/verification`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{
+                localStorage.setItem('email', this.formData.email);
+                this.$router.push({name:'reset'});
+            }).catch((error) => {
+                this.error = error.response.data.errors;
+            }).finally(()=>{
+                this.loading = false;
+            })
         },
 
-        startCountdown() {
-            let minutes = 1;
-            let seconds = 0;
-            this.timerInterval = setInterval(() => {
-                if (seconds === 0 && minutes === 0) {
-                    clearInterval(this.timerInterval);
-                } else {
-                    if (seconds === 0) {
-                        minutes--;
-                        seconds = 59;
-                    } else {
-                        seconds--;
-                    }
-                    this.timer = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-                }
-            }, 1000);
-        },
-
-        onInput(index) {
-            if (!/^[a-zA-Z0-9]*$/.test(this.verificationCodeArray[index])) {
-                this.verificationCodeArray[index] = this.verificationCodeArray[index].slice(0, -1);
-            }
-            if (this.verificationCodeArray[index].length === 1 && index < this.verificationCodeArray.length - 1) {
-                this.$nextTick(() => {
-                    this.$refs[`input${index + 1}`][0].focus();
-                });
-            }
-            if (this.verificationCodeArray[index].length === 0 && index > 0) {
-                this.$nextTick(() => {
-                    this.$refs[`input${index - 1}`][0].focus();
-                });
-            }
-        },
     },
 };
 </script>

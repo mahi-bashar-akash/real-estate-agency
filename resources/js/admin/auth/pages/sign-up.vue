@@ -53,6 +53,7 @@ export default {
     },
     methods: {
 
+        // SignUp api integration
         async signUp() {
             this.loading = true;
             axios.post(`/api/auth/registration`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{

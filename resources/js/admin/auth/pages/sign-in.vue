@@ -84,7 +84,7 @@ export default {
             this.passwordFieldType = this.passwordFieldType === "password" ? "text" : "password";
         },
 
-        // Login Api integration
+        // Login api integration
         async logIn() {
             this.loading = true;
             axios.post('/api/auth/login', this.formData,{ headers: { 'Content-Type': 'application/json; charset=utf-8' }}).then(response => {

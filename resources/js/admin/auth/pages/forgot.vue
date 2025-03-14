@@ -16,7 +16,7 @@
         <div class="text-center">
             Remember password! <br/>
             <router-link :to="{name:'signIn'}" class="decoration-0 text-blue-950 font-medium">
-                Sign IN
+                Sign In
             </router-link>
         </div>
     </form>
@@ -43,11 +43,12 @@ export default {
     },
     methods: {
 
-        // Forgot Api integration
-        forgot() {
+        // Forgot api integration
+        async forgot() {
             this.loading = true;
             axios.post(`/api/auth/forgot`,this.formData,{headers:{'Content-Type':'application/json; charset=utf-8'}}).then((response)=>{
-                console.log(response)
+                localStorage.setItem('email', this.formData.email);
+                this.$router.push({name:'verification'});
             }).catch((error) => {
                 this.error = error.response.data.errors;
             }).finally(()=>{
