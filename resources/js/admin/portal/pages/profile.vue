@@ -118,7 +118,7 @@
                     <div class="mb-3 w-full block">
                         <label for="current_password" class="block mb-1 text-blue-950"> Current Password </label>
                         <div class="w-full relative">
-                            <input id="current_password" type="text" name="current_password" v-model="passwordParam.current_password" class="w-full block px-5 py-3 outline-0 border border-gray-300 duration-500 focus-within:border-gray-950 rounded-xl" autocomplete="off" />
+                            <input id="current_password" :type="currentPasswordFieldType" name="current_password" v-model="passwordParam.current_password" class="w-full block px-5 py-3 outline-0 border border-gray-300 duration-500 focus-within:border-gray-950 rounded-xl" autocomplete="off" />
                             <div class="absolute end-0 top-0 bottom-0 pe-3">
                                 <button type="button" class="bg-transparent border-0 group outline-0 size-[25px] flex justify-end items-center h-full" @click="currentPasswordVisibility()">
                                     <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="currentPasswordFieldType === 'text'">
@@ -143,7 +143,7 @@
                     <div class="mb-3 w-full block">
                         <label for="new_password" class="block mb-1 text-blue-950"> New Password </label>
                         <div class="w-full relative">
-                            <input id="new_password" type="text" name="new_password" v-model="passwordParam.new_password" class="w-full block px-5 py-3 outline-0 border border-gray-300 duration-500 focus-within:border-gray-950 rounded-xl" autocomplete="off" />
+                            <input id="new_password" :type="newPasswordFieldType" name="new_password" v-model="passwordParam.new_password" class="w-full block px-5 py-3 outline-0 border border-gray-300 duration-500 focus-within:border-gray-950 rounded-xl" autocomplete="off" />
                             <div class="absolute end-0 top-0 bottom-0 pe-3">
                                 <button type="button" class="bg-transparent border-0 group outline-0 size-[25px] flex justify-end items-center h-full" @click="newPasswordVisibility()">
                                     <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="newPasswordFieldType === 'text'">
@@ -168,7 +168,7 @@
                     <div class="mb-3 w-full block">
                         <label for="new_confirm_password" class="block mb-1 text-blue-950">New Confirm Password</label>
                         <div class="w-full relative">
-                            <input id="new_confirm_password" type="text" name="new_confirm_password" v-model="passwordParam.new_confirm_password" class="w-full block px-5 py-3 outline-0 border border-gray-300 duration-500 focus-within:border-gray-950 rounded-xl" autocomplete="off" />
+                            <input id="new_confirm_password" :type="newConfirmPasswordFieldType" name="new_confirm_password" v-model="passwordParam.new_confirm_password" class="w-full block px-5 py-3 outline-0 border border-gray-300 duration-500 focus-within:border-gray-950 rounded-xl" autocomplete="off" />
                             <div class="absolute end-0 top-0 bottom-0 pe-3">
                                 <button type="button" class="bg-transparent border-0 group outline-0 size-[25px] flex justify-end items-center h-full" @click="newConfirmPasswordVisibility()">
                                     <svg viewBox="0 0 24 24" class="size-[20px]" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="newConfirmPasswordFieldType === 'text'">
